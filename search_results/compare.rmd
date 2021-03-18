@@ -1,0 +1,123 @@
+---
+title: "Wearable Technology for MS: Review Search Strategy"
+author: "Tim Woelfle"
+date: "18/03/2021"
+output:
+  html_notebook:
+    code_folding: hide
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+---
+
+# Search term
+
+All searches performed on 18.03.2021. Term: 
+
+"multiple sclerosis" AND ("smartphone" OR "smartphones" OR "smartwatch" OR "smartwatches" OR "wearable" OR "wearables" OR "biosensor" OR "biosensors" OR "digital biomarker" OR "digital biomarkers" OR "accelerometer" OR "accelerometers" OR "accelerometry" OR "gyroscope" OR "gyroscopes" OR "inertial motion unit" OR "IMU")
+
+# Pubmed (354)
+
+```{r}
+suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(VennDiagram))
+
+pubmed = fread("21-03-18 Pubmed 354 search results.csv", data.table = F)
+pubmed[pubmed$DOI == '', 'DOI'] = NA
+pubmed$DOI = toupper(pubmed$DOI)
+
+table(pubmed$Type, hasDOI=!is.na(pubmed$DOI))
+hist(pubmed$Year)
+```
+
+# Scopus (497)
+
+```{r}
+# scop1 = read.csv("21-03-18 Scopus 1975-2014.csv", stringsAsFactors = F)
+# scop2 = read.csv("21-03-18 Scopus 2015-2018.csv", stringsAsFactors = F)
+# scop3 = read.csv("21-03-18 Scopus 2019-2021.csv", stringsAsFactors = F)
+# scopus = rbind(scop1,scop2,scop3)
+# write.csv(scopus, "21-03-18 Scopus 497 search results.csv", row.names = F)
+
+scopus = fread("21-03-18 Scopus 497 search results.csv", data.table = F)
+scopus[scopus$DOI == '', 'DOI'] = NA
+scopus$DOI = toupper(scopus$DOI)
+
+table(scopus$Type, hasDOI=!is.na(scopus$DOI))
+hist(scopus$Year)
+```
+
+# Embase (727)
+
+```{r}
+embase = fread("21-03-18 Embase 727 search results.csv", data.table=F)
+embase[embase$DOI == '', 'DOI'] = NA
+embase$DOI = toupper(embase$DOI)
+
+table(embase$`Publication Type`, hasDOI=!is.na(embase$DOI))
+hist(embase$`Publication Year`)
+```
+
+# Web of Science (510)
+
+```{r}
+wos = fread("21-03-18 WoS 510 search results.csv", data.table=F)
+wos[wos$DOI == '', 'DOI'] = NA
+wos$DOI = toupper(wos$DOI)
+
+table(wos$`Document Type`, hasDOI=!is.na(wos$DOI))
+hist(wos$`Publication Year`)
+```
+
+# DOI Overlap
+
+```{r, fig.width=8, fig.height=6}
+grid.newpage()
+grid.draw(venn.diagram(sapply(list(Embase=embase$DOI, WoS=wos$DOI, PubMed=pubmed$DOI, Scopus=scopus$DOI), na.omit), NULL))
+```
+
+# Concat
+
+```{r}
+# Embase is the only database in which DOIs are not unique (presumably e.g. because of conference abstracts often published under one summary DOI)
+table(table(pubmed$DOI))
+table(table(scopus$DOI))
+table(table(embase$DOI))
+table(table(wos$DOI))
+
+pubmed$database = "PubMed"
+scopus$database = "Scopus"
+embase$database = "Embase"
+wos$database = "WoS"
+
+# First combine PubMed and Scopus
+pubmed_scopus = rbind(
+  scopus[, c("Authors", "Title", "Source", "Year", "Abstract", "Type", "DOI", "ArticleURL", "database")],
+  pubmed[is.na(pubmed$DOI) | !pubmed$DOI %in% scopus$DOI, c("Authors", "Title", "Source", "Year", "Abstract", "Type", "DOI", "ArticleURL", "database")]
+)
+colnames(pubmed_scopus) = c("Authors", "Article Title", "Source Title", "Publication Year", "Abstract", "Document Type", "DOI", "UT (Unique WOS ID)", "database")
+
+# Then with WoS
+pubmed_scopus_wos = rbind(
+  wos[, c("Authors", "Article Title", "Source Title", "Publication Year", "Abstract", "Document Type", "DOI", "UT (Unique WOS ID)", "database")],
+  pubmed_scopus[is.na(pubmed_scopus$DOI) | !pubmed_scopus$DOI %in% wos$DOI,]
+)
+colnames(pubmed_scopus_wos) = c("Author Names", "Title", "Source title", "Publication Year", "Abstract", "Publication Type", "DOI", "Open URL Link", "database")
+
+# Sanity check for pubmed_scopus_wos
+nrow(pubmed_scopus_wos) == length(unique(c(pubmed$DOI, scopus$DOI, wos$DOI)))-1 + sum(is.na(c(pubmed$DOI, scopus$DOI, wos$DOI)))
+
+# And finally merge with Embase
+merged = rbind(
+  embase[, c("Author Names", "Title", "Source title", "Publication Year", "Abstract", "Publication Type", "DOI", "Open URL Link", "database")],
+  pubmed_scopus_wos[is.na(pubmed_scopus_wos$DOI) | !pubmed_scopus_wos$DOI %in% embase$DOI,]
+)
+
+# View exact Title duplicates (probably better to resolve them manually)
+#table(duplicated(merged[c("Title")]))
+#View(merged[merged$Title %in% merged$Title[duplicated(merged[c("Title")])], c("Title", "Abstract", "DOI", "database")])
+
+#write.csv(merged[order(merged$`Publication Year`, merged$Title),], "21-03-18 merged 1051.csv")
+```
+
