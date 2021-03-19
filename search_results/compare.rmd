@@ -114,10 +114,11 @@ merged = rbind(
   pubmed_scopus_wos[is.na(pubmed_scopus_wos$DOI) | !pubmed_scopus_wos$DOI %in% embase$DOI,]
 )
 
-# View exact Title duplicates (probably better to resolve them manually)
-#table(duplicated(merged[c("Title")]))
-#View(merged[merged$Title %in% merged$Title[duplicated(merged[c("Title")])], c("Title", "Abstract", "DOI", "database")])
+# Remove Title duplicates
+length(unique(gsub("\\.$","",tolower(merged$Title)))) # Number of unique titles (irrespective of case and trailing period)
+merged = merged[order(merged$`Publication Year`, merged$Title, merged$Abstract, merged$DOI),]
+merged = merged[!duplicated(gsub("\\.$","",tolower(merged$Title))),]
 
-#write.csv(merged[order(merged$`Publication Year`, merged$Title),], "21-03-18 merged 1051.csv")
+write.csv(merged, "21-03-19 merged 959.csv", row.names = F)
 ```
 
