@@ -21,7 +21,7 @@ Questions or comments related to the manuscript:
 
 This repository is maintained by:
 * [Dr. Catherine Jutzeler](https://github.com/jutzca)
-* [Dr. Tim Woelfle](https://github.com/jutzca)
+* [Dr. Tim Woelfle](https://github.com/timwoelfle)
 * XX
 
 ## Funding
