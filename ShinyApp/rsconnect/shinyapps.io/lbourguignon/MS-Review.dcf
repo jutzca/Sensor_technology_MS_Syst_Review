@@ -1,0 +1,13 @@
+name: MS-Review
+title: MS-Review
+username:
+account: lbourguignon
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5163963
+bundleId: 5345089
+url: https://lbourguignon.shinyapps.io/MS-Review/
+when: 1638966083.19795
+lastSyncTime: 1638966083.19796
+asMultiple: FALSE
+asStatic: FALSE
