@@ -2,25 +2,24 @@
 
 ## Abstract
 
-**Authors**: 
+**Authors**: Tim Woelfle*, Lucie Bourguignon*, Johannes Lorscheider, Ludwig Kappos, Yvonne Naegelin†, Catherine R. Jutzeler†
+
 
 **Short summary:**
 
 
 ## External resources
 
-**Link to paper**: [Preprint](www.google.com)
-
-**Link to web application**: [Web application](www.google.com)
+**Link to web application**: [Web application](https://lbourguignon.shinyapps.io/MS-Review/))
 
 
 ## Contact
 Questions or comments related to the manuscript:
-* XX
-* XX
+* [Dr. Yvonne Naegelin](yvonne.naegelin@usb.ch)
+* [Dr. Catherine Jutzeler](catherine.jutzeler@hest.ethz.ch)
 
 This repository is maintained by:
-* [Dr. Catherine Jutzeler](https://github.com/jutzca)
+* [Lucie Bourguignon](https://github.com/jutzca)
 * [Dr. Tim Woelfle](https://github.com/timwoelfle)
 * XX
 
