@@ -13,7 +13,7 @@ An ever-growing number of studies is implementing sensor technologies to optimiz
 
 ## External resources
 
-**Link to web application**: [Web application](https://lbourguignon.shinyapps.io/MS-Review/))
+**Link to web application**: [Shiny App](https://lbourguignon.shinyapps.io/MS-Review/)
 
 
 ## Contact
