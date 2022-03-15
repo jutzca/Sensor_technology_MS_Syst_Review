@@ -6,9 +6,11 @@ library(shinydashboard)
 library(plotly)
 library(data.table)
 library(tidyverse)
-
+library(readr)
 
 data_raw <- read.csv('shiny_app_table.csv')
+#data_metaplot <- read.csv('22-03-14 Working_Copy_Study-details-extracted-information - Sheet1.csv')
+data_metaplot <- read.csv('data_meta_figure.csv')
 source("functions.R")
 
 # Define UI for data download app ----
@@ -170,14 +172,11 @@ ui <- dashboardPage(
                       box(plotlyOutput("hist_years", height = "60vh"), width = 12, height = "60vh"),
                       
                       conditionalPanel(condition = "input.wearable_type.indexOf('accelerometer') > -1",
-                        box(plotlyOutput("hist_axes", height = "60vh"), width = 12, height = "60vh"))
+                        box(plotlyOutput("hist_axes", height = "60vh"), width = 12, height = "60vh")),
+                      
+                      box(plotlyOutput("meta_results", height = "60vh"), width = 12, height = "60vh")
                     ) # end fluidRow
-                    
-                    #valueBox("5000+", "Patients", icon = icon("hospital-user"), width = 12, color = "yellow"),
-                    #valueBox("15", "Countries", icon = icon("globe-europe"), width = 3, color = "blue"),
-                    #valueBox("20", "Years", icon = icon("calendar-alt"), width = 3, color = "blue"),
-                    #valueBox("50+", "Researchers", icon = icon("user-cog"), width = 3, color = "blue")#,
-                    
+
            ), #end tabPanel 1
            
            tabPanel("Papers",
@@ -192,16 +191,6 @@ ui <- dashboardPage(
 
 # Define server logic to display and download selected file ----
 server <- function(input, output) {
-  
-  # # Reactive value for selected dataset ----
-  # datasetInput <- reactive({
-  #   types <- input$wearable_type
-  #   position <- input$wearable_position
-  #   context <- input$wearable_context
-  #   data <- data_raw[data_raw$Wearable %like% types, ]
-  #   data <- data[data$Wearable %like% position, ]
-  #   data <- data[data$Context.of.primary.wearable %like% context, ]
-  # })
   
   # Table of selected dataset ----
   output$table <- renderDataTable(escape=F, {
@@ -247,10 +236,6 @@ server <- function(input, output) {
     data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
     data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
     
-    #data <- data[data$sensors_type_plot %like% input$wearable_type, ]
-    #data <- data[data$Wearable %like% input$wearable_position, ]
-    #data <- data[data$Context %like% input$wearable_context, ]
-    
     valueBox(paste0(dim(data)[1], " papers"), 
              "meeting your input criteria", 
              icon = icon("scroll"), 
@@ -260,7 +245,6 @@ server <- function(input, output) {
   
   output$nb_reallife <- renderValueBox({
     
-    #print(input$wearable_type[1])
     data <- data_raw
     data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
     data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
@@ -330,11 +314,6 @@ server <- function(input, output) {
       plot <- plot %>% add_trace(y=data_nb_wearable[[count]], name = names(data_nb_wearable)[count])
       count = count + 1
     }
-      #add_trace(y=~accelerometer, name = 'accelerometer') %>%
-      #add_trace(y=~gyroscope, name = 'gyroscope') %>%
-      #add_trace(y=~magnetometer, name = 'magnetometer') %>%
-      #add_trace(y=~`smartphone/touchscreen`, name = 'smartphone/touchscreen') %>%
-      #add_trace(y=~others, name = 'others') %>%
      plot
 
   })
@@ -344,6 +323,9 @@ server <- function(input, output) {
     data <- data_raw
     data$Year[data$Year == 2020] <- "2020-2021*"
     data$Year[data$Year == 2021] <- "2020-2021*"
+    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
+    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
+    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
     
     accelerometer_data_axis <- data %>%
       group_by(Year) %>% 
@@ -374,6 +356,84 @@ server <- function(input, output) {
       layout(yaxis = list(title = 'Number of accelerometers'), 
              xaxis = list(title = 'Year of publication'),
              barmode = 'stack')
+    
+  })
+  
+  output$meta_results <- renderPlotly({
+    
+    data <- data_raw
+    data$Year[data$Year == 2020] <- "2020-2021*"
+    data$Year[data$Year == 2021] <- "2020-2021*"
+    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
+    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
+    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
+    
+    merged.df <- merge(data, data_metaplot, by=c("DOI"))
+    
+    columns = c(
+      "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS",
+      "Correlation...association.with.other.measure..cross.sectional.",
+      "Group.differences..MS.vs.HC.",
+      "Group.differences..MS.vs.MS.",
+      "Group.differences..MS.vs.other.diseases.",
+      "Test.retest.reliability",
+      "Responsiveness.to.change",
+      "Responsiveness.to.intervention..controlled.study.",
+      "Content.validity..meaningfulness.to.patients."
+    )
+    
+    columns_names = c(
+      "Correlation / association with clinical MS severity scores (cross-sectional), e.g. EDSS, PDDS",
+      "Correlation / association with other measure (cross-sectional)",
+      "Group differences\n(MS vs HC)",
+      "Group differences\n(MS vs MS)",
+      "Group differences (MS vs other diseases)",
+      "Test-retest\nreliability",
+      "Responsiveness\nto change",
+      "Responsiveness\nto intervention\n (controlled study)",
+      "Content validity (meaningfulness to patients)"
+    )
+    
+    domains = c("RW: Actigraphy", "RW: Qualitative gait", "RW: Dexterity/Tremor", "RW: Other", "Lab: Actigraphy", "Lab: Qualitative gait", "Lab: Balance", "Lab: Dexterity/Tremor")
+    effects = c("not-tested", "non-significant", "mixed", "significant")
+    
+    plot_data = data.frame()
+    
+    for (column in columns) {
+      total = sum(merged.df[column] == "yes")
+      for (domain in domains) {
+        for (effect in effects) {
+          count = sum(substr(merged.df[apply(merged.df, 1, function(row) domain %in% row[paste0("Domain", 1:6)]), paste0(column, "...Effect")], 0, nchar(effect)) == effect)
+          plot_data = rbind(plot_data, list(
+            column = column,
+            domain = domain,
+            effect = effect,
+            count = count,
+            proportion = count/total
+          ))
+        }
+      }
+    }
+    
+    plot_data$domain = factor(plot_data$domain, levels=rev(domains))
+    plot_data$effect = factor(plot_data$effect, levels=effects, labels=c("significance not tested", "non-significant", "some significant", "significant"))
+    
+    plot_data_sub = plot_data[plot_data$column %in% c(columns[1:4], columns[6:8]),]
+    plot_data_sub$column = factor(plot_data_sub$column, levels=columns, labels=c("Association with\nclinical severity score", "Association with\nother measure", columns_names[3:9]))
+    
+    plot <- ggplot(plot_data_sub, aes(domain, count, fill=effect, label=count)) + 
+      geom_bar(stat="identity", position=position_stack(reverse=T)) + 
+      geom_text(data=plot_data_sub[plot_data_sub$count>0,], size = 3, position=position_stack(vjust=0.5, reverse=T)) +
+      facet_wrap(facets=vars(column), scales="free_x", nrow=2, drop=T) +
+      theme_pubclean() + xlab(NULL) + ylab(NULL) + coord_flip() + scale_fill_manual(values=c("#d9d9d9", "#fdbf6f", "#96c3dc", "#1b63a5")) +
+      theme(panel.grid.major.x=element_line(size=.1, linetype=2, color="black"), 
+            panel.grid.major.y=element_blank(),
+            panel.spacing.y = unit(2, "lines"),
+            legend.title = element_blank())
+    
+    ggplotly(plot) %>%
+      facet_strip_bigger()
+
     
   })
   

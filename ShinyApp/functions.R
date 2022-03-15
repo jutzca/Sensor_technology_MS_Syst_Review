@@ -99,3 +99,18 @@ prepare_data_nb_wearable <- function(data, wearable, position, context){
   
   return (counts_combined_fig2)
 }
+
+facet_strip_bigger <- function(gp){
+  
+  # n_facets should be the number of facets x2
+  n_facets <- c(1:length(gp[["x"]][["layout"]][["shapes"]]))
+  
+  for(i in n_facets){
+    if(n_facets[i] %% 2 == 0){
+      gp[["x"]][["layout"]][["shapes"]][[i]][["y0"]] <- + 50 # increase as needed
+      gp[["x"]][["layout"]][["shapes"]][[i]][["y1"]] <- 0
+    }
+  }
+  
+  return(gp)
+}
