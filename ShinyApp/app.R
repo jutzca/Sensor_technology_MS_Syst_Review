@@ -7,6 +7,7 @@ library(plotly)
 library(data.table)
 library(tidyverse)
 library(readr)
+library(ggpubr)
 
 data_raw <- read.csv('shiny_app_table.csv')
 #data_metaplot <- read.csv('22-03-14 Working_Copy_Study-details-extracted-information - Sheet1.csv')
