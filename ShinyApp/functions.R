@@ -1,5 +1,17 @@
 
-prepare_data_nb_wearable <- function(data, wearable, position, context){
+prepare_data_nb_wearable <- function(data, data_metaplot, wearable, position, context, domain, results){
+  
+  result_columns <- c(
+    "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS",
+    "Correlation...association.with.other.measure..cross.sectional.",
+    "Group.differences..MS.vs.HC.",
+    "Group.differences..MS.vs.MS.",
+    "Group.differences..MS.vs.other.diseases.",
+    "Test.retest.reliability",
+    "Responsiveness.to.change",
+    "Responsiveness.to.intervention..controlled.study.",
+    "Content.validity..meaningfulness.to.patients."
+  )
   
   data$Year[data$Year == 2020] <- "2020-2021*"
   data$Year[data$Year == 2021] <- "2020-2021*"
@@ -7,10 +19,28 @@ prepare_data_nb_wearable <- function(data, wearable, position, context){
   data <- data[grepl(paste(position, collapse="|"), data$Wearable), ]
   data <- data[grepl(paste(context, collapse="|"), data$Context), ]
   
-  counts_combined_fig2=data.frame(Year=unique(data$Year))
+  merged.df <- merge(data, data_metaplot, by=c("DOI"))
+  
+  indices <- grep(paste(domain, collapse="|"), merged.df$Domain1)
+  indices <- append(indices, grep(paste(domain, collapse="|"), merged.df$Domain2))
+  indices <- append(indices, grep(paste(domain, collapse="|"), merged.df$Domain3))
+  indices <- append(indices, grep(paste(domain, collapse="|"), merged.df$Domain4))
+  indices <- sort(unique(indices))
+  
+  merged.df <- merged.df[indices, ]
+  
+  if ("None" %in% results){
+    results_selected <- results[!results %in% c('None')]
+    merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
+                       merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
+  } else {
+    merged.df <- merged.df %>% filter_at(vars(results), any_vars(. %in% c('yes')))
+  }
+  
+  counts_combined_fig2=data.frame(Year=unique(merged.df$Year))
   
   if ('accelerometer' %in% wearable){
-    accelerometer_data <- data %>%
+    accelerometer_data <- merged.df %>%
       group_by(Year) %>% 
       filter(grepl("accelerometer", sensors_type_plot)) %>% 
       count(Year, sensors_type_plot) %>% 
@@ -26,7 +56,7 @@ prepare_data_nb_wearable <- function(data, wearable, position, context){
   
   # Count all appearances of gyroscopes per year
   if ('gyroscope' %in% wearable){
-    gyroscope_data <- data %>%
+    gyroscope_data <- merged.df %>%
       group_by(Year) %>% 
       filter(grepl("gyroscope",sensors_type_plot)) %>% 
       count(Year, sensors_type_plot) %>% 
@@ -42,7 +72,7 @@ prepare_data_nb_wearable <- function(data, wearable, position, context){
   
   # Count all appearances of magnetometers per year
   if ('magnetometer' %in% wearable){
-    magnetometer_data <- data %>%
+    magnetometer_data <- merged.df %>%
       group_by(Year) %>% 
       filter(grepl("magnetometer",sensors_type_plot)) %>% 
       count(Year, sensors_type_plot) %>% 
@@ -58,7 +88,7 @@ prepare_data_nb_wearable <- function(data, wearable, position, context){
   
   # Count all appearances of smartphone/touchscreen per year
   if ('smartphone/touchscreen' %in% wearable){
-    touchscreen_data <- data %>%
+    touchscreen_data <- merged.df %>%
       group_by(Year) %>% 
       filter(grepl("touchscreen",sensors_type_plot)) %>% 
       count(Year, sensors_type_plot) %>% 
@@ -74,7 +104,7 @@ prepare_data_nb_wearable <- function(data, wearable, position, context){
   
   # Count all appearances of other wearables used per year
   if ('others' %in% wearable){
-    others_data <- data %>%
+    others_data <- merged.df %>%
       group_by(Year) %>% 
       filter(grepl("others",sensors_type_plot)) %>% 
       count(Year, sensors_type_plot) %>% 
