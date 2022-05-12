@@ -4,10 +4,10 @@ prepare_data_nb_wearable <- function(data, data_metaplot, wearable, position, co
   result_columns <- c(
     "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS",
     "Correlation...association.with.other.measure..cross.sectional.",
+    "Test.retest.reliability",
     "Group.differences..MS.vs.HC.",
     "Group.differences..MS.vs.MS.",
     "Group.differences..MS.vs.other.diseases.",
-    "Test.retest.reliability",
     "Responsiveness.to.change",
     "Responsiveness.to.intervention..controlled.study.",
     "Content.validity..meaningfulness.to.patients."

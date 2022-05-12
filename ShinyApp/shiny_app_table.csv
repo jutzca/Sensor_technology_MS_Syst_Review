@@ -975,23 +975,23 @@ Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 6
 Primary position: sternum, lower back, wrist, ankle",lab setting (controlled),2 days,yes,yes,yes,yes,yes,yes,yes,no,yes,"accelerometer, gyroscope, magnetometer",3
-"Sebastião E., Learmonth Y.C., Motl R.W.",2017,"Sebasti�o et al, 2017",Lower Physical Activity in Persons with Multiple Sclerosis at Increased Fall Risk: A Cross-sectional Study,10.1097/PHM.0000000000000581,47 (not reported),53.1 (11.4),"RR: n=44,
+"Sebastião E., Learmonth Y.C., Motl R.W.",2017,"Sebastião et al, 2017",Lower Physical Activity in Persons with Multiple Sclerosis at Increased Fall Risk: A Cross-sectional Study,10.1097/PHM.0000000000000581,47 (not reported),53.1 (11.4),"RR: n=44,
 PP: n=1, 
 SP: n=2",EDSS: 4 [3.0],13.1 (9.6),not reported,not reported,none,"ActiGraph
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
 Primary position: not reported",real-life setting,7 days,yes,yes,yes,yes,yes,yes,yes,no,yes,accelerometer,3
-"Norris M., Anderson R., Motl R.W., Hayes S., Coote S.",2017,"Norris et al, 2017","Minimum number of days required for a reliable estimate of daily step count and energy expenditure, in people with MS who walk unaided",10.1016/J.GAITPOST.2017.02.005,26 (not reported),44.5 (11.9),"RR: n=21, 
+"Norris M., Anderson R., Motl R.W., Hayes S., Coote S.",2017,"Norris et al, 2017","Minimum number of days required for a reliable estimate of daily step count and energy expenditure, in people with MS who walk unaided",10.1016/J.GAITPOST.2017.02.005,26 (not reported),44.5 (11.9),"RR: n=21, 
 PP: n=2, 
 SP: n=1, 
 benign: n=2,
-not reported: n=1",inclusion criteria: PDDS <=3,6.5 (6.2),not reported,not reported,none,"SenseWear Armband
+not reported: n=1",inclusion criteria: PDDS <=3,6.5 (6.2),not reported,not reported,none,"SenseWear Armband
 Type of sensor: accelerometer
 Number of axes: 2
 Number of wearables: 1
 Primary position: wrist",real-life setting,7 days,yes,yes,yes,applies partially,applies partially,yes,yes,no,yes,accelerometer,2
-"Sebastião E., Learmonth Y.C., Motl R.W.",2017,"Sebasti�o et al, 2017",Mobility measures differentiate falls risk status in persons with multiple sclerosis: An exploratory study,10.3233/NRE-161401,"21 (90.5)
+"Sebastião E., Learmonth Y.C., Motl R.W.",2017,"Sebastião et al, 2017",Mobility measures differentiate falls risk status in persons with multiple sclerosis: An exploratory study,10.3233/NRE-161401,"21 (90.5)
 (increased fall risk)",55.5 (9.1),RR: n=18,EDSS: 6.0 [2.0],14.7 (10.5),not reported,not reported,"MS patients (normal fall risk)
 n=26 (88% female)
 age: 51.2 (12.9)
@@ -1562,7 +1562,7 @@ Type of sensor: accelerometer, gyroscope
 Number of axes: 3
 Number of wearables: 1
 Primary position: waist",real-life setting,24 weeks,yes,yes,yes,yes,yes,applies partially,yes,no,yes,"accelerometer, gyroscope",3
-"Cofré Lizama L.E., Bruijn S.M., Galea M.P.",2020,"Cofr� et al, 2020",Gait stability at early stages of multiple sclerosis using different data sources,10.1016/J.GAITPOST.2020.02.006,30 (83.3),42.5 (9.2),RR: n=30,"EDSS: 1.2 (0.9), range: 0-2.5",<15,not reported,not reported,"healthy 
+"Cofré Lizama L.E., Bruijn S.M., Galea M.P.",2020,"Cofré et al, 2020",Gait stability at early stages of multiple sclerosis using different data sources,10.1016/J.GAITPOST.2020.02.006,30 (83.3),42.5 (9.2),RR: n=30,"EDSS: 1.2 (0.9), range: 0-2.5",<15,not reported,not reported,"healthy 
 n=15 (60% female)
 age: 36.8 (7.0)","Cometa accelerometer
 Type of sensor: accelerometer

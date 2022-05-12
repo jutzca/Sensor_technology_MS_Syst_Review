@@ -9,17 +9,16 @@ library(tidyverse)
 library(readr)
 library(ggpubr)
 
-data_raw <- read.csv('shiny_app_table.csv')
+data_raw <- read.csv('shiny_app_table.csv', check.names=F)
 data_metaplot <- read.csv('data_meta_figure.csv')
-#merged.df <- merge(data_raw, data_metaplot, by=c("DOI"))
 
 result_columns <- c(
   "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS",
   "Correlation...association.with.other.measure..cross.sectional.",
+  "Test.retest.reliability",
   "Group.differences..MS.vs.HC.",
   "Group.differences..MS.vs.MS.",
   "Group.differences..MS.vs.other.diseases.",
-  "Test.retest.reliability",
   "Responsiveness.to.change",
   "Responsiveness.to.intervention..controlled.study.",
   "Content.validity..meaningfulness.to.patients."
@@ -53,7 +52,7 @@ ui <- dashboardPage(
                                                       "smartphone/touchscreen",
                                                       'others', 'not reported')),
                    
-                   div(style="text-align:center",em("Others: electrocardiogram amplifier, motion tracker", "global positioning system (GPS), surface electromyography (sEMG)")),
+                   div(style="text-align:center",em("Others: electrocardiogram (ECG), global ", "positioning system (GPS), surface electromyography (sEMG)")),
 
                    # Input: Choose position of wearable ----
                    checkboxGroupInput("wearable_position", label = "Choose a position of interest for the sensor:",
@@ -64,7 +63,7 @@ ui <- dashboardPage(
                                                    "upper arm", "lower arm", "wrist", "hand",
                                                    "upper leg", "lower leg", "ankle", "foot", 'others', "not reported")),
                    
-                   div(style="text-align:center",em('Others: head, normal phone position, pocket or bag, and tip of crutches.')),
+                   div(style="text-align:center",em('Others: head, pocket or bag, and tip of crutches.')),
                    
                    # Input: Choose context of wearable ----
                    checkboxGroupInput("wearable_context", label = "Choose a context for usage of sensor:",
@@ -77,12 +76,12 @@ ui <- dashboardPage(
                                       selected = c("Actigraphy", 'Qualitative gait', 'Balance', 'Dexterity/Tremor', 'Others')),
                    
                    checkboxGroupInput("reported_results", label = "Choose the type of results reported:",
-                                      choices = list("Correlation with MS severity" = "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS", 
-                                                     "Correlation with other measures" = "Correlation...association.with.other.measure..cross.sectional.", 
+                                      choices = list("Association with MS severity" = "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS", 
+                                                     "Association with other measures" = "Correlation...association.with.other.measure..cross.sectional.", 
+                                                     "Test-retest reliability" = "Test.retest.reliability",
                                                      "Group difference MS vs HC" = "Group.differences..MS.vs.HC.",
                                                      "Group difference MS vs MS" = "Group.differences..MS.vs.MS.", 
                                                      "Group difference MS vs other diseases" = "Group.differences..MS.vs.other.diseases.",
-                                                     "Test-retest reliability" = "Test.retest.reliability",
                                                      "Responsiveness to change" = "Responsiveness.to.change",
                                                      "Responsiveness to intervention" = "Responsiveness.to.intervention..controlled.study.",
                                                      "Content validity" = "Content.validity..meaningfulness.to.patients.",
@@ -91,10 +90,10 @@ ui <- dashboardPage(
                                       selected = c(
                                         "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS",
                                         "Correlation...association.with.other.measure..cross.sectional.",
+                                        "Test.retest.reliability",
                                         "Group.differences..MS.vs.HC.",
                                         "Group.differences..MS.vs.MS.",
                                         "Group.differences..MS.vs.other.diseases.",
-                                        "Test.retest.reliability",
                                         "Responsiveness.to.change",
                                         "Responsiveness.to.intervention..controlled.study.",
                                         "Content.validity..meaningfulness.to.patients.",
@@ -103,7 +102,10 @@ ui <- dashboardPage(
   ),
   
   dashboardBody(
-    tags$head(tags$style(HTML('
+    tags$head(tags$style(HTML(' /* fix background-color of wrapper (is black otherwise for some reason) */
+                                .skin-blue .wrapper {
+                                background-color: #ecf0f5;
+                                }
                                 /* logo */
                                 .skin-blue .main-header .logo {
                                 background-color: #0253b5;
@@ -149,44 +151,44 @@ ui <- dashboardPage(
                                 color: #0f0f0f;}
                                 
                                 .btn.btn-success {
-                     color: #fff;
-                    background-color: #ff9800;
-                    border-color: #ff9800;
-                    }
-                    .btn.btn-success.focus,
-                    .btn.btn-success:focus {
-                    color: #fff;
-                    background-color: #ff9800;
-                    border-color: #ff9800;
-                    outline: none;
-                    box-shadow: none;
-                    }
-                    .btn.btn-success:hover {
-                    color: #fff;
-                    background-color: #ff9800;
-                    border-color: #ff9800;
-                    outline: none;
-                    box-shadow: none;
-                    }
-                    .btn.btn-success.active,
-                    .btn.btn-success:active {
-                    color: #fff;
-                    background-color: #f7dfbc;
-                    border-color: #f7dfbc;
-                    outline: none;
-                    }
-                    .btn.btn-success.active.focus,
-                    .btn.btn-success.active:focus,
-                    .btn.btn-success.active:hover,
-                    .btn.btn-success:active.focus,
-                    .btn.btn-success:active:focus,
-                    .btn.btn-success:active:hover {
-                    color: #fff;
-                    background-color: #f7dfbc ;
-                    border-color: #f7dfbc ;
-                    outline: none;
-                    box-shadow: none;
-                    }
+                                color: #fff;
+                                background-color: #ff9800;
+                                border-color: #ff9800;
+                                }
+                                .btn.btn-success.focus,
+                                .btn.btn-success:focus {
+                                color: #fff;
+                                background-color: #ff9800;
+                                border-color: #ff9800;
+                                outline: none;
+                                box-shadow: none;
+                                }
+                                .btn.btn-success:hover {
+                                color: #fff;
+                                background-color: #ff9800;
+                                border-color: #ff9800;
+                                outline: none;
+                                box-shadow: none;
+                                }
+                                .btn.btn-success.active,
+                                .btn.btn-success:active {
+                                color: #fff;
+                                background-color: #f7dfbc;
+                                border-color: #f7dfbc;
+                                outline: none;
+                                }
+                                .btn.btn-success.active.focus,
+                                .btn.btn-success.active:focus,
+                                .btn.btn-success.active:hover,
+                                .btn.btn-success:active.focus,
+                                .btn.btn-success:active:focus,
+                                .btn.btn-success:active:hover {
+                                color: #fff;
+                                background-color: #f7dfbc ;
+                                border-color: #f7dfbc ;
+                                outline: none;
+                                box-shadow: none;
+                                }
                                 
                                 '))),
     
@@ -207,21 +209,19 @@ ui <- dashboardPage(
                              )),
                       #valueBoxOutput("nb_papers", width = 6),
                       
-                      box(plotlyOutput("meta_results", height = "60vh"), width = 12, height = "60vh"),
+                      box(plotlyOutput("meta_results", height = "800px"), width = 12, height = "800px"),
                       
-                      box(plotlyOutput("hist_years", height = "60vh"), width = 12, height = "60vh"),
+                      box(plotlyOutput("hist_years", height = "400px"), width = 12, height = "400px"),
                       
                       conditionalPanel(condition = "input.wearable_type.indexOf('accelerometer') > -1",
-                        box(plotlyOutput("hist_axes", height = "60vh"), width = 12, height = "60vh")),
+                        box(plotlyOutput("hist_axes", height = "400px"), width = 12, height = "400px")),
                       
                     ) # end fluidRow
 
            ), #end tabPanel 1
            
            tabPanel("Papers",
-                    textInput("filename", "Input a name for the file", value = paste0("data-", Sys.Date(),".csv")),
-                    downloadButton("downloadData", "Download table", style="margin: 15px;"),
-                    dataTableOutput("table"),style = "height:800px; overflow-y: scroll;overflow-x: scroll;"
+                    dataTableOutput("table"),style = "overflow-x: scroll;"
                     
            ) #end tabPanel 2
     ) #end tabBox
@@ -231,104 +231,74 @@ ui <- dashboardPage(
 
 # Define server logic to display and download selected file ----
 server <- function(input, output) {
+  # Debounce checkboxGroupInput filter inputs so that multiple changes in selections are evaluated together
+  wearable_type <- reactive(input$wearable_type)
+  wearable_type_d <- wearable_type %>% debounce(1000)
   
-  # Table of selected dataset ----
-  output$table <- renderDataTable(escape=F, {
+  wearable_position <- reactive(input$wearable_position)
+  wearable_position_d <- wearable_position %>% debounce(1000)
+  
+  wearable_context <- reactive(input$wearable_context)
+  wearable_context_d <- wearable_context %>% debounce(1000)
+  
+  wearable_domain <- reactive(input$wearable_domain)
+  wearable_domain_d <- wearable_domain %>% debounce(1000)
+  
+  reported_results <- reactive(input$reported_results)
+  reported_results_d <- reported_results %>% debounce(1000)
+  
+  filtered_data <- reactive({
     data <- data_raw
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
+    data <- data[grepl(paste(wearable_type_d(), collapse="|"), data$sensors_type_plot), ]
+    data <- data[grepl(paste(wearable_position_d(), collapse="|"), data$Wearable), ]
+    data <- data[grepl(paste(wearable_context_d(), collapse="|"), data$Context), ]
     
     merged.df <- inner_join(data, data_metaplot, by=c("DOI"))
     
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
+    indices <- grep(paste(wearable_domain_d(), collapse="|"), merged.df$Domain1)
+    indices <- append(indices, grep(paste(wearable_domain_d(), collapse="|"), merged.df$Domain2))
+    indices <- append(indices, grep(paste(wearable_domain_d(), collapse="|"), merged.df$Domain3))
+    indices <- append(indices, grep(paste(wearable_domain_d(), collapse="|"), merged.df$Domain4))
     indices <- sort(unique(indices))
     
     merged.df <- merged.df[indices, ]
     
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-      merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                              merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-    } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-    }
-    
-    merged.df$DOI <- paste0("https://doi.org/", merged.df$DOI, sep='')
-    merged.df$First.author.and.year <- paste0("<a href='", merged.df$DOI,"' target='_blank'>", merged.df$First.author.and.year,"</a>")
-    
-    x <- names(merged.df)
-    col_to_select <- x[! x %in% c('Authors', 'Year', 'DOI', 'sensors_type_plot', 'axes', 'X')]
-    subset(merged.df, select=col_to_select)
-  })
-  
-  #Downloadable csv of selected dataset ----
-  output$downloadData <- downloadHandler(
-    
-    filename = function() {
-      input$filename
-    },
-    
-    content = function(file) {
-      
-      data <- data_raw
-      data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-      data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-      data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-      
-      merged.df <- inner_join(data, data_metaplot, by=c("DOI"))
-      
-      indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-      indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-      indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-      indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-      indices <- sort(unique(indices))
-      
-      merged.df <- merged.df[indices, ]
-      
-      if ("None" %in% input$reported_results){
-        results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-        merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                           merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-      } else {
-        merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-      }
-      
-      x <- names(data_raw)
-      col_to_select <- x[! x %in% c('sensors_type_plot', 'axes')]
-      sub_data <- subset(merged.df, select=col_to_select)
-      write.csv(sub_data, file, row.names = FALSE)
-      
-    }
-  )
-  
-  output$nb_papers <- renderValueBox({
-    
-    data <- data_raw
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-    
-    merged.df <- merge(data, data_metaplot, by=c("DOI"))
-    
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-    indices <- sort(unique(indices))
-    
-    merged.df <- merged.df[indices, ]
-    
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
+    if ("None" %in% reported_results_d()){
+      results_selected <- reported_results_d()[!reported_results_d() %in% c('None')]
       merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
                          merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
     } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
+      merged.df <- merged.df %>% filter_at(vars(reported_results_d()), any_vars(. %in% c('yes')))
     }
+    return(merged.df)
+  })
+  
+  filtered_data_combined_2020_2021 <- reactive({
+    data <- filtered_data()
+    data$Year[data$Year == 2020] <- "2020-2021*"
+    data$Year[data$Year == 2021] <- "2020-2021*"
+    return(data)
+  })
+  
+  # Table of selected dataset ----
+  output$table <- renderDataTable({
+    merged.df <- filtered_data()
+    
+    merged.df$DOI <- paste0("https://doi.org/", merged.df$DOI, sep='')
+    merged.df$`First author and year` <- paste0("<a href='", merged.df$DOI,"' target='_blank'>", merged.df$`First author and year`, "</a>")
+    
+    # Remove unnecessary columns
+    x <- names(merged.df)
+    col_to_select <- x[! x %in% c('Authors', 'Year', 'DOI', 'sensors_type_plot', 'axes', 'X', colnames(data_metaplot))]
+    datatable(subset(merged.df, select=col_to_select), escape=F, filter="top", extensions = 'Buttons', options = list(
+      dom = 'Bfrti',
+      buttons = c('copy', 'csv', 'excel', 'pdf', 'colvis'),
+      pageLength=1000)
+    )
+  })
+  
+  output$nb_papers <- renderValueBox({
+    merged.df = filtered_data()
     
     valueBox(paste0(dim(merged.df)[1], " papers"), 
              "meeting your input criteria", 
@@ -338,29 +308,7 @@ server <- function(input, output) {
   })
   
   output$nb_reallife <- renderValueBox({
-    
-    data <- data_raw
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-    
-    merged.df <- merge(data, data_metaplot, by=c("DOI"))
-    
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-    indices <- sort(unique(indices))
-    
-    merged.df <- merged.df[indices, ]
-    
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-      merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                         merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-    } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-    }
+    merged.df = filtered_data()
     
     nb_realsetting <- sum(merged.df$Context == 'real-life setting')
     
@@ -372,29 +320,7 @@ server <- function(input, output) {
   })
   
   output$nb_lab <- renderValueBox({
-    
-    data <- data_raw
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-    
-    merged.df <- merge(data, data_metaplot, by=c("DOI"))
-    
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-    indices <- sort(unique(indices))
-    
-    merged.df <- merged.df[indices, ]
-    
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-      merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                         merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-    } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-    }
+    merged.df = filtered_data()
     
     nb_lab <- sum(merged.df$Context == 'lab setting (controlled)')
     
@@ -406,29 +332,7 @@ server <- function(input, output) {
   })
   
   output$nb_mixed <- renderValueBox({
-    
-    data <- data_raw
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-    
-    merged.df <- merge(data, data_metaplot, by=c("DOI"))
-    
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-    indices <- sort(unique(indices))
-    
-    merged.df <- merged.df[indices, ]
-    
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-      merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                         merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-    } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-    }
+    merged.df = filtered_data()
     
     nb_mixed <- sum(merged.df$Context == 'both')
     
@@ -443,11 +347,11 @@ server <- function(input, output) {
     
     data_nb_wearable <- prepare_data_nb_wearable(data = data_raw,
                                                  data_metaplot = data_metaplot,
-                                                 wearable = input$wearable_type,
-                                                 position = input$wearable_position,
-                                                 context = input$wearable_context,
-                                                 domain = input$wearable_domain,
-                                                 results = input$reported_results)
+                                                 wearable = wearable_type_d(),
+                                                 position = wearable_position_d(),
+                                                 context = wearable_context_d(),
+                                                 domain = wearable_domain_d(),
+                                                 results = reported_results_d())
     
     colorsv = c("#1F78B4", "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#FFFF99")
     plot <- plot_ly(
@@ -475,33 +379,7 @@ server <- function(input, output) {
   })
   
   output$hist_axes <- renderPlotly({
-    
-    data <- data_raw
-    data$Year[data$Year == 2020] <- "2020-2021*"
-    data$Year[data$Year == 2021] <- "2020-2021*"
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-    
-    merged.df <- merge(data, data_metaplot, by=c("DOI"))
-    
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-    indices <- sort(unique(indices))
-    
-    merged.df <- merged.df[indices, ]
-    
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-      merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                         merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-    } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-    }
-    
-    data <- merged.df
+    data = filtered_data_combined_2020_2021()
     
     accelerometer_data_axis <- data %>%
       group_by(Year) %>% 
@@ -541,7 +419,7 @@ server <- function(input, output) {
       color=c('FFFF99')) %>%
       add_trace(y=~`number.2`, name = 'biaxial', color=c('#A6CEE3')) %>%
       add_trace(y=~`number.1`, name = 'uniaxial', color=c('#1F78B4')) %>%
-      layout(title = list(text = '<b>Number of accelerometer classified by the number of axes, per year of publication of the study<b>', font = list(size = 14)),
+      layout(title = list(text = '<b>Number of accelerometers classified by the number of axes, per year of publication of the study<b>', font = list(size = 14)),
         yaxis = list(title = 'Number of accelerometers'), 
              xaxis = list(title = 'Year of publication'),
              barmode = 'stack')
@@ -550,54 +428,30 @@ server <- function(input, output) {
   })
   
   output$meta_results <- renderPlotly({
-    
-    data <- data_raw
-    data$Year[data$Year == 2020] <- "2020-2021*"
-    data$Year[data$Year == 2021] <- "2020-2021*"
-    data <- data[grepl(paste(input$wearable_type, collapse="|"), data$sensors_type_plot), ]
-    data <- data[grepl(paste(input$wearable_position, collapse="|"), data$Wearable), ]
-    data <- data[grepl(paste(input$wearable_context, collapse="|"), data$Context), ]
-    
-    merged.df <- merge(data, data_metaplot, by=c("DOI"))
-    
-    indices <- grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain1)
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain2))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain3))
-    indices <- append(indices, grep(paste(input$wearable_domain, collapse="|"), merged.df$Domain4))
-    indices <- sort(unique(indices))
-    
-    merged.df <- merged.df[indices, ]
-    
-    if ("None" %in% input$reported_results){
-      results_selected <- input$reported_results[!input$reported_results %in% c('None')]
-      merged.df <- rbind(merged.df %>% filter_at(vars(results_selected), any_vars(. %in% c('yes'))),
-                         merged.df %>% filter_at(vars(result_columns), all_vars(. %in% c('no'))))
-    } else {
-      merged.df <- merged.df %>% filter_at(vars(input$reported_results), any_vars(. %in% c('yes')))
-    }
+    merged.df = filtered_data()
     
     columns = c(
       "Correlation...association.with.clinical.MS.severity.scores..cross.sectional...e.g..EDSS..PDDS",
       "Correlation...association.with.other.measure..cross.sectional.",
+      "Test.retest.reliability",
       "Group.differences..MS.vs.HC.",
       "Group.differences..MS.vs.MS.",
       "Group.differences..MS.vs.other.diseases.",
-      "Test.retest.reliability",
       "Responsiveness.to.change",
       "Responsiveness.to.intervention..controlled.study.",
       "Content.validity..meaningfulness.to.patients."
     )
     
     columns_names = c(
-      "Correlation / association with clinical MS severity scores (cross-sectional), e.g. EDSS, PDDS",
-      "Correlation / association with other measure (cross-sectional)",
-      "Group differences\n(MS vs HC)",
-      "Group differences\n(MS vs MS)",
-      "Group differences (MS vs other diseases)",
-      "Test-retest\nreliability",
-      "Responsiveness\nto change",
-      "Responsiveness\nto intervention\n (controlled study)",
-      "Content validity (meaningfulness to patients)"
+      "Association with \n clinical severity score",
+      "Association with \n other measure",
+      "Test-retest \n reliability",
+      "Group differences \n (MS vs HC)",
+      "Group differences \n (MS vs MS)",
+      "Group differences \n (MS vs other diseases)",
+      "Responsiveness to \n change",
+      "Responsiveness to \n intervention (controlled study)",
+      "Content validity \n (meaningfulness to patients)"
     )
     
     domains = c("RW: Actigraphy", "RW: Qualitative gait", "RW: Dexterity/Tremor", "RW: Other", "Lab: Actigraphy", "Lab: Qualitative gait", "Lab: Balance", "Lab: Dexterity/Tremor")
@@ -624,18 +478,17 @@ server <- function(input, output) {
     plot_data$domain = factor(plot_data$domain, levels=rev(domains))
     plot_data$effect = factor(plot_data$effect, levels=effects, labels=c("significance not tested", "non-significant", "some significant", "significant"))
     
-    plot_data_sub = plot_data[plot_data$column %in% c(columns[1:4], columns[6:8]),]
-    plot_data_sub$column = factor(plot_data_sub$column, levels=columns, labels=c("Association with\nclinical severity score", "Association with\nother measure", columns_names[3:9]))
+    plot_data_sub = plot_data#[plot_data$column %in% c(columns[1:4], columns[6:8]),]
+    plot_data_sub$column = factor(plot_data_sub$column, levels=columns, labels=columns_names)
     
     plot <- ggplot(plot_data_sub, aes(domain, count, fill=effect, label=count)) + 
       geom_bar(stat="identity", position=position_stack(reverse=T)) + 
       geom_text(data=plot_data_sub[plot_data_sub$count>0,], size = 3, position=position_stack(vjust=0.5, reverse=T)) + #, aes(color = effect), show.legend = FALSE) +
       #scale_color_manual(values = c("black", "black", "black", "white")) + 
-      facet_wrap(facets=vars(column), scales="free_x", nrow=2, drop=T) +
+      facet_wrap(facets=vars(column), scales="free_x", nrow=3, ncol=3, drop=FALSE) +
       theme_pubclean() + xlab(NULL) + ylab(NULL) + coord_flip() + scale_fill_manual(values=c("#d9d9d9", "#fdbf6f", "#96c3dc", "#1b63a5")) +
       theme(panel.grid.major.x=element_line(size=.1, linetype=2, color="black"), 
             panel.grid.major.y=element_blank(),
-            panel.spacing.y = unit(2, "lines"),
             legend.title = element_blank())
     
     ggplotly(plot) %>%
