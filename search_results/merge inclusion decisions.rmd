@@ -1,0 +1,154 @@
+---
+title: "Merge"
+output: html_notebook
+---
+
+# 21-03-31 Merge YN & CJ
+
+Out of 959: 165 included, 657 excluded, 137 undecided
+
+```{r}
+# Load
+screened = read.csv("search_results/21-03-19 merged 959.csv", stringsAsFactors = F)
+colnames(screened)[8] = "ID"
+yvonne = read.csv2("21-03-22 selection YN.csv", stringsAsFactors = F)
+
+# Yvonne didn't change order but some special characters are broken
+#table(yvonne$Title == screened$Title)
+#View(cbind(yvonne$Title[yvonne$Title != screened$Title], screened$Title[screened$Title != yvonne$Title ]))
+
+table(yvonne$included == "Yes", yvonne$excluded.reason == "")
+#View(yvonne[yvonne$included == "Yes" & yvonne$excluded.reason != "",])
+#yvonne[132, "excluded.reason"] = ""
+#View(yvonne[yvonne$included == "No" & yvonne$excluded.reason == "",])
+
+catherine = read.csv2("21-03-22 selection CJ.csv", stringsAsFactors = F)
+
+# Catherine changed the order
+table(catherine$Title == screened$Title)
+
+table(catherine$included == "yes", catherine$excluded == "")
+#View(catherine[catherine$included == "yes" & catherine$excluded != "",])
+#View(catherine[catherine$included == "no" & catherine$excluded == "",])
+
+
+# Merge (CJ has changed order of original table, so a merge on certain columns is necessary)
+yvonne = yvonne[order(yvonne$Publication.Year, yvonne$Title, yvonne$Abstract, yvonne$DOI),]
+rownames(yvonne) = NULL
+catherine = catherine[order(catherine$Publication.Year, catherine$Title, catherine$Abstract, catherine$DOI),]
+rownames(catherine) = NULL
+
+all.equal(yvonne[,1:9], catherine[,1:9]) # yes, just some special symbols in an abstract are formatted differently
+#View(cbind(yvonne=yvonne$Abstract, catherine=catherine$Abstract)[!is.na(yvonne$Abstract) & yvonne$Abstract!=catherine$Abstract,])
+
+
+# Compare
+table(yvonne=yvonne$included, catherine=catherine$included)
+
+merged = cbind(screened[,1:9], yvonne[,c(10:11,16)], catherine_included=catherine$included, catherine_excluded=catherine$excluded, catherine_comment=catherine$comment, both_yes=yvonne$included=='Yes' & catherine$included=='yes', both_no=yvonne$included=='No' & catherine$included=='no')
+colnames(merged)[10:12] = c("yvonne_included", "yvonne_excluded", "yvonne_comments")
+
+included = merged[merged$both_yes,1:15]
+
+#write.csv2(merged[!(merged$both_yes | merged$both_no),], "21-04-07 YN CJ conflicts.csv")
+```
+
+## Agreement YN & CJ
+
+```{r}
+library(DescTools)
+
+yvonne_in = merged$yvonne_included != "No"
+catherine_in = merged$catherine_included != "no" # better to use double negation because of one "not sure" result
+
+ratertab = xtabs(~ yvonne_in + catherine_in)
+
+CohenKappa(ratertab, conf.level=0.95)
+
+mean(yvonne_in == catherine_in)
+```
+
+## Reasons for exclusion
+
+YN's reasons for exclusion of the 657 items excluded by both YN & CJ
+
+```{r}
+table(merged[merged$yvonne_included == "No" & merged$catherine_included == "no", "yvonne_excluded"])
+```
+
+# 21-05-05 Merge JL & TW
+
+Out of the 137 undecided: 58 included, 44 excluded, 35 undecided 
+
+```{r}
+johannes = read.csv("21-04-07 YN CJ conflicts JL.csv", stringsAsFactors = F, row.names = 1)
+table(johannes$In.ex)
+
+tim = read.csv("21-04-07 YN CJ conflicts TW.csv", stringsAsFactors = F, row.names = 1)
+table(tim$tim)
+
+all.equal(johannes[1], tim[1])
+
+#table(JL=johannes$In.ex, TW=tim$tim)
+#table(JL_in=johannes$In.ex == "Included", TW_in=tim$tim=="included")
+
+merged = cbind(johannes, tim_included=tim$tim, tim_comment=tim$tim_comment, JL_TW_both_yes=johannes$In.ex == "Included" & tim$tim == 'included', JL_TW_both_no=johannes$In.ex != 'Included' & tim$tim != 'included')
+colnames(merged)[16:17] = c("johannes_included", "johannes_comment")
+
+#write.csv2(merged[!(merged$JL_TW_both_yes | merged$JL_TW_both_no), 1:19], "21-05-05 JL TW conflicts.csv")
+
+included = rbind(cbind(included, johannes_included=NA,johannes_comment=NA,tim_included=NA,tim_comment=NA), merged[merged$JL_TW_both_yes, 1:19])
+```
+
+## Agreement JL & TW
+
+```{r}
+tim_in = tim$tim == "included"
+johannes_in = johannes$In.ex == "Included"
+
+ratertab = xtabs(~ tim_in + johannes_in)
+
+ratertab
+
+CohenKappa(ratertab, conf.level=0.95)
+
+mean(tim_in == johannes_in)
+```
+
+## Reasons for exclusion
+
+JL's reasons for exclusion of the 44 items excluded by both JL & TW
+
+```{r}
+table(merged$johannes_included)
+table(merged[merged$tim_included != "included" & merged$johannes_included != "Included", "johannes_included"])
+```
+
+# Merge all included in phase 1
+
+Out of the 35 undecided (2vs2 tie): 26 included, 9 excluded as per team decision
+
+```{r}
+team_decision = read.csv("21-05-05 JL TW conflicts team decision.csv", stringsAsFactors = F, row.names = 1)
+table(team_decision$team_decision)
+
+included = rbind(cbind(included, team_decision=NA, team_reason=NA), team_decision[team_decision$team_decision == "in",])
+included = included[order(as.integer(rownames(included))),]
+
+#write.csv2(included, "21-05-05 selection 249.csv", fileEncoding="UTF-8")
+```
+
+## Reasons for exclusion
+
+Team's reason for exclusion of the 9 items excluded by team decision
+
+```{r}
+table(team_decision[team_decision$team_decision == "ex", "team_reason"])
+```
+
+Total reasons for exclusion based on abstract step (sums to 710):
+Duplicate 14
+Abstract only 54
+Letter with insufficient data 5
+Review / Meta-Analysis 73
+Out of Scope (including animal studies) 564

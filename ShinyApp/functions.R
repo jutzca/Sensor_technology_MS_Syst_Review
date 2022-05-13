@@ -86,8 +86,8 @@ prepare_data_nb_wearable <- function(data, data_metaplot, wearable, position, co
                                   "magnetometer" = 'total_magnetometer')
   }
   
-  # Count all appearances of smartphone/touchscreen per year
-  if ('smartphone/touchscreen' %in% wearable){
+  # Count all appearances of smartphone touchscreen per year
+  if ('smartphone touchscreen' %in% wearable){
     touchscreen_data <- merged.df %>%
       group_by(Year) %>% 
       filter(grepl("touchscreen",sensors_type_plot)) %>% 
@@ -99,7 +99,7 @@ prepare_data_nb_wearable <- function(data, data_metaplot, wearable, position, co
                                   touchscreen_data2[c('Year', 'total_touchscreen')], 
                                   by="Year", all = T)
     counts_combined_fig2 = rename(counts_combined_fig2, 
-                                  "smartphone/touchscreen" = 'total_touchscreen')
+                                  "smartphone touchscreen" = 'total_touchscreen')
   }
   
   # Count all appearances of other wearables used per year
@@ -122,7 +122,7 @@ prepare_data_nb_wearable <- function(data, data_metaplot, wearable, position, co
   
   # Harmonise column names
   #colnames(counts_combined_fig2) <- c("year", "accelerometer", "gyroscope", 
-  #                                    'magnetometer', 'smartphone/touchscreen', 
+  #                                    'magnetometer', 'smartphone touchscreen', 
   #                                    'others')
   
   counts_combined_fig2 = rename(counts_combined_fig2, 'year' = "Year")

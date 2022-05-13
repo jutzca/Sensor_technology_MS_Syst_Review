@@ -703,7 +703,7 @@ age: 39.9 (10.5)","Smartphone
 Type of sensor: touchscreen
 Number of axes: NA
 Number of wearables: 1
-Primary position: hand",real-life setting,12 months,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,smartphone/touchscreen,NA
+Primary position: hand",real-life setting,12 months,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,smartphone touchscreen,NA
 "Sandroff B.M., Motl R.W., Sosnoff J.J., Pula J.H.",2015,"Sandroff et al, 2015",Further validation of the Six-Spot Step Test as a measure of ambulation in multiple sclerosis,10.1016/J.GAITPOST.2014.10.011,96 (80.2),52.7 (11.1),"RR: n=79,
 P: n=13,
 not reported: n=4","EDSS: 4.5 (median), range: 2-6.5, 
@@ -1169,7 +1169,7 @@ age: not reported","Google Pixel XL 2017
 Type of sensor: touchscreen
 Number of axes: NA
 Number of wearables: 1
-Primary position: hand",both,,yes,yes,yes,yes,yes,yes,yes,no,no,smartphone/touchscreen,NA
+Primary position: hand",both,,yes,yes,yes,yes,yes,yes,yes,no,no,smartphone touchscreen,NA
 "Carpinella I., Gervasoni E., Anastasi D., Lencioni T., Cattaneo D., Ferrarin M.",2018,"Carpinella et al, 2018","Instrumental Assessment of Stair Ascent in People with Multiple Sclerosis, Stroke, and Parkinson's Disease: A Wearable-Sensor-Based Approach",10.1109/TNSRE.2018.2881324,10 (60.0),51 [35-66],not reported,not reported,8.5 [7-17],not reported,not reported,"mixed 
 healthy: n=20 (50%, female), age: 57 (mean), range: 51-7;
 stroke: n=10 (60% female), age:  59 (mean), range: 47-70;
@@ -1500,7 +1500,7 @@ age: 42.4 (mean), range: 20-58","iPhone X smartphone
 Type of sensor: touchscreen
 Number of axes: NA
 Number of wearables: 1
-Primary position: hand",lab setting (controlled),not reported,yes,applies partially,yes,yes,yes,applies partially,applies partially,no,yes,smartphone/touchscreen,NA
+Primary position: hand",lab setting (controlled),not reported,yes,applies partially,yes,yes,yes,applies partially,applies partially,no,yes,smartphone touchscreen,NA
 "Pau M., Porta M., Coghe G., Frau J., Lorefice L., Cocco E.",2020,"Pau et al, 2020",Does multiple sclerosis differently impact physical activity in women and man? A quantitative study based on wearable accelerometers,10.3390/IJERPH17238848,45 (51.1),"sex:
 women: 49.4 (9.0), 
 men: 51.2 (11.8)","RR: n=30,
@@ -1520,7 +1520,7 @@ age: not reported","Smartphone
 Type of sensor: touchscreen
 Number of axes: NA
 Number of wearables: 1
-Primary position: hand",real-life setting,12 months,yes,yes,no,no,yes,yes,yes,no,yes,smartphone/touchscreen,NA
+Primary position: hand",real-life setting,12 months,yes,yes,no,no,yes,yes,yes,no,yes,smartphone touchscreen,NA
 "Pratap A., Grant D., Vegesna A., Tummalacherla M., Cohan S., Deshpande C., Mangravite L., Omberg L.",2020,"Pratap et al, 2020","Evaluating the Utility of Smartphone-Based Sensor Assessments in Persons With Multiple Sclerosis in the Real-World Using an App (elevateMS): Observational, Prospective Pilot Digital Health Study",10.2196/22108,495 (46.9),"MS diagnosis:
 self-referred: 45.2 (11.6),
 clinic-referred: 48.93 (11.20)","RR: n=423,
@@ -1680,7 +1680,7 @@ age: 45.2 (13.5)","BYOD (smartphone)
 Type of sensor: touchscreen
 Number of axes: NA
 Number of wearables: 1
-Primary position: hand",real-life setting,2 weeks,yes,yes,yes,yes,yes,yes,yes,no,yes,smartphone/touchscreen,NA
+Primary position: hand",real-life setting,2 weeks,yes,yes,yes,yes,yes,yes,yes,no,yes,smartphone touchscreen,NA
 "Brull A., Zubizarreta A., Cabanes I., Rodriguez-Larrad A.",2020,"Brull et al, 2020",Sensorized Tip for Monitoring People with Multiple Sclerosis that Require Assistive Devices for Walking,10.3390/S20154329,3 (not reported),not reported,not reported,"EDS: 6.5 (median), range: 4.5-7.5",not reported,not reported,not reported,none,"XSens IMU, C9C force sensor, BMP280 barometer
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
@@ -1709,7 +1709,7 @@ age: not reported","Samsung Galaxy S7
 Type of sensor: touchscreen
 Number of axes: NA
 Number of wearables: 1
-Primary position: hand",real-life setting,24 weeks,yes,yes,yes,yes,applies partially,yes,yes,no,yes,smartphone/touchscreen,NA
+Primary position: hand",real-life setting,24 weeks,yes,yes,yes,yes,applies partially,yes,yes,no,yes,smartphone touchscreen,NA
 "Huang S.-C., Dalla Costa G., Pisa M., Gregoris L., Leccabue G., Congiu M., Comi G., Leocani L.",2020,"Huang et al, 2020",The Danger of Walking with Socks: Evidence from Kinematic Analysis in People with Progressive Multiple Sclerosis,10.3390/S20216160,40 (50.0),50.9 (9.8),P: n=40,EDSS: 5.5 (1.1),not reported,not reported,not reported,"healthy 
 n=15 (60% female)
 age: 52.7 (4.4)","G-Walk

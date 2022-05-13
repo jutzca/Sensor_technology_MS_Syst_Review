@@ -43,13 +43,13 @@ ui <- dashboardPage(
                                       choices = list("accelerometer", 
                                                      "gyroscope", 
                                                      "magnetometer",
-                                                     "smartphone/touchscreen",
+                                                     "smartphone touchscreen",
                                                      'others',
                                                      'not reported'),
                                       selected = c("accelerometer", 
                                                       "gyroscope", 
                                                       "magnetometer",
-                                                      "smartphone/touchscreen",
+                                                      "smartphone touchscreen",
                                                       'others', 'not reported')),
                    
                    div(style="text-align:center",em("Others: electrocardiogram (ECG), global ", "positioning system (GPS), surface electromyography (sEMG)")),
@@ -105,6 +105,9 @@ ui <- dashboardPage(
     tags$head(tags$style(HTML(' /* fix background-color of wrapper (is black otherwise for some reason) */
                                 .skin-blue .wrapper {
                                 background-color: #ecf0f5;
+                                }
+                                p {
+                                margin: 10px
                                 }
                                 /* logo */
                                 .skin-blue .main-header .logo {
@@ -215,6 +218,9 @@ ui <- dashboardPage(
                       
                       conditionalPanel(condition = "input.wearable_type.indexOf('accelerometer') > -1",
                         box(plotlyOutput("hist_axes", height = "400px"), width = 12, height = "400px")),
+                      
+                      p("* 2020-2021 contains papers published from January 2020 to March 2021, when the literature search was performed"),
+                      p("** Publications using multiple types of sensors count multiple times")
                       
                     ) # end fluidRow
 
@@ -363,7 +369,7 @@ server <- function(input, output) {
       color = colorsv[2],
       colors = colorRamp(colorsv)) %>%
       layout(title = list(text = '<b>Number of publications published per year, per type of sensor used<b>', font = list(size = 14)),
-             yaxis = list(title = 'Number of wearables'), 
+             yaxis = list(title = 'Number of publications per sensor type**'), 
              xaxis = list(title = 'Year of publication'),
              barmode = 'stack')
     
@@ -420,9 +426,9 @@ server <- function(input, output) {
       add_trace(y=~`number.2`, name = 'biaxial', color=c('#A6CEE3')) %>%
       add_trace(y=~`number.1`, name = 'uniaxial', color=c('#1F78B4')) %>%
       layout(title = list(text = '<b>Number of accelerometers classified by the number of axes, per year of publication of the study<b>', font = list(size = 14)),
-        yaxis = list(title = 'Number of accelerometers'), 
-             xaxis = list(title = 'Year of publication'),
-             barmode = 'stack')
+        yaxis = list(title = 'Number of publications per accelerometer type**'), 
+        xaxis = list(title = 'Year of publication'),
+        barmode = 'stack')
 
     
   })
