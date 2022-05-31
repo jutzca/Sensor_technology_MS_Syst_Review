@@ -585,18 +585,6 @@ server <- function(input, output) {
   output$meta_results <- renderPlotly({
     merged.df = filtered_data()
     
-    columns_names = c(
-      "Association with \n clinical severity score",
-      "Association with \n other measure",
-      "Test-retest \n reliability",
-      "Group differences \n (MS vs HC)",
-      "Group differences \n (MS vs MS)",
-      "Group differences \n (MS vs other diseases)",
-      "Responsiveness to \n change",
-      "Responsiveness to \n intervention (controlled study)",
-      "Content validity \n (meaningfulness to patients)"
-    )
-    
     domains = c("RW: Physical activity", "RW: Gait", "RW: Balance", "RW: Dexterity/Tremor", "Lab: Physical activity", "Lab: Gait", "Lab: Balance", "Lab: Dexterity/Tremor")
     effects = c("not-tested", "non-significant", "mixed", "significant")
     
