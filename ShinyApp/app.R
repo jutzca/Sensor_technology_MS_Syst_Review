@@ -107,7 +107,7 @@ ui <- dashboardPage(
                                       selected = sensor_types),
                    
                    div(style="text-align:center",em("Others: electrocardiogram (ECG), global ", "positioning system (GPS), surface electromyography (sEMG),", "portable metabolic system (VO2)")),
-
+                   
                    # Input: Choose position of wearable ----
                    checkboxGroupInput("wearable_position", label = "Choose a position of interest for the sensor:",
                                       choices = wearable_positions,
@@ -247,13 +247,13 @@ ui <- dashboardPage(
                       box(plotlyOutput("hist_years", height = "400px"), width = 12, height = "400px"),
                       
                       conditionalPanel(condition = "input.sensor_type.indexOf('accelerometer') > -1",
-                        box(plotlyOutput("hist_axes", height = "400px"), width = 12, height = "400px")),
+                                       box(plotlyOutput("hist_axes", height = "400px"), width = 12, height = "400px")),
                       
                       p("* 2020-2021 contains papers published from January 2020 to March 2021, when the literature search was performed"),
                       p("** Publications using multiple types of sensors count multiple times")
                       
                     ) # end fluidRow
-
+                    
            ), #end tabPanel 1
            
            tabPanel("Papers",
@@ -406,7 +406,7 @@ server <- function(input, output) {
                                       mechanical_pedometer_data2[c('Year', 'total_mechanical_pedometer')], 
                                       by="Year", all = T)
         counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "mechanical_pedometer" = 'total_mechanical_pedometer')
+                                      "mechanical pedometer" = 'total_mechanical_pedometer')
       }
       
       if ('accelerometer' %in% wearable){
@@ -508,7 +508,7 @@ server <- function(input, output) {
                                                  domain = wearable_domain_d(),
                                                  results = reported_results_d())
     
-    colorsv = c("#1F78B4", "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#FFFF99")
+    colorsv = c("#1F78B4", "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#FFFF99", 'black')
     plot <- plot_ly(
       data = data_nb_wearable,
       x = ~year,
@@ -530,7 +530,7 @@ server <- function(input, output) {
       count = count + 1
     }
     plot
-
+    
   })
   
   output$hist_axes <- renderPlotly({
@@ -563,22 +563,22 @@ server <- function(input, output) {
     if (!('number.3' %in% names(test))){
       test['number.3'] <- NA
     }
-          
+    
     plot_ly(
       data = test,
       x = ~year,
       y = ~`number.3`,
       type = 'bar',
       name = 'triaxial',
-      colors = colorRamp(c("#A6CEE3", "#FFFF99", "#1F78B4")),
-      color=c('FFFF99')) %>%
+      colors = colorRamp(c("#A6CEE3", "#FDBF6F", "#1F78B4")),
+      color=c('#FDBF6F')) %>%
       add_trace(y=~`number.2`, name = 'biaxial', color=c('#A6CEE3')) %>%
       add_trace(y=~`number.1`, name = 'uniaxial', color=c('#1F78B4')) %>%
       layout(title = list(text = '<b>Number of publications published per year, per accelerometer type (number of axes)<b>', font = list(size = 14)),
-        yaxis = list(title = 'Number of publications per accelerometer type'), 
-        xaxis = list(title = 'Year of publication'),
-        barmode = 'stack')
-
+             yaxis = list(title = 'Number of publications per accelerometer type'), 
+             xaxis = list(title = 'Year of publication'),
+             barmode = 'stack')
+    
     
   })
   
@@ -632,7 +632,7 @@ server <- function(input, output) {
       #facet_strip_bigger() %>%
       layout(title = list(text = '<b>Results reported by domain and context studied<b>', font = list(size = 14), y=.95),
              margin = list(l = 75, t = 100))
-      
+    
   })
   
 }
