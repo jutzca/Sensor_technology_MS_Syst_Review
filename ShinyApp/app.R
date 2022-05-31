@@ -279,7 +279,12 @@ wearable_context_d = function() input$wearable_context
 wearable_domain_d = function() input$wearable_domain
 reported_results_d = function() input$reported_results
 
-filtered_data_combined_2020_2021 = function() data_raw
+filtered_data = function() inner_join(data_raw, data_metaplot, by=c("DOI"))
+filtered_data_combined_2020_2021 = function() {
+  data = filtered_data()
+  data$Year[data$Year %in% c(2020, 2021)] <- "2020-2021*"
+  return(data)
+}
 
 # Define server logic to display and download selected file ----
 server <- function(input, output) {
@@ -315,8 +320,7 @@ server <- function(input, output) {
   
   filtered_data_combined_2020_2021 <- reactive({
     data <- filtered_data()
-    data$Year[data$Year == 2020] <- "2020-2021*"
-    data$Year[data$Year == 2021] <- "2020-2021*"
+    data$Year[data$Year %in% c(2020, 2021)] <- "2020-2021*"
     return(data)
   })
   
@@ -525,7 +529,7 @@ server <- function(input, output) {
                                  color = colorsv[count])
       count = count + 1
     }
-     plot
+    plot
 
   })
   
@@ -593,7 +597,7 @@ server <- function(input, output) {
       "Content validity \n (meaningfulness to patients)"
     )
     
-    domains = c("RW: Physical activity", "RW: Gait", "RW: Dexterity/Tremor", "Lab: Physical activity", "Lab: Gait", "Lab: Balance", "Lab: Dexterity/Tremor")
+    domains = c("RW: Physical activity", "RW: Gait", "RW: Balance", "RW: Dexterity/Tremor", "Lab: Physical activity", "Lab: Gait", "Lab: Balance", "Lab: Dexterity/Tremor")
     effects = c("not-tested", "non-significant", "mixed", "significant")
     
     plot_data = data.frame()
@@ -626,9 +630,15 @@ server <- function(input, output) {
       #scale_color_manual(values = c("black", "black", "black", "white")) + 
       facet_wrap(facets=vars(column), scales="free_x", nrow=3, ncol=3, drop=FALSE) +
       theme_pubclean() + xlab(NULL) + ylab(NULL) + coord_flip() + scale_fill_manual(values=c("#d9d9d9", "#fdbf6f", "#96c3dc", "#1b63a5")) +
+      #https://stackoverflow.com/questions/15622001/how-to-display-only-integer-values-on-an-axis-using-ggplot2
+      scale_y_continuous(breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1))))) +
       theme(panel.grid.major.x=element_line(size=.1, linetype=2, color="black"), 
             panel.grid.major.y=element_blank(),
             legend.title = element_blank())
+    
+    #pdf("../Figure 3.pdf", width=8, height=8)
+    #plot
+    #dev.off()
     
     ggplotly(plot) %>%
       #facet_strip_bigger() %>%
