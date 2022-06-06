@@ -333,8 +333,13 @@ server <- function(input, output) {
     
     # Remove unnecessary columns
     x <- names(merged.df)
-    col_to_select <- x[! x %in% c('Authors', 'DOI', 'sensors_type_plot', 'axes', 'X', colnames(data_metaplot))]
-    datatable(subset(merged.df, select=col_to_select), escape=F, filter="top", extensions = 'Buttons', options = list(
+    col_to_select <- x[! x %in% c('Authors', 'DOI', 'sensors_type_plot', 'axes', 
+                                  'X', 'Domain1', 'Domain2', 'Domain3', 'Domain4')]
+    
+    df_sub <- subset(merged.df, select=col_to_select)
+    df_sub$Wearable <- gsub(pattern = "\n", replacement = "<br/>", x = df_sub$Wearable)
+    
+    datatable(df_sub, rownames = FALSE, escape=F, filter="top", extensions = 'Buttons', options = list(
       dom = 'Bfrti',
       buttons = c('copy', 'csv', 'excel', 'pdf', 'colvis'),
       pageLength=1000)
