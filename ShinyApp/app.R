@@ -556,7 +556,7 @@ server <- function(input, output) {
     
     accelerometer_data_axis <- aggregate(. ~ Year, data=accelerometer_data_axis, FUN=sum)
     
-    data_all_axis <- melt(accelerometer_data_axis,
+    data_all_axis <- melt(setDT(accelerometer_data_axis),
                        id.vars = c("Year"))
     
     # Harmonise column names
