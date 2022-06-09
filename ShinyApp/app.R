@@ -8,6 +8,7 @@ library(data.table)
 library(tidyverse)
 library(readr)
 library(ggpubr)
+library(stringr)
 
 data <- read.csv('extracted_data.csv', check.names=F)
 data_raw <- data[c('Authors','Year','First author and year','Title','DOI','Number (% female)','Age','Type of MS','Severity','Duration of disease in years','Treatments','Comorbidities','Comparator population, number (number of females)','Wearable','Context','Duration wearable was worn','Does the study have a clearly defined research objective (including an outcome)?','Does the study adequately describe the inclusion/exclusion criteria?','Does the study report on the population parameters/demographics (at least age, sex)?','Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?','Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?','Does the study apply proper statistical analysis? Correction for multiple comparisons?','Does the study adequately report the strength of the results (e.g., ways of calculating effect sizes, reporting confidence intervals/standard deviation?','Does the study make the data and/or code publicly available?','Do the authors report on the limitations of their study?','sensors_type_plot','axes')]
