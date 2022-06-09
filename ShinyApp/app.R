@@ -106,7 +106,12 @@ ui <- dashboardPage(
                                       choices = sensor_types,
                                       selected = sensor_types),
                    
-                   div(style="text-align:center",em("Others: electrocardiogram (ECG), global ", "positioning system (GPS), surface electromyography (sEMG),", "portable metabolic system (VO2)")),
+                   div(style="text-align:center",em("Others: electrocardiogram (ECG), global ", 
+                                                    "positioning system (GPS), surface electromyography (sEMG),", 
+                                                    "portable metabolic system (VO2), thermometer,",
+                                                    "galvanic skin response, photoplethysmography,",
+                                                    "skin impedance, light exposure, air pressure,",
+                                                    "force sensor, barometer")),
                    
                    # Input: Choose position of wearable ----
                    checkboxGroupInput("wearable_position", label = "Choose a position of interest for the sensor:",
@@ -250,7 +255,8 @@ ui <- dashboardPage(
                                        box(plotlyOutput("hist_axes", height = "400px"), width = 12, height = "400px")),
                       
                       p("* 2020-2021 contains papers published from January 2020 to March 2021, when the literature search was performed"),
-                      p("** Publications using multiple types of sensors count multiple times")
+                      p("** Publications using multiple types of sensors count multiple times"),
+                      p("*** Publications using multiple accelerometers count multiple times")
                       
                     ) # end fluidRow
                     
@@ -399,21 +405,6 @@ server <- function(input, output) {
       
       counts_combined_fig2=data.frame(Year=unique(merged.df$Year))
       
-      if ('mechanical pedometer' %in% wearable){
-        mechanical_pedometer_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("mechanical pedometer", sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        mechanical_pedometer_data2 <- mechanical_pedometer_data %>% mutate(total_mechanical_pedometer = sum(c_across(contains("mechanical pedometer"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      mechanical_pedometer_data2[c('Year', 'total_mechanical_pedometer')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "mechanical pedometer" = 'total_mechanical_pedometer')
-      }
-      
       if ('accelerometer' %in% wearable){
         accelerometer_data <- merged.df %>%
           group_by(Year) %>% 
@@ -477,6 +468,21 @@ server <- function(input, output) {
                                       "touchscreen" = 'total_touchscreen')
       }
       
+      if ('mechanical pedometer' %in% wearable){
+        mechanical_pedometer_data <- merged.df %>%
+          group_by(Year) %>% 
+          filter(grepl("mechanical pedometer", sensors_type_plot)) %>% 
+          count(Year, sensors_type_plot) %>% 
+          spread(sensors_type_plot, n, fill = 0) 
+        mechanical_pedometer_data2 <- mechanical_pedometer_data %>% mutate(total_mechanical_pedometer = sum(c_across(contains("mechanical pedometer"))))
+        
+        counts_combined_fig2 <- merge(counts_combined_fig2, 
+                                      mechanical_pedometer_data2[c('Year', 'total_mechanical_pedometer')], 
+                                      by="Year", all = T)
+        counts_combined_fig2 = rename(counts_combined_fig2, 
+                                      "mechanical pedometer" = 'total_mechanical_pedometer')
+      }
+      
       # Count all appearances of other wearables used per year
       if ("others" %in% wearable){
         others_data <- merged.df %>%
@@ -513,7 +519,7 @@ server <- function(input, output) {
                                                  domain = wearable_domain_d(),
                                                  results = reported_results_d())
     
-    colorsv = c("#1F78B4", "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#FFFF99", 'black')
+    colorsv = c("#1F78B4", "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#FFFF99", '#D9D9D9')
     plot <- plot_ly(
       data = data_nb_wearable,
       x = ~year,
@@ -542,16 +548,16 @@ server <- function(input, output) {
     data = filtered_data_combined_2020_2021()
     
     accelerometer_data_axis <- data %>%
-      group_by(Year) %>% 
-      filter(grepl("accelerometer", sensors_type_plot)) %>% 
-      count(Year, sensors_type_plot, axes) %>% 
-      spread(sensors_type_plot, n, fill = 0) 
-    accelerometer_data2_axis <- accelerometer_data_axis %>% 
-      group_by(Year, axes) %>%
-      mutate(total = sum(c_across(starts_with("accelerometer"))))
+      group_by(Year) %>%
+      summarise(`1` = str_count(Wearable, "Type of sensor: .*accelerometer.*\nNumber of axes: 1"),
+                `2` = str_count(Wearable, "Type of sensor: .*accelerometer.*\nNumber of axes: 2"),
+                `3` = str_count(Wearable, "Type of sensor: .*accelerometer.*\nNumber of axes: 3"))
     
-    # Subset the accelerometer_data2_axis table to only the total number per year
-    data_all_axis <- accelerometer_data2_axis[c('Year', 'axes', 'total')]
+    accelerometer_data_axis <- aggregate(. ~ Year, data=accelerometer_data_axis, FUN=sum)
+    
+    data_all_axis <- melt(accelerometer_data_axis,
+                       id.vars = c("Year"))
+    
     # Harmonise column names
     colnames(data_all_axis) <- c("year", "axis", "number")
     # Add a year with no wearable to create a space between 1997 and 2006
@@ -580,7 +586,7 @@ server <- function(input, output) {
       add_trace(y=~`number.2`, name = 'biaxial', color=c('#A6CEE3')) %>%
       add_trace(y=~`number.1`, name = 'uniaxial', color=c('#1F78B4')) %>%
       layout(title = list(text = '<b>Number of publications published per year, per accelerometer type (number of axes)<b>', font = list(size = 14)),
-             yaxis = list(title = 'Number of publications per accelerometer type'), 
+             yaxis = list(title = 'Number of publications per accelerometer type***'), 
              xaxis = list(title = 'Year of publication'),
              barmode = 'stack')
     
