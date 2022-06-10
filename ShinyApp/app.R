@@ -11,7 +11,7 @@ library(ggpubr)
 library(stringr)
 
 data <- read.csv('extracted_data.csv', check.names=F)
-data_raw <- data[c('Authors','Year','First author and year','Title','DOI','Number (% female)','Age','Type of MS','Severity','Duration of disease in years','Treatments','Comorbidities','Comparator population, number (number of females)','Wearable','Context','Duration wearable was worn','Does the study have a clearly defined research objective (including an outcome)?','Does the study adequately describe the inclusion/exclusion criteria?','Does the study report on the population parameters/demographics (at least age, sex)?','Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?','Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?','Does the study apply proper statistical analysis? Correction for multiple comparisons?','Does the study adequately report the strength of the results (e.g., ways of calculating effect sizes, reporting confidence intervals/standard deviation?','Does the study make the data and/or code publicly available?','Do the authors report on the limitations of their study?','sensors_type_plot','axes')]
+data_raw <- data[c('Authors','Year','First author and year','Title','DOI','Number (% female)','Age','Type of MS','Severity','Duration of disease in years','Treatments','Comorbidities','Comparator population, number (number of females)','Wearable','Context','Duration wearable was worn','Does the study report a clearly defined research objective (including an outcome)?','Does the study adequately describe the inclusion/exclusion criteria?','Does the study report on the population parameters/demographics (at least age, sex)?','Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?','Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?','Does the study report proper statistical analysis? Correction for multiple comparisons?','Does the study adequately report the strength of the results (e.g., ways of calculating effect sizes, reporting confidence intervals/standard deviation?','Does the study make the data and/or code publicly available?','Do the authors report on the limitations of their study?','sensors_type_plot')]
 
 sensor_types = c("accelerometer", "gyroscope", "magnetometer", "touchscreen", "mechanical pedometer", "others")
 wearable_positions = c("sternum", "upper back", "lower back", "waist",
@@ -107,19 +107,15 @@ ui <- dashboardPage(
                                       choices = sensor_types,
                                       selected = sensor_types),
                    
-                   div(style="text-align:center",em("Others: electrocardiogram (ECG), global ", 
-                                                    "positioning system (GPS), surface electromyography (sEMG),", 
-                                                    "portable metabolic system (VO2), thermometer,",
-                                                    "galvanic skin response, photoplethysmography,",
-                                                    "skin impedance, light exposure, air pressure,",
-                                                    "force sensor, barometer")),
+                   div(style="text-align:center", em("Others: electrocardiogram (ECG), global positioning system (GPS), surface electromyography (sEMG), 
+                                                     portable metabolic system (VO2), skin impedance, photoplethysmography (PPG), force sensor, barometer, thermometer, light exposure")),
                    
                    # Input: Choose position of wearable ----
                    checkboxGroupInput("wearable_position", label = "Choose a position of interest for the sensor:",
                                       choices = wearable_positions,
                                       selected = wearable_positions),
                    
-                   div(style="text-align:center",em('Others: head, pocket or bag, and tip of crutches.')),
+                   div(style="text-align:center",em('Others: head, pocket or bag, and tip of crutches')),
                    
                    # Input: Choose context of wearable ----
                    checkboxGroupInput("wearable_context", label = "Choose a context for usage of sensor:",
@@ -340,10 +336,9 @@ server <- function(input, output) {
     
     # Remove unnecessary columns
     x <- names(merged.df)
-    col_to_select <- x[! x %in% c('Authors', 'DOI', 'sensors_type_plot', 'axes', 
-                                  'X', 'Domain1', 'Domain2', 'Domain3', 'Domain4')]
+    col_to_select <- x[! x %in% c('Authors', 'DOI', 'sensors_type_plot', 'X', 'Domain1', 'Domain2', 'Domain3', 'Domain4', result_columns)]
     
-    df_sub <- subset(merged.df, select=col_to_select)
+    df_sub <- merged.df[order(merged.df$Year), col_to_select]
     df_sub$Wearable <- gsub(pattern = "\n", replacement = "<br/>", x = df_sub$Wearable)
     
     datatable(df_sub, rownames = FALSE, escape=F, filter="top", extensions = 'Buttons', options = list(
@@ -520,25 +515,24 @@ server <- function(input, output) {
                                                  domain = wearable_domain_d(),
                                                  results = reported_results_d())
     
-    colorsv = c("#1F78B4", "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#FFFF99", '#D9D9D9')
+    colorsv = c(NA, "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#D9D9D9", "#FFFD99")
     plot <- plot_ly(
       data = data_nb_wearable,
       x = ~year,
       y = data_nb_wearable[[2]],
       type = 'bar',
       name = names(data_nb_wearable)[2],
-      color = colorsv[2],
-      colors = colorRamp(colorsv)) %>%
-      layout(title = list(text = '<b>Number of publications published per year, per type of sensor used<b>', font = list(size = 14)),
-             yaxis = list(title = 'Number of publications per sensor type**'), 
+      marker = list(color = colorsv[2])) %>%
+      layout(title = list(text = '<b>Number of publications published per year, per type of sensor</b>', font = list(size = 14)),
+             yaxis = list(title = 'Number of publications per type of sensor**'), 
              xaxis = list(title = 'Year of publication'),
              barmode = 'stack')
     
     count = 3
-    while (!(is.na(names(data_nb_wearable)[count]))) {
+    while (!is.na(names(data_nb_wearable)[count])) {
       plot <- plot %>% add_trace(y=data_nb_wearable[[count]], 
                                  name = names(data_nb_wearable)[count],
-                                 color = colorsv[count])
+                                 marker = list(color=colorsv[count]))
       count = count + 1
     }
     plot
@@ -582,12 +576,11 @@ server <- function(input, output) {
       y = ~`number.3`,
       type = 'bar',
       name = 'triaxial',
-      colors = colorRamp(c("#A6CEE3", "#FDBF6F", "#1F78B4")),
-      color=c('#FDBF6F')) %>%
-      add_trace(y=~`number.2`, name = 'biaxial', color=c('#A6CEE3')) %>%
-      add_trace(y=~`number.1`, name = 'uniaxial', color=c('#1F78B4')) %>%
-      layout(title = list(text = '<b>Number of publications published per year, per accelerometer type (number of axes)<b>', font = list(size = 14)),
-             yaxis = list(title = 'Number of publications per accelerometer type***'), 
+      marker = list(color = '#1F78B4')) %>%
+      add_trace(y=~`number.2`, name = 'biaxial', marker = list(color = '#FFFD99')) %>%
+      add_trace(y=~`number.1`, name = 'uniaxial', marker = list(color = '#A6CEE3')) %>%
+      layout(title = list(text = '<b>Number of publications published per year, per type of accelerometer (number of axes)</b>', font = list(size = 14)),
+             yaxis = list(title = 'Number of publications per type of accelerometer***'), 
              xaxis = list(title = 'Year of publication'),
              barmode = 'stack')
     
@@ -642,7 +635,7 @@ server <- function(input, output) {
     
     ggplotly(plot) %>%
       #facet_strip_bigger() %>%
-      layout(title = list(text = '<b>Results reported by domain and context studied<b>', font = list(size = 14), y=.95),
+      layout(title = list(text = '<b>Results reported by domain and context studied</b>', font = list(size = 14), y=.95),
              margin = list(l = 75, t = 100))
     
   })
