@@ -627,7 +627,7 @@ server <- function(input, output) {
     merged.df = filtered_data()
     
     domains = c("RW: Physical activity", "RW: Gait", "RW: Balance", "RW: Dexterity/Tremor", "Lab: Physical activity", "Lab: Gait", "Lab: Balance", "Lab: Dexterity/Tremor")
-    effects = c("not-tested", "non-significant", "mixed", "significant")
+    effects = c("significance not tested", "non-significant", "mixed", "significant")
     
     plot_data = data.frame()
     
@@ -665,7 +665,7 @@ server <- function(input, output) {
             panel.grid.major.y=element_blank(),
             legend.title = element_blank())
     
-    #pdf("../Figure 3.pdf", width=8, height=8)
+    #pdf("../Figures/Figure3.pdf", width=10, height=10)
     #plot
     #dev.off()
     
