@@ -9,6 +9,7 @@ library(tidyverse)
 library(readr)
 library(ggpubr)
 library(stringr)
+library(shinyWidgets)
 
 data <- read.csv('extracted_data.csv', check.names=F)
 data_raw <- data[c('Authors','Year','First author and year','Title','DOI','Number (% female)','Age','Type of MS','Severity','Duration of disease in years','Treatments','Comorbidities','Comparator population, number (number of females)','Wearable','Context','Duration wearable was worn','Does the study report a clearly defined research objective (including an outcome)?','Does the study adequately describe the inclusion/exclusion criteria?','Does the study report on the population parameters/demographics (at least age, sex)?','Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?','Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?','Does the study report proper statistical analysis? Correction for multiple comparisons?','Does the study adequately report the strength of the results (e.g., ways of calculating effect sizes, reporting confidence intervals/standard deviation?','Does the study make the data and/or code publicly available?','Do the authors report on the limitations of their study?','sensors_type_plot')]
@@ -57,6 +58,7 @@ filter_by_reported_results = function(data, reported_results) {
   if (length(results_selected_wo_none)) selected = rbind(selected, data %>% filter_at(vars(results_selected_wo_none), any_vars(. %in% c('yes'))))
   selected
 }
+filter_by_year = function(data, years) data[grepl(paste(c(unique(years)[1]:unique(years)[2]), collapse="|"), data$Year),]
 
 # ...and add total number of publications behind each filter option in sidebar
 for (i in 1:length(sensor_types)) {
@@ -130,7 +132,43 @@ ui <- dashboardPage(
                    checkboxGroupInput("reported_results", label = "Choose the type of results reported:",
                                       choices = c(result_columns, "None of the above (5)"),
                                       
-                                      selected = c(result_columns, "None of the above (5)"))
+                                      selected = c(result_columns, "None of the above (5)")),
+                   
+                   # Input: Choose year(s) of publication ----
+                   
+                   # radioButtons(inputId = "choose_time",
+                   #              label = "Choose year(s) of publication displayed:",
+                   #              choices = c("Single year" = "single",
+                   #                          "Time range" = "multiple"),
+                   #              selected = "multiple"),
+                   
+                   #conditionalPanel(condition = "input.choose_time == 'multiple'",
+                                    sliderTextInput(inputId = "year_publi", # create new slider text
+                                                    label = "Years of publication:", # label of the box
+                                                    choices = list("1997" = 1997,"2006" = 2006,"2007" = 2007,"2008" = 2008,"2009" = 2009,
+                                                                   "2010" = 2010,"2011" = 2011,"2012" = 2012,"2013" = 2013,"2014" = 2014,
+                                                                   "2015" = 2015,"2016" = 2016,"2017" = 2017,"2018" = 2018,"2019" = 2019,
+                                                                   "2020" = 2020, "2021" = 2021),
+                                                    selected = c(1997, 2021),
+                                                    animate = T, grid = T, hide_min_max = FALSE, from_fixed = FALSE,
+                                                    to_fixed = FALSE, from_min = NULL, from_max = NULL, to_min = NULL,
+                                                    to_max = NULL, force_edges = T, width = NULL, pre = NULL,
+                                                    post = NULL, dragRange = TRUE)
+                   #), # end conditionalPanel
+                   
+                   # conditionalPanel(condition = "input.choose_time == 'single'",
+                   #                  sliderTextInput(inputId = "year_publi_single",
+                   #                                  label = "Time point:",
+                   #                                  choices = list("1997" = 1997,"2006" = 2006,"2007" = 2007,"2008" = 2008,"2009" = 2009,
+                   #                                                 "2010" = 2010,"2011" = 2011,"2012" = 2012,"2013" = 2013,"2014" = 2014,
+                   #                                                 "2015" = 2015,"2016" = 2016,"2017" = 2017,"2018" = 2018,"2019" = 2019,
+                   #                                                 "2020" = 2020, '2021' = 2021),
+                   #                                  selected = c(2006),
+                   #                                  animate = F, grid = TRUE, hide_min_max = FALSE, from_fixed = FALSE,
+                   #                                  to_fixed = FALSE, from_min = NULL, from_max = NULL, to_min = NULL,
+                   #                                  to_max = NULL, force_edges = T, width = NULL, pre = NULL,
+                   #                                  post = NULL, dragRange = TRUE)
+                   # ) # end conditionalPanel
   ),
   
   dashboardBody(
@@ -145,33 +183,27 @@ ui <- dashboardPage(
                                 .skin-blue .main-header .logo {
                                 background-color: #0253b5;
                                 }
-
                                 /* logo when hovered */
                                 .skin-blue .main-header .logo:hover {
                                 background-color: #0253b5;
                                 }
-
                                 /* navbar (rest of the header) */
                                 .skin-blue .main-header .navbar {
                                 background-color: #0253b5;
                                 }        
-
                                 /* main sidebar */
                                 .skin-blue .main-sidebar {
                                 background-color: #6baeff;
                                 }
-
                                 /* active selected tab in the sidebarmenu */
                                 .skin-blue .main-sidebar .sidebar .sidebar-menu .active a{
                                 background-color: #ff0000;
                                 }
-
                                 /* other links in the sidebarmenu */
                                 .skin-blue .main-sidebar .sidebar .sidebar-menu a{
                                 background-color: #00ff00;
                                 color: #000000;
                                 }
-
                                 /* other links in the sidebarmenu when hovered */
                                 .skin-blue .main-sidebar .sidebar .sidebar-menu a:hover{
                                 background-color: #ff9800;
@@ -307,11 +339,15 @@ server <- function(input, output) {
   reported_results <- reactive(input$reported_results)
   reported_results_d <- reported_results %>% debounce(1000)
   
+  year_publi <- reactive(input$year_publi)
+  year_publi_d <- year_publi %>% debounce(1000)
+  
   filtered_data <- reactive({
     data <- data_raw
     data <- filter_by_sensor_type(data, sensor_type_d())
     data <- filter_by_wearable_position(data, wearable_position_d())
     data <- filter_by_wearable_context(data, wearable_context_d())
+    data <- filter_by_year(data, year_publi_d())
     
     merged.df <- inner_join(data, data_metaplot, by=c("DOI"))
     
@@ -551,7 +587,7 @@ server <- function(input, output) {
     accelerometer_data_axis <- aggregate(. ~ Year, data=accelerometer_data_axis, FUN=sum)
     
     data_all_axis <- melt(setDT(accelerometer_data_axis),
-                       id.vars = c("Year"))
+                          id.vars = c("Year"))
     
     # Harmonise column names
     colnames(data_all_axis) <- c("year", "axis", "number")
