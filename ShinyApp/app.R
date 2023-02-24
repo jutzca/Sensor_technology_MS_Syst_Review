@@ -1,327 +1,378 @@
-library(shiny)
-library(dplyr)
-library(DT)
-library(ggplot2)
-library(shinydashboard)
-library(plotly)
-library(data.table)
-library(tidyverse)
-library(readr)
-library(ggpubr)
-library(stringr)
-library(shinyWidgets)
+suppressPackageStartupMessages(library(shiny))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(tidyr)) # pivot_longer (alternative to melt)
+suppressPackageStartupMessages(library(DT))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(shinydashboard))
+suppressPackageStartupMessages(library(plotly))
+suppressPackageStartupMessages(library(ggpubr)) # theme_pubclean
+suppressPackageStartupMessages(library(shinyWidgets)) # sliderTextInput
 
-data <- read.csv('extracted_data.csv', check.names=F)
-data_raw <- data[c('Authors','Year','First author and year','Title','DOI','Number (% female)','Age','Type of MS','Severity','Duration of disease in years','Treatments','Comorbidities','Comparator population, number (number of females)','Wearable','Context','Duration wearable was worn','Does the study report a clearly defined research objective (including an outcome)?','Does the study adequately describe the inclusion/exclusion criteria?','Does the study report on the population parameters/demographics (at least age, sex)?','Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?','Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?','Does the study report proper statistical analysis? Correction for multiple comparisons?','Does the study adequately report the strength of the results (e.g., ways of calculating effect sizes, reporting confidence intervals/standard deviation?','Does the study make the data and/or code publicly available?','Do the authors report on the limitations of their study?','sensors_type_plot')]
+# TODO Set this to FALSE after publication; set only to TRUE when all Figures should be re-saved as png (make sure to also open 2nd tab to execute all code)
+SAVE_FIGURES <- TRUE
 
-sensor_types = c("accelerometer", "gyroscope", "magnetometer", "touchscreen", "mechanical pedometer", "others")
-wearable_positions = c("sternum", "upper back", "lower back", "waist",
-                       "upper arm", "lower arm", "wrist", "hand",
-                       "upper leg", "lower leg", "ankle", "foot", "others", "not reported")
-wearable_contexts = c("real-world", "laboratory", "mixed")
-wearable_domains = c("Physical activity", 'Gait', 'Balance', 'Dexterity/Tremor')
-result_columns <- c(
-  "Association with MS severity",
-  "Association with other measure",
-  "Test-retest reliability",
-  "Group differences MS vs HC",
-  "Group differences MS vs MS",
-  "Group differences MS vs other diseases",
-  "Responsiveness to change",
-  "Responsiveness to intervention",
-  "Subjective patient acceptability"
-)
+data <- read.csv("extracted_data.csv", check.names = F, na.strings = c("NA", "not reported"))
+#data <- read.csv("23-02-23 extracted_data_new.csv", check.names = F, na.strings = c("NA", "not reported"))
+data["Number (thereof female)"] <- paste0(data[, "Number of MS patients"], " (", data[, "Thereof female, n"], ")")
 
-data_metaplot <- data[c('DOI','Domain1','Domain2','Domain3','Domain4',result_columns,paste0(result_columns, " - Effect"))]
+# Extract number of wearables from 'Wearable' summary column by adding the 'Number of wearables: ' fields
+wearables <- strsplit(data$Wearable, "\n\n")
+data$number_wearables <- sapply(lapply(wearables, function(x) as.integer(substr(gsub("\n.*", "", gsub(".*Number of wearables: ", "", x)), 0, 1))), sum, na.rm = T)
+
+sensor_types <- c("accelerometer", "gyroscope", "magnetometer", "touchscreen", "mechanical pedometer", "others")
+wearable_positions <- c("sternum", "upper back", "lower back", "waist", "upper arm", "lower arm", "wrist", "hand", "upper leg", "lower leg", "ankle", "foot", "others", "not reported")
+wearable_contexts <- c("real-world", "laboratory", "mixed")
+wearable_domains <- c("Physical activity", "Gait", "Balance", "Dexterity/Tremor")
+result_columns <- c("Association with MS severity", "Association with other measure", "Test-retest reliability", "Group differences MS vs HC", "Group differences MS vs MS", "Group differences MS vs other diseases", "Responsiveness to change", "Responsiveness to intervention", "Subjective patient acceptability")
+
+data <- data[c(
+  "Authors", "Year", "First author and year", "Title", "DOI", "Number of MS patients", "Number (thereof female)", "Age", "Type of MS", "Severity", "Duration of disease in years", "Treatments", "Comorbidities", "Comparator population, number (number of females)", "Wearable", "Context", "Duration wearable was worn",
+  "Does the study report a clearly defined research objective (including an outcome)?", "Does the study adequately describe the inclusion/exclusion criteria?", "Does the study report on the population parameters/demographics (at least age, sex)?", "Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?", "Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?", "Does the study report proper statistical analysis? Correction for multiple comparisons?", "Does the study adequately report the strength of the results (e.g., reporting confidence intervals / standard deviations)?", "Does the study make the data and/or code publicly available?", "Do the authors report on the limitations of their study?", 
+  "Domain1", "Domain2", "Domain3", "Domain4", result_columns, paste0(result_columns, " - Effect"), "number_wearables"
+)]
 
 # Define filter functions here ...
-filter_by_sensor_type = function(data, sensor_types) data[grepl(paste(sensor_types, collapse="|"), data$sensors_type_plot),]
-filter_by_wearable_position = function(data, wearable_position) data[grepl(paste(wearable_position, collapse="|"), data$Wearable),]
-filter_by_wearable_context = function(data, wearable_context) data[grepl(paste(wearable_context, collapse="|"), data$Context),]
-filter_by_wearable_domain = function(data, wearable_domain) {
-  indices <- grep(paste(wearable_domain, collapse="|"), data$Domain1)
-  indices <- append(indices, grep(paste(wearable_domain, collapse="|"), data$Domain2))
-  indices <- append(indices, grep(paste(wearable_domain, collapse="|"), data$Domain3))
-  indices <- append(indices, grep(paste(wearable_domain, collapse="|"), data$Domain4))
+filter_by_year <- function(data, years) data[between(data$Year, years[1], years[2]), ]
+filter_by_sensor_type <- function(data, sensor_types) data[grepl(paste0("Type of sensor: [^\n]*", paste0(sensor_types, collapse = "|")), data$Wearable), ]
+filter_by_wearable_position <- function(data, wearable_position) data[grepl(paste0("Position: [^\n]*", paste0(wearable_position, collapse = "|")), data$Wearable), ]
+filter_by_wearable_context <- function(data, wearable_context) data[grepl(paste0(wearable_context, collapse = "|"), data$Context), ]
+
+filter_by_wearable_domain <- function(data, wearable_domain) {
+  indices <- grep(paste0(wearable_domain, collapse = "|"), data$Domain1)
+  indices <- append(indices, grep(paste0(wearable_domain, collapse = "|"), data$Domain2))
+  indices <- append(indices, grep(paste0(wearable_domain, collapse = "|"), data$Domain3))
+  indices <- append(indices, grep(paste0(wearable_domain, collapse = "|"), data$Domain4))
   indices <- sort(unique(indices))
   
-  data[indices,]
+  data[indices, ]
 }
-filter_by_reported_results = function(data, reported_results) {
-  # CAREFUL: 5 is hardcoded, check again when changing data base
+
+filter_by_reported_results <- function(data, reported_results) {
+  # TODO: number is hardcoded, check again when changing source-data
   if ("None of the above (5)" %in% reported_results) {
-    selected = data %>% filter_at(vars(result_columns), all_vars(. %in% c('no')))
+    selected <- data %>% filter_at(vars(result_columns), all_vars(. %in% c("no")))
   } else {
-    selected = data.frame()
+    selected <- data.frame()
   }
   results_selected_wo_none <- reported_results[!reported_results %in% c("None of the above (5)")]
-  if (length(results_selected_wo_none)) selected = rbind(selected, data %>% filter_at(vars(results_selected_wo_none), any_vars(. %in% c('yes'))))
+  if (length(results_selected_wo_none))
+    selected <- rbind(selected, data %>% filter_at(vars(results_selected_wo_none), any_vars(. %in% c("yes"))))
   selected
 }
-filter_by_year = function(data, years) data[grepl(paste(c(unique(years)[1]:unique(years)[2]), collapse="|"), data$Year),]
 
 # ...and add total number of publications behind each filter option in sidebar
 for (i in 1:length(sensor_types)) {
-  names(sensor_types)[i] = paste0(sensor_types[i], " (", nrow(filter_by_sensor_type(data_raw, sensor_types[i])), ")")
+  names(sensor_types)[i] <- paste0(sensor_types[i], " (", nrow(filter_by_sensor_type(data, sensor_types[i])), ")")
 }
+
 for (i in 1:length(wearable_positions)) {
-  names(wearable_positions)[i] = paste0(wearable_positions[i], " (", nrow(filter_by_wearable_position(data_raw, wearable_positions[i])), ")")
+  names(wearable_positions)[i] <- paste0(wearable_positions[i], " (", nrow(filter_by_wearable_position(data, wearable_positions[i])), ")")
 }
+
 for (i in 1:length(wearable_contexts)) {
-  names(wearable_contexts)[i] = paste0(wearable_contexts[i], " (", nrow(filter_by_wearable_context(data_raw, wearable_contexts[i])), ")")
+  names(wearable_contexts)[i] <- paste0(wearable_contexts[i], " (", nrow(filter_by_wearable_context(data, wearable_contexts[i])), ")")
 }
+
 for (i in 1:length(wearable_domains)) {
-  names(wearable_domains)[i] = paste0(wearable_domains[i], " (", nrow(filter_by_wearable_domain(data_metaplot, wearable_domains[i])), ")")
+  names(wearable_domains)[i] <- paste0(wearable_domains[i], " (", nrow(filter_by_wearable_domain(data, wearable_domains[i])), ")")
 }
+
 for (i in 1:length(result_columns)) {
-  names(result_columns)[i] = paste0(result_columns[i], " (", nrow(filter_by_reported_results(data_metaplot, result_columns[i])), ")")
+  names(result_columns)[i] <- paste0(result_columns[i], " (", nrow(filter_by_reported_results(data, result_columns[i])), ")")
 }
 
-facet_strip_bigger <- function(gp){
-  
-  # n_facets should be the number of facets x2
-  n_facets <- c(1:length(gp[["x"]][["layout"]][["shapes"]]))
-  
-  for(i in n_facets){
-    if(n_facets[i] %% 2 == 0){
-      gp[["x"]][["layout"]][["shapes"]][[i]][["y0"]] <- + 50 # increase as needed
-      gp[["x"]][["layout"]][["shapes"]][[i]][["y1"]] <- 0
-    }
-  }
-  
-  return(gp)
+# Debug
+input <- list(year_publi = c(1997, 2022), sensor_type = sensor_types, wearable_position = wearable_positions, wearable_context = wearable_contexts, wearable_domain = wearable_domains, reported_results = c(result_columns, "None of the above (5)"), barplot_type_sensor_proportion = F, barplot_accelerometer_axes_proportion = F, barplot_publications_number_patients_proportion = F, barplot_publications_context_proportion = F, barplot_publications_positions_proportion = F, barplot_publications_number_wearables_proportion = F)
+year_publi_d <- function() input$year_publi
+sensor_type_d <- function() input$sensor_type
+wearable_position_d <- function() input$wearable_position
+wearable_context_d <- function() input$wearable_context
+wearable_domain_d <- function() input$wearable_domain
+reported_results_d <- function() input$reported_results
+
+filtered_data <- function() {
+  data <- filter_by_sensor_type(data, sensor_type_d())
+  data <- filter_by_wearable_position(data, wearable_position_d())
+  data <- filter_by_wearable_context(data, wearable_context_d())
+  data <- filter_by_year(data, year_publi_d())
+  data <- filter_by_wearable_domain(data, wearable_domain_d())
+  data <- filter_by_reported_results(data, reported_results_d())
+  data
 }
 
-# Define UI for data download app ----
+# Make sure that in default filter context all publications are actually selected
+stopifnot(nrow(data) == nrow(filtered_data()))
+
+create_barplot <- function(data, fill, ylab, proportion = F) {
+  # Expects data to have 3 columns: 'year', 'count', fill
+  
+  colors <- c("#D9D9D9", "#FFFF99", "#FF7F00", "#FDBF6F", "#A6CEE3", "#1F78B4")[(7 - length(unique(data[, fill]))):6]
+  
+  # Add a year to create a space between 1997 and 2006
+  data <- rbind(data, c(1998, NA, NA))
+  
+  data$year <- as.factor(data$year)
+  
+  ggplot(data, aes(x = year, y = count, fill = get(fill))) + 
+    geom_bar(stat = "identity", colour = "black", position = ifelse(proportion, "fill", "stack")) + 
+    scale_fill_manual(values = colors) + 
+    theme_classic() + 
+    xlab("Year of publication") + 
+    ylab(paste0(ifelse(proportion, "Proportion", "Number"), " of publications by ", ylab, "*")) + 
+    labs(fill = ylab) + 
+    geom_vline(xintercept = 2, linetype = 2) + 
+    scale_x_discrete(breaks = data$year[data$year != 1998]) + 
+    theme(
+      panel.grid.major.y = element_line(linewidth = 0.1, color = "black"), 
+      axis.title.x = element_text(size = 14, face = "bold"), 
+      axis.title.y = element_text(size = 14, face = "bold"), 
+      legend.title = element_text(size = 14, face = "bold"), 
+      axis.text.x = element_text(angle = 45, vjust = 0.5), 
+      legend.position = c(0.25, 0.8)
+    )
+}
+
+# Define UI
+
+css <- "
+/* fix background-color of wrapper (is black otherwise for some reason) */
+.skin-blue .wrapper {
+background-color: #ecf0f5;
+}
+p {
+margin: 10px
+}
+/* logo */
+.skin-blue .main-header .logo {
+background-color: #0253b5;
+}
+/* logo when hovered */
+.skin-blue .main-header .logo:hover {
+background-color: #0253b5;
+}
+/* navbar (rest of the header) */
+.skin-blue .main-header .navbar {
+background-color: #0253b5;
+}        
+/* main sidebar */
+.skin-blue .main-sidebar {
+background-color: #6baeff;
+}
+/* active selected tab in the sidebarmenu */
+.skin-blue .main-sidebar .sidebar .sidebar-menu .active a{
+background-color: #ff0000;
+}
+/* other links in the sidebarmenu */
+.skin-blue .main-sidebar .sidebar .sidebar-menu a{
+background-color: #00ff00;
+color: #000000;
+}
+/* other links in the sidebarmenu when hovered */
+.skin-blue .main-sidebar .sidebar .sidebar-menu a:hover{
+background-color: #ff9800;
+}
+/* toggle button when hovered  */                    
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+background-color: #ff9800;
+}
+
+/* sidebar text color */  
+.skin-blue .sidebar a{
+color: #0f0f0f;}
+
+.btn.btn-success {
+color: #fff;
+background-color: #ff9800;
+border-color: #ff9800;
+}
+.btn.btn-success.focus,
+.btn.btn-success:focus {
+color: #fff;
+background-color: #ff9800;
+border-color: #ff9800;
+outline: none;
+box-shadow: none;
+}
+.btn.btn-success:hover {
+color: #fff;
+background-color: #ff9800;
+border-color: #ff9800;
+outline: none;
+box-shadow: none;
+}
+.btn.btn-success.active,
+.btn.btn-success:active {
+color: #fff;
+background-color: #f7dfbc;
+border-color: #f7dfbc;
+outline: none;
+}
+.btn.btn-success.active.focus,
+.btn.btn-success.active:focus,
+.btn.btn-success.active:hover,
+.btn.btn-success:active.focus,
+.btn.btn-success:active:focus,
+.btn.btn-success:active:hover {
+color: #fff;
+background-color: #f7dfbc ;
+border-color: #f7dfbc ;
+outline: none;
+box-shadow: none;
+}"
 
 ui <- dashboardPage(
-  # App title ----
-  dashboardHeader(title = "MS Wearable Sensors - A Review",
-                  titleWidth = 320),
-  
-  # Sidebar layout with input and output definitions ----
+  dashboardHeader(title = "MS Wearable Sensors - A Review", titleWidth = 340),
+
+  # Sidebar layout with input and output definitions
   dashboardSidebar(width = 320,
-                   
-                   div(style="text-align:center",em('For each category, papers with at least one item corresponding to selection will be presented.')),
-                   
-                   # Input: Choose type of wearable ----
-                   checkboxGroupInput("sensor_type", label = "Choose a type of sensor:",
-                                      choices = sensor_types,
-                                      selected = sensor_types),
-                   
-                   div(style="text-align:center", em("Others: electrocardiogram (ECG), global positioning system (GPS), surface electromyography (sEMG), 
-                                                     portable metabolic system (VO2), skin impedance, photoplethysmography (PPG), force sensor, barometer, thermometer, light exposure")),
-                   
-                   # Input: Choose position of wearable ----
-                   checkboxGroupInput("wearable_position", label = "Choose a position of interest for the sensor:",
-                                      choices = wearable_positions,
-                                      selected = wearable_positions),
-                   
-                   div(style="text-align:center",em('Others: head, pocket or bag, and tip of crutches')),
-                   
-                   # Input: Choose context of wearable ----
-                   checkboxGroupInput("wearable_context", label = "Choose a context for usage of sensor:",
-                                      choices = wearable_contexts,
-                                      selected = wearable_contexts),
-                   
-                   # Input: Choose context of wearable ----
-                   checkboxGroupInput("wearable_domain", label = "Choose a domain for usage of sensor:",
-                                      choices = wearable_domains,
-                                      selected = wearable_domains),
-                   
-                   checkboxGroupInput("reported_results", label = "Choose the type of results reported:",
-                                      choices = c(result_columns, "None of the above (5)"),
-                                      
-                                      selected = c(result_columns, "None of the above (5)")),
-                   
-                   # Input: Choose year(s) of publication ----
-                   
-                   # radioButtons(inputId = "choose_time",
-                   #              label = "Choose year(s) of publication displayed:",
-                   #              choices = c("Single year" = "single",
-                   #                          "Time range" = "multiple"),
-                   #              selected = "multiple"),
-                   
-                   #conditionalPanel(condition = "input.choose_time == 'multiple'",
-                                    sliderTextInput(inputId = "year_publi", # create new slider text
-                                                    label = "Years of publication:", # label of the box
-                                                    choices = list("1997" = 1997,"2006" = 2006,"2007" = 2007,"2008" = 2008,"2009" = 2009,
-                                                                   "2010" = 2010,"2011" = 2011,"2012" = 2012,"2013" = 2013,"2014" = 2014,
-                                                                   "2015" = 2015,"2016" = 2016,"2017" = 2017,"2018" = 2018,"2019" = 2019,
-                                                                   "2020" = 2020, "2021" = 2021),
-                                                    selected = c(1997, 2021),
-                                                    animate = T, grid = T, hide_min_max = FALSE, from_fixed = FALSE,
-                                                    to_fixed = FALSE, from_min = NULL, from_max = NULL, to_min = NULL,
-                                                    to_max = NULL, force_edges = T, width = NULL, pre = NULL,
-                                                    post = NULL, dragRange = TRUE)
-                   #), # end conditionalPanel
-                   
-                   # conditionalPanel(condition = "input.choose_time == 'single'",
-                   #                  sliderTextInput(inputId = "year_publi_single",
-                   #                                  label = "Time point:",
-                   #                                  choices = list("1997" = 1997,"2006" = 2006,"2007" = 2007,"2008" = 2008,"2009" = 2009,
-                   #                                                 "2010" = 2010,"2011" = 2011,"2012" = 2012,"2013" = 2013,"2014" = 2014,
-                   #                                                 "2015" = 2015,"2016" = 2016,"2017" = 2017,"2018" = 2018,"2019" = 2019,
-                   #                                                 "2020" = 2020, '2021' = 2021),
-                   #                                  selected = c(2006),
-                   #                                  animate = F, grid = TRUE, hide_min_max = FALSE, from_fixed = FALSE,
-                   #                                  to_fixed = FALSE, from_min = NULL, from_max = NULL, to_min = NULL,
-                   #                                  to_max = NULL, force_edges = T, width = NULL, pre = NULL,
-                   #                                  post = NULL, dragRange = TRUE)
-                   # ) # end conditionalPanel
+    div(style = "text-align:center", em("Papers satisfying at least one selected criterion will be presented (inclusive).")),
+
+    # Input: Choose year(s) of publication
+    sliderTextInput(
+      inputId = "year_publi", # create new slider text
+      label = "Years of publication:", # label of the box
+      choices = list("1997" = 1997, "2006" = 2006, "2007" = 2007, "2008" = 2008, "2009" = 2009,
+                     "2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014,
+                     "2015" = 2015, "2016" = 2016, "2017" = 2017, "2018" = 2018, "2019" = 2019,
+                     "2020" = 2020, "2021" = 2021, "2022" = 2022),
+      selected = c(1997, 2022),
+      animate = F, grid = T, hide_min_max = FALSE, from_fixed = FALSE,
+      to_fixed = FALSE, from_min = NULL, from_max = NULL, to_min = NULL,
+      to_max = NULL, force_edges = T, width = NULL, pre = NULL,
+      post = NULL, dragRange = TRUE
+    ),
+
+    # Input: Choose context of wearable
+    checkboxGroupInput(
+      "wearable_context", label = "Choose the contexts:",
+      choices = wearable_contexts,
+      selected = wearable_contexts
+    ),
+
+    # Input: Choose domain
+    checkboxGroupInput(
+      "wearable_domain", label = "Choose the domains studied:",
+      choices = wearable_domains,
+      selected = wearable_domains
+    ),
+
+    # Input: Choose type of results
+    checkboxGroupInput(
+      "reported_results", label = "Choose the types of results reported:",
+      choices = c(result_columns, "None of the above (5)"),
+      selected = c(result_columns, "None of the above (5)")
+    ),
+
+    # Input: Choose type of sensor
+    checkboxGroupInput(
+      "sensor_type", label = "Choose the types of sensors:",
+      choices = sensor_types,
+      selected = sensor_types
+    ),
+
+    div(
+      style = "text-align:center",
+      em("Others: electrocardiogram (ECG), global positioning system (GPS), surface electromyography (sEMG), portable metabolic system (VO2), skin impedance, force sensor, barometer, thermometer")
+    ),
+
+    # Input: Choose position of wearable
+    checkboxGroupInput(
+      "wearable_position", label = "Choose the positions for the wearables:",
+      choices = wearable_positions,
+      selected = wearable_positions
+    ),
+
+    div(
+      style = "text-align:center",
+      em("Others: head, pocket or bag, chest, tip of crutches")
+    )
   ),
-  
+
   dashboardBody(
-    tags$head(tags$style(HTML(' /* fix background-color of wrapper (is black otherwise for some reason) */
-                                .skin-blue .wrapper {
-                                background-color: #ecf0f5;
-                                }
-                                p {
-                                margin: 10px
-                                }
-                                /* logo */
-                                .skin-blue .main-header .logo {
-                                background-color: #0253b5;
-                                }
-                                /* logo when hovered */
-                                .skin-blue .main-header .logo:hover {
-                                background-color: #0253b5;
-                                }
-                                /* navbar (rest of the header) */
-                                .skin-blue .main-header .navbar {
-                                background-color: #0253b5;
-                                }        
-                                /* main sidebar */
-                                .skin-blue .main-sidebar {
-                                background-color: #6baeff;
-                                }
-                                /* active selected tab in the sidebarmenu */
-                                .skin-blue .main-sidebar .sidebar .sidebar-menu .active a{
-                                background-color: #ff0000;
-                                }
-                                /* other links in the sidebarmenu */
-                                .skin-blue .main-sidebar .sidebar .sidebar-menu a{
-                                background-color: #00ff00;
-                                color: #000000;
-                                }
-                                /* other links in the sidebarmenu when hovered */
-                                .skin-blue .main-sidebar .sidebar .sidebar-menu a:hover{
-                                background-color: #ff9800;
-                                }
-                                /* toggle button when hovered  */                    
-                                .skin-blue .main-header .navbar .sidebar-toggle:hover{
-                                background-color: #ff9800;
-                                }
-                                
-                                /* sidebar text color */  
-                                .skin-blue .sidebar a{
-                                color: #0f0f0f;}
-                                
-                                .btn.btn-success {
-                                color: #fff;
-                                background-color: #ff9800;
-                                border-color: #ff9800;
-                                }
-                                .btn.btn-success.focus,
-                                .btn.btn-success:focus {
-                                color: #fff;
-                                background-color: #ff9800;
-                                border-color: #ff9800;
-                                outline: none;
-                                box-shadow: none;
-                                }
-                                .btn.btn-success:hover {
-                                color: #fff;
-                                background-color: #ff9800;
-                                border-color: #ff9800;
-                                outline: none;
-                                box-shadow: none;
-                                }
-                                .btn.btn-success.active,
-                                .btn.btn-success:active {
-                                color: #fff;
-                                background-color: #f7dfbc;
-                                border-color: #f7dfbc;
-                                outline: none;
-                                }
-                                .btn.btn-success.active.focus,
-                                .btn.btn-success.active:focus,
-                                .btn.btn-success.active:hover,
-                                .btn.btn-success:active.focus,
-                                .btn.btn-success:active:focus,
-                                .btn.btn-success:active:hover {
-                                color: #fff;
-                                background-color: #f7dfbc ;
-                                border-color: #f7dfbc ;
-                                outline: none;
-                                box-shadow: none;
-                                }
-                                
-                                '))),
-    
-    tabBox(width=12,id="tabBox_next_previous",
-           tabPanel("Summary",
-                    fluidRow(
-                      column(12,
-                             fluidRow(
-                               column(3, 
-                                      valueBoxOutput("nb_papers", width = 12)),
-                               column(3,
-                                      valueBoxOutput("nb_realworld", width = 12)),
-                               column(3,
-                                      valueBoxOutput("nb_lab", width = 12)),
-                               column(3,
-                                      valueBoxOutput("nb_mixed", width = 12))
-                               
-                             )),
-                      #valueBoxOutput("nb_papers", width = 6),
-                      
-                      box(plotlyOutput("meta_results", height = "800px"), width = 12, height = "800px"),
-                      
-                      box(plotlyOutput("hist_years", height = "400px"), width = 12, height = "400px"),
-                      
-                      conditionalPanel(condition = "input.sensor_type.indexOf('accelerometer') > -1",
-                                       box(plotlyOutput("hist_axes", height = "400px"), width = 12, height = "400px")),
-                      
-                      p("* 2020-2021 contains papers published from January 2020 to March 2021, when the literature search was performed"),
-                      p("** Publications using multiple types of sensors count multiple times"),
-                      p("*** Publications using multiple accelerometers count multiple times")
-                      
-                    ) # end fluidRow
-                    
-           ), #end tabPanel 1
-           
-           tabPanel("Papers",
-                    dataTableOutput("table"),style = "overflow-x: scroll;"
-                    
-           ) #end tabPanel 2
-    ) #end tabBox
+    tags$head(tags$style(css)),
+
+    tabBox(width = 12,
+      tabPanel("Main Findings",
+        fluidRow(
+          column(12,
+            column(3, valueBoxOutput("nb_papers", width = 12)),
+            column(3,valueBoxOutput("nb_realworld", width = 12)),
+            column(3,valueBoxOutput("nb_lab", width = 12)),
+            column(3,valueBoxOutput("nb_mixed", width = 12))
+          ),
+
+          box(
+            h3("Types of results per context and domain"),
+            plotlyOutput("meta_results", height = "800px"),
+            width = 12
+          ),
+
+          box(
+            h3("Publications per year by type of sensor"),
+            radioButtons("barplot_type_sensor_proportion", "", c("Show numbers"=F, "Show proportions"=T), selected = F, inline = T),
+            plotlyOutput("barplot_type_sensor", height = "400px"),
+            width = 12
+          ),
+
+          box(
+            h3("Publications per year by type of accelerometer (number of axes)"),
+            radioButtons("barplot_accelerometer_axes_proportion", "", c("Show numbers"=F, "Show proportions"=T), selected = F, inline = T),
+            plotlyOutput("barplot_accelerometer_axes", height = "400px"),
+            width = 12
+          ),
+          
+          box(
+            h3("Publications per wearable position per context"),
+            plotOutput("donut_publications_context_position"),
+            width = 12
+          ),
+          
+          p("* Publications satisfying multiple criteria count multiple times"),
+        )
+      ), # end tabPanel
+
+      tabPanel("Supplementary",
+        fluidRow(
+          box(
+            h3("Publications per year by number of MS patients"),
+            radioButtons("barplot_publications_number_patients_proportion", "", c("Show numbers"=F, "Show proportions"=T), selected = F, inline = T),
+            plotlyOutput("barplot_publications_number_patients"),
+            width = 12
+          ),
+          box(
+            h3("Publications per year by context"),
+            radioButtons("barplot_publications_context_proportion", "", c("Show numbers"=F, "Show proportions"=T), selected = F, inline = T),
+            plotlyOutput("barplot_publications_context", height="400px"),
+            width = 12
+          ),
+          box(
+            h3("Publications per year by position"),
+            radioButtons("barplot_publications_positions_proportion", "", c("Show numbers"=F, "Show proportions"=T), selected = F, inline = T),
+            plotlyOutput("barplot_publications_positions", height="400px"),
+            width = 12
+          ),
+          box(
+            h3("Publications per year by number of wearables"),
+            radioButtons("barplot_publications_number_wearables_proportion", "", c("Show numbers"=F, "Show proportions"=T), selected = F, inline = T),
+            plotlyOutput("barplot_publications_number_wearables"),
+            width = 12
+          ),
+          box(
+            h3("Publications per number of wearables per context"),
+            plotOutput("barplot_number_wearables"),
+            width = 12
+          )
+        )
+      ), # end tabPanel
+      
+      tabPanel("Papers",
+        dataTableOutput("table"),style = "overflow-x: scroll"
+      ) # end tabPanel
+    ) # end tabBox
   ) # end dashboardBody
 ) # end dashboardPage
 
-
-# Debug
-input = list(
-  sensor_type=sensor_types,
-  wearable_position=wearable_positions,
-  wearable_context=wearable_contexts,
-  wearable_domain=wearable_domains,
-  reported_results=c(result_columns, "None of the above (5)")
-)
-sensor_type_d = function() input$sensor_type
-wearable_position_d = function() input$wearable_position
-wearable_context_d = function() input$wearable_context
-wearable_domain_d = function() input$wearable_domain
-reported_results_d = function() input$reported_results
-
-filtered_data = function() inner_join(data_raw, data_metaplot, by=c("DOI"))
-filtered_data_combined_2020_2021 = function() {
-  data = filtered_data()
-  data$Year[data$Year %in% c(2020, 2021)] <- "2020-2021*"
-  return(data)
-}
-
-# Define server logic to display and download selected file ----
+# Define server logic to display and download selected file
 server <- function(input, output) {
   # Debounce checkboxGroupInput filter inputs so that multiple changes in selections are evaluated together
   sensor_type <- reactive(input$sensor_type)
@@ -343,299 +394,88 @@ server <- function(input, output) {
   year_publi_d <- year_publi %>% debounce(1000)
   
   filtered_data <- reactive({
-    data <- data_raw
     data <- filter_by_sensor_type(data, sensor_type_d())
     data <- filter_by_wearable_position(data, wearable_position_d())
     data <- filter_by_wearable_context(data, wearable_context_d())
     data <- filter_by_year(data, year_publi_d())
+    data <- filter_by_wearable_domain(data, wearable_domain_d())
+    data <- filter_by_reported_results(data, reported_results_d())
     
-    merged.df <- inner_join(data, data_metaplot, by=c("DOI"))
-    
-    merged.df <- filter_by_wearable_domain(merged.df, wearable_domain_d())
-    merged.df <- filter_by_reported_results(merged.df, reported_results_d())
-    
-    return(merged.df)
-  })
-  
-  filtered_data_combined_2020_2021 <- reactive({
-    data <- filtered_data()
-    data$Year[data$Year %in% c(2020, 2021)] <- "2020-2021*"
     return(data)
   })
   
-  # Table of selected dataset ----
+  # Table of selected dataset
   output$table <- renderDataTable({
-    merged.df <- filtered_data()
+    data <- filtered_data()
     
-    merged.df$DOI <- paste0("https://doi.org/", merged.df$DOI, sep='')
-    merged.df$`First author and year` <- paste0("<a href='", merged.df$DOI,"' target='_blank'>", merged.df$`First author and year`, "</a>")
+    data$DOI <- paste0("https://doi.org/", data$DOI, sep="")
+    data$`First author and year` <- paste0("<a href='", data$DOI,"' target='_blank'>", data$`First author and year`, "</a>")
     
     # Remove unnecessary columns
-    x <- names(merged.df)
-    col_to_select <- x[! x %in% c('Authors', 'DOI', 'sensors_type_plot', 'X', 'Domain1', 'Domain2', 'Domain3', 'Domain4', result_columns)]
+    x <- names(data)
+    col_to_select <- x[! x %in% c("Authors", "DOI", "Number of MS patients", "sensors_type_plot", "X", "Domain1", "Domain2", "Domain3", "Domain4", result_columns)]
     
-    df_sub <- merged.df[order(merged.df$Year), col_to_select]
+    df_sub <- data[order(data$Year), col_to_select]
     df_sub$Wearable <- gsub(pattern = "\n", replacement = "<br/>", x = df_sub$Wearable)
     
-    datatable(df_sub, rownames = FALSE, escape=F, filter="top", extensions = 'Buttons', options = list(
-      dom = 'Bfrti',
-      buttons = c('copy', 'csv', 'excel', 'pdf', 'colvis'),
+    datatable(df_sub, rownames = FALSE, escape=F, filter="top", extensions = "Buttons", options = list(
+      dom = "Bfrti",
+      buttons = c("copy", "csv", "excel", "pdf", "colvis"),
       pageLength=1000)
     )
   })
   
   output$nb_papers <- renderValueBox({
-    merged.df = filtered_data()
-    
-    valueBox(paste0(dim(merged.df)[1], " papers"), 
-             "meeting your input criteria", 
-             icon = icon("scroll"), 
-             color = "yellow", 
-             width = 12)
+    valueBox(
+      paste0(nrow(filtered_data()), " papers"), 
+      "meeting your input criteria", 
+      icon = icon("scroll"), 
+      color = "yellow", 
+      width = 12
+    )
   })
   
   output$nb_realworld <- renderValueBox({
-    merged.df = filtered_data()
-    
-    nb_realsetting <- sum(merged.df$Context == 'real-world')
-    
-    valueBox(paste0(nb_realsetting, " papers"),
-             "conducted in a real-world setting",
-             icon = icon("house-user"), 
-             color = "yellow", 
-             width = 12)
+    valueBox(
+      paste0(sum(filtered_data()$Context == "real-world"), " papers"),
+      "conducted in a real-world context (RW)",
+      icon = icon("house-user"), 
+      color = "yellow", 
+      width = 12
+    )
   })
   
   output$nb_lab <- renderValueBox({
-    merged.df = filtered_data()
-    
-    nb_lab <- sum(merged.df$Context == 'laboratory')
-    
-    valueBox(paste0(nb_lab, " papers"),
-             "conducted in a laboratory setting",
-             icon = icon("search"), 
-             color = "yellow", 
-             width = 12)
+    valueBox(
+      paste0(sum(filtered_data()$Context == "laboratory"), " papers"),
+      "conducted in a laboratory context",
+      icon = icon("search"), 
+      color = "yellow", 
+      width = 12
+    )
   })
   
   output$nb_mixed <- renderValueBox({
-    merged.df = filtered_data()
-    
-    nb_mixed <- sum(merged.df$Context == 'mixed')
-    
-    valueBox(paste0(nb_mixed, " papers"),
-             "conducted in mixed setting",
-             icon = icon("user"), 
-             color = "yellow", 
-             width = 12)
-  })
-  
-  output$hist_years <- renderPlotly({
-    
-    prepare_data_nb_wearable <- function(data, data_metaplot, wearable, position, context, domain, results){
-      merged.df = filtered_data_combined_2020_2021()
-      
-      counts_combined_fig2=data.frame(Year=unique(merged.df$Year))
-      
-      if ('accelerometer' %in% wearable){
-        accelerometer_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("accelerometer", sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        accelerometer_data2 <- accelerometer_data %>% mutate(total_accelerometer = sum(c_across(contains("accelerometer"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      accelerometer_data2[c('Year', 'total_accelerometer')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "accelerometer" = 'total_accelerometer')
-      }
-      
-      # Count all appearances of gyroscopes per year
-      if ('gyroscope' %in% wearable){
-        gyroscope_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("gyroscope",sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        gyroscope_data2 <- gyroscope_data %>% mutate(total_gyroscope = sum(c_across(contains("gyroscope"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      gyroscope_data2[c('Year', 'total_gyroscope')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "gyroscope" = 'total_gyroscope')
-      }
-      
-      # Count all appearances of magnetometers per year
-      if ('magnetometer' %in% wearable){
-        magnetometer_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("magnetometer",sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        magnetometer_data2 <- magnetometer_data %>% mutate(total_magnetometer = sum(c_across(contains("magnetometer"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      magnetometer_data2[c('Year', 'total_magnetometer')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "magnetometer" = 'total_magnetometer')
-      }
-      
-      # Count all appearances of touchscreen per year
-      if ('touchscreen' %in% wearable){
-        touchscreen_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("touchscreen",sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        touchscreen_data2 <- touchscreen_data %>% mutate(total_touchscreen = sum(c_across(contains("touchscreen"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      touchscreen_data2[c('Year', 'total_touchscreen')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "touchscreen" = 'total_touchscreen')
-      }
-      
-      if ('mechanical pedometer' %in% wearable){
-        mechanical_pedometer_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("mechanical pedometer", sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        mechanical_pedometer_data2 <- mechanical_pedometer_data %>% mutate(total_mechanical_pedometer = sum(c_across(contains("mechanical pedometer"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      mechanical_pedometer_data2[c('Year', 'total_mechanical_pedometer')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "mechanical pedometer" = 'total_mechanical_pedometer')
-      }
-      
-      # Count all appearances of other wearables used per year
-      if ("others" %in% wearable){
-        others_data <- merged.df %>%
-          group_by(Year) %>% 
-          filter(grepl("others",sensors_type_plot)) %>% 
-          count(Year, sensors_type_plot) %>% 
-          spread(sensors_type_plot, n, fill = 0) 
-        others_data2 <- others_data %>% mutate(total_others = sum(c_across(contains("others"))))
-        
-        counts_combined_fig2 <- merge(counts_combined_fig2, 
-                                      others_data2[c('Year', 'total_others')], 
-                                      by="Year", all = T)
-        counts_combined_fig2 = rename(counts_combined_fig2, 
-                                      "others" = 'total_others')
-      }
-      
-      counts_combined_fig2[is.na(counts_combined_fig2)] <- 0
-      
-      # Harmonise column names
-      #colnames(counts_combined_fig2) <- c("year", "accelerometer", "gyroscope", 
-      #                                    'magnetometer', 'touchscreen', 
-      #                                    "others")
-      
-      counts_combined_fig2 = rename(counts_combined_fig2, 'year' = "Year")
-      
-      return (counts_combined_fig2)
-    }
-    
-    data_nb_wearable <- prepare_data_nb_wearable(data = data_raw,
-                                                 data_metaplot = data_metaplot,
-                                                 wearable = sensor_type_d(),
-                                                 position = wearable_position_d(),
-                                                 context = wearable_context_d(),
-                                                 domain = wearable_domain_d(),
-                                                 results = reported_results_d())
-    
-    colorsv = c(NA, "#A6CEE3", "#1F78B4", "#FDBF6F", "#FF7F00", "#D9D9D9", "#FFFD99")
-    plot <- plot_ly(
-      data = data_nb_wearable,
-      x = ~year,
-      y = data_nb_wearable[[2]],
-      type = 'bar',
-      name = names(data_nb_wearable)[2],
-      marker = list(color = colorsv[2])) %>%
-      layout(title = list(text = '<b>Number of publications published per year, per type of sensor</b>', font = list(size = 14)),
-             yaxis = list(title = 'Number of publications per type of sensor**'), 
-             xaxis = list(title = 'Year of publication'),
-             barmode = 'stack')
-    
-    count = 3
-    while (!is.na(names(data_nb_wearable)[count])) {
-      plot <- plot %>% add_trace(y=data_nb_wearable[[count]], 
-                                 name = names(data_nb_wearable)[count],
-                                 marker = list(color=colorsv[count]))
-      count = count + 1
-    }
-    plot
-    
-  })
-  
-  output$hist_axes <- renderPlotly({
-    data = filtered_data_combined_2020_2021()
-    
-    accelerometer_data_axis <- data %>%
-      group_by(Year) %>%
-      summarise(`1` = str_count(Wearable, "Type of sensor: .*accelerometer.*\nNumber of axes: 1"),
-                `2` = str_count(Wearable, "Type of sensor: .*accelerometer.*\nNumber of axes: 2"),
-                `3` = str_count(Wearable, "Type of sensor: .*accelerometer.*\nNumber of axes: 3"))
-    
-    accelerometer_data_axis <- aggregate(. ~ Year, data=accelerometer_data_axis, FUN=sum)
-    
-    data_all_axis <- melt(setDT(accelerometer_data_axis),
-                          id.vars = c("Year"))
-    
-    # Harmonise column names
-    colnames(data_all_axis) <- c("year", "axis", "number")
-    # Add a year with no wearable to create a space between 1997 and 2006
-    data_all_axis <- rbind(data.frame(data_all_axis), c(1998, NA, NA))
-    
-    test <- reshape(data_all_axis, idvar = "year", timevar = "axis", direction = "wide")
-    
-    if (!('number.1' %in% names(test))){
-      test['number.1'] <- NA
-    }
-    if (!('number.2' %in% names(test))){
-      test['number.2'] <- NA
-    }
-    if (!('number.3' %in% names(test))){
-      test['number.3'] <- NA
-    }
-    
-    plot_ly(
-      data = test,
-      x = ~year,
-      y = ~`number.3`,
-      type = 'bar',
-      name = 'triaxial',
-      marker = list(color = '#1F78B4')) %>%
-      add_trace(y=~`number.2`, name = 'biaxial', marker = list(color = '#FFFD99')) %>%
-      add_trace(y=~`number.1`, name = 'uniaxial', marker = list(color = '#A6CEE3')) %>%
-      layout(title = list(text = '<b>Number of publications published per year, per type of accelerometer (number of axes)</b>', font = list(size = 14)),
-             yaxis = list(title = 'Number of publications per type of accelerometer***'), 
-             xaxis = list(title = 'Year of publication'),
-             barmode = 'stack')
-    
-    
+    valueBox(
+      paste0(sum(filtered_data()$Context == "mixed"), " papers"),
+      "conducted in a mixed context",
+      icon = icon("user"), 
+      color = "yellow", 
+      width = 12
+    )
   })
   
   output$meta_results <- renderPlotly({
-    merged.df = filtered_data()
-    
-    domains = c("RW: Physical activity", "RW: Gait", "RW: Balance", "RW: Dexterity/Tremor", "Lab: Physical activity", "Lab: Gait", "Lab: Balance", "Lab: Dexterity/Tremor")
+    domains = c(paste0("RW: ", wearable_domains), paste0("Lab: ", wearable_domains))
     effects = c("significance not tested", "non-significant", "mixed", "significant")
     
     plot_data = data.frame()
     
     for (column in result_columns) {
-      total = sum(merged.df[column] == "yes")
+      total = sum(filtered_data()[column] == "yes")
       for (domain in domains) {
         for (effect in effects) {
-          count = sum(substr(merged.df[apply(merged.df, 1, function(row) domain %in% row[paste0("Domain", 1:6)]), paste0(column, " - Effect")], 0, nchar(effect)) == effect)
+          count = sum(substr(filtered_data()[apply(filtered_data(), 1, function(row) domain %in% row[paste0("Domain", 1:6)]), paste0(column, " - Effect")], 0, nchar(effect)) == effect)
           plot_data = rbind(plot_data, list(
             column = column,
             domain = domain,
@@ -653,7 +493,7 @@ server <- function(input, output) {
     plot_data_sub = plot_data#[plot_data$column %in% c(columns[1:4], columns[6:8]),]
     plot_data_sub$column = factor(plot_data_sub$column, levels=result_columns, labels=result_columns)
     
-    plot <- ggplot(plot_data_sub, aes(domain, count, fill=effect, label=count)) + 
+    p <- ggplot(plot_data_sub, aes(domain, count, fill=effect, label=count)) + 
       geom_bar(stat="identity", position=position_stack(reverse=T)) + 
       geom_text(data=plot_data_sub[plot_data_sub$count>0,], size = 3, position=position_stack(vjust=0.5, reverse=T)) + #, aes(color = effect), show.legend = FALSE) +
       #scale_color_manual(values = c("black", "black", "black", "white")) + 
@@ -661,22 +501,210 @@ server <- function(input, output) {
       theme_pubclean() + xlab(NULL) + ylab(NULL) + coord_flip() + scale_fill_manual(values=c("#d9d9d9", "#fdbf6f", "#96c3dc", "#1b63a5")) +
       #https://stackoverflow.com/questions/15622001/how-to-display-only-integer-values-on-an-axis-using-ggplot2
       scale_y_continuous(breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1))))) +
-      theme(panel.grid.major.x=element_line(size=.1, linetype=2, color="black"), 
-            panel.grid.major.y=element_blank(),
-            legend.title = element_blank())
+      theme(
+        panel.grid.major.x=element_line(linewidth=.1, linetype=2, color="black"), 
+        panel.grid.major.y=element_blank(),
+        legend.title = element_blank()
+      )
     
-    #pdf("../Figures/Figure3.pdf", width=10, height=10)
-    #plot
-    #dev.off()
+    if (SAVE_FIGURES) ggsave("../Figures/Figure 3 Results reported by domain and context studied.png", p, width=10, height=10)
+    ggplotly(p)
+  })
+  
+  output$barplot_type_sensor <- renderPlotly({
+    # Count number of sensor types in "Wearable" summary column
+    yearly_publication_counts_sensor_type = data.frame()
+    for (year in unique(data$Year)) {
+      for (sensor in sensor_types) {
+        yearly_publication_counts_sensor_type = rbind(yearly_publication_counts_sensor_type, list(
+          year = year,
+          sensors = sensor,
+          count = nrow(filter_by_sensor_type(filter_by_year(filtered_data(), c(year, year)), sensor))
+        ))
+      }
+    }
     
-    ggplotly(plot) %>%
-      #facet_strip_bigger() %>%
-      layout(title = list(text = '<b>Results reported by domain and context studied</b>', font = list(size = 14), y=.95),
-             margin = list(l = 75, t = 100))
+    # Change level order in the sensor column
+    # such that the majority group (accelerometers) is plotted at the bottom
+    yearly_publication_counts_sensor_type$sensors <- factor(yearly_publication_counts_sensor_type$sensors, levels = rev(sensor_types))
     
+    p = create_barplot(yearly_publication_counts_sensor_type, "sensors", "type of sensor", input$barplot_type_sensor_proportion)
+    if (SAVE_FIGURES) ggsave("../Figures/Figure 2A Publications type of sensor.png", p, width=8, height=6)
+    ggplotly(p)
+  })
+  
+  output$barplot_accelerometer_axes <- renderPlotly({
+    # Count number of publications with 1/2/3 axis-accelerometers from "Wearable" summary column
+    yearly_publication_counts_acc_axes = data.frame()
+    for (year in unique(data$Year)) {
+      for (axes in 1:3) {
+        yearly_publication_counts_acc_axes = rbind(yearly_publication_counts_acc_axes, list(
+          year = year,
+          axes = axes,
+          count = sum(grepl(paste0("accelerometer[^\n]*\nNumber of axes: ", axes), filter_by_year(filtered_data(), c(year, year))$Wearable))
+        ))
+      }
+    }
+    
+    yearly_publication_counts_acc_axes$axes = as.factor(yearly_publication_counts_acc_axes$axes)
+    
+    p = create_barplot(yearly_publication_counts_acc_axes, "axes", "number of axes", input$barplot_accelerometer_axes_proportion)
+    if (SAVE_FIGURES) ggsave("../Figures/Figure 2B Publications type of accelerometer.png", p, width=8, height=6)
+    ggplotly(p)
+  })
+  
+  output$donut_publications_context_position <- renderPlot({
+    plots = list()
+    for (pos in wearable_positions) {
+      data_temp <- data.frame(
+        context=factor(wearable_contexts, levels=wearable_contexts),
+        count=c(
+          nrow(filter_by_wearable_position(filter_by_wearable_context(filtered_data(), wearable_contexts[1]), pos)),
+          nrow(filter_by_wearable_position(filter_by_wearable_context(filtered_data(), wearable_contexts[2]), pos)),
+          nrow(filter_by_wearable_position(filter_by_wearable_context(filtered_data(), wearable_contexts[3]), pos))
+        )
+      )
+      
+      # Compute percentages
+      data_temp$fraction <- data_temp$count / sum(data_temp$count)
+      data_temp$percent <- round((data_temp$fraction)*100, 1)
+      
+      # Compute the cumulative percentages (top of each rectangle)
+      data_temp$ymax <- cumsum(data_temp$fraction)
+      
+      # Compute the bottom of each rectangle
+      data_temp$ymin <- c(0, head(data_temp$ymax, n=-1))
+      
+      # Make the plot without percentages of each context
+      plots[[pos]] = ggplot(data_temp, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=2.5, fill=context)) +
+        geom_rect() +
+        geom_text(x=-1, y=0.25, label=paste0(pos, "\n n=", sum(data_temp$count)), size=4) +
+        scale_fill_manual(values = c("#A6CEE3", "#1F78B4", "#FDBF6F")) +
+        #scale_color_brewer(palette=1) +
+        coord_polar(theta="y") +
+        xlim(c(-1, 4)) +
+        theme_void()
+    }
+    p = ggarrange(plotlist=plots, ncol=7, nrow=2, common.legend=T) + bgcolor("white")
+    if (SAVE_FIGURES) ggsave("../Figures/Figure 2C Publications wearable position context.png", p, width=8, height=3)
+    p
+  })
+  
+  output$barplot_publications_context <- renderPlotly({
+    yearly_publication_counts_context <- data.frame(filtered_data() %>%
+      group_by(Year, Context) %>%
+      count())
+    
+    colnames(yearly_publication_counts_context) = c("year", "context", "count")
+    
+    yearly_publication_counts_context$context = factor(yearly_publication_counts_context$context, levels=rev(wearable_contexts))
+    
+    p = create_barplot(yearly_publication_counts_context, "context", "context", input$barplot_publications_context_proportion)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 7 Publications context.png", p, width=8, height=6)
+    p
+  })
+  
+  output$barplot_publications_positions <- renderPlotly({
+    yearly_publication_counts_positions = data.frame()
+    for (year in unique(data$Year)) {
+      for (position in c("waist", "lower extremities", "trunk", "upper extremities", "others", "not reported")) {
+        positions = position
+        if (position == "trunk") positions = c("lower back", "upper back", "sternum")
+        if (position == "lower extremities") positions = c("foot", "ankle", "lower leg", "upper leg")
+        if (position == "upper extremities") positions = c("hand", "wrist", "lower arm", "upper arm")
+        yearly_publication_counts_positions = rbind(yearly_publication_counts_positions, list(
+          year = year,
+          position = position,
+          count = nrow(filter_by_wearable_position(filter_by_year(filtered_data(), c(year, year)), positions))
+        ))
+      }
+    }
+    
+    yearly_publication_counts_positions$position = factor(yearly_publication_counts_positions$position, rev(c("waist", "lower extremities", "trunk", "upper extremities", "others", "not reported")))
+    
+    p <- create_barplot(yearly_publication_counts_positions, "position", "positions", input$barplot_publications_positions_proportion)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 8A Publications positions.png", p, width=8, height=6)
+    p
+  })
+  
+  output$hist_number_patients <- renderPlot({
+    p = ggplot(filtered_data(), aes(x = get("Number of MS patients"))) +
+      geom_histogram(color="black", fill="white", binwidth = 100) +
+      #facet_grid(rows = vars(Year)) +
+      facet_wrap(Year ~ ., ncol = 6) +
+      theme_classic() +
+      xlab("Number of PwMS included")  +
+      ylab("Number of publications")  +
+      theme(
+        panel.grid.major.y = element_line(linewidth=.1, color="black"),
+        panel.grid.major.x = element_line(linewidth=.1, color="black"),
+        axis.title.x = element_text(size=14, face="bold"),
+        axis.title.y = element_text(size=14, face="bold"),
+        legend.title = element_text(size=14, face="bold"),
+        axis.text.x = element_text(angle = 45, vjust = 0.5),
+      )
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 6 Publications number of MS patients over time.png", p, width=8, height=6)
+    p
+  })
+  
+  output$barplot_publications_number_patients <- renderPlotly({
+    yearly_publication_counts_number_patients <- data.frame(filtered_data() %>% group_by(Year) %>%
+                                                              summarise("<50 patients"=sum(`Number of MS patients`<50),
+                                                                        "<100 patients"=sum(between(`Number of MS patients`, 50, 99)),
+                                                                        "<200 patients"=sum(between(`Number of MS patients`, 100, 199)),
+                                                                        "<500 patients"=sum(between(`Number of MS patients`, 200, 499)),
+                                                                        "<1000 patients"=sum(between(`Number of MS patients`, 500, 1999))))
+    colnames(yearly_publication_counts_number_patients) = c("year", "<50 patients", "<100 patients", "<200 patients", "<500 patients", "<1000 patients")
+    yearly_publication_counts_number_patients = as.data.frame(pivot_longer(yearly_publication_counts_number_patients, cols=!year, names_to="number_bins", values_to="count"))
+    
+    yearly_publication_counts_number_patients$number_bins = factor(yearly_publication_counts_number_patients$number_bins, levels=rev(unique(yearly_publication_counts_number_patients$number_bins)))
+    
+    p = create_barplot(yearly_publication_counts_number_patients, "number_bins", "number of MS patients", input$barplot_publications_number_patients_proportion)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 6 Publications number of MS patients over time.png", p, width=8, height=6)
+    ggplotly(p)
+  })
+  
+  output$barplot_publications_number_wearables <- renderPlotly({
+    yearly_publication_counts_number_wearables <- data.frame(filtered_data() %>% group_by(Year) %>%
+                                                              summarise("1 wearable"=sum(number_wearables == 1, na.rm=T),
+                                                                        "2 wearables"=sum(number_wearables == 2, na.rm=T),
+                                                                        "3 wearables"=sum(number_wearables == 3, na.rm=T),
+                                                                        ">3 wearables"=sum(number_wearables > 3, na.rm=T)))
+    colnames(yearly_publication_counts_number_wearables) = c("year", "1 wearable", "2 wearables", "3 wearables", ">3 wearables")
+    yearly_publication_counts_number_wearables = as.data.frame(pivot_longer(yearly_publication_counts_number_wearables, cols=!year, names_to="number_bins", values_to="count"))
+    
+    yearly_publication_counts_number_wearables$number_bins = factor(yearly_publication_counts_number_wearables$number_bins, levels=rev(unique(yearly_publication_counts_number_wearables$number_bins)))
+    
+    p = create_barplot(yearly_publication_counts_number_wearables, "number_bins", "number of wearables", input$barplot_publications_number_wearables_proportion)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 8B Publications number of MS wearables over time.png", p, width=8, height=6)
+    ggplotly(p)
+  })
+  
+  output$barplot_number_wearables <- renderPlot({
+    plot_data = filtered_data()
+    plot_data$Context = factor(plot_data$Context, levels=wearable_contexts)
+    
+    p = ggplot(plot_data, aes(x = number_wearables)) + 
+      geom_histogram(color="black", fill="white", binwidth = 1) +
+      facet_grid(Context~.) +
+      theme_classic() +
+      xlab("Number of wearables")  +
+      ylab("Number of publications")  +
+      theme(
+        panel.grid.major.y = element_line(linewidth=.1, color="black"),
+        axis.title.x = element_text(size=14, face="bold"),
+        axis.title.y = element_text(size=14, face="bold"),
+        legend.title = element_text(size=14, face="bold"),
+        axis.text.x = element_text(angle = 45, vjust = 0.5),
+      ) +
+      stat_bin(binwidth=1, geom="text", aes(label=after_stat(count)), vjust=-1) +
+      scale_x_continuous(breaks = c(1:max(plot_data$number_wearables))) +
+      ylim(0, 150)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 9 Publications number wearables context.png", p, width=6, height=6)
+    p
   })
   
 }
 
-# Create Shiny app ----
+# Create Shiny app
 shinyApp(ui, server)
