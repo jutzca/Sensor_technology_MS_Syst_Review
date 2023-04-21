@@ -1,0 +1,135 @@
+---
+title: "MS Wearable Sensors - A Review"
+author: "Tim Woelfle"
+date: "2023-04-20"
+output:
+  html_notebook:
+    code_folding: hide
+    toc: yes
+    toc_depth: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+---
+
+```{r}
+data <- read.csv("ShinyApp/extracted_data_new.csv", check.names = F, na.strings = c("NA", "not reported"))
+data <- data[order(data$Year, data$Authors, data$Title, data$DOI),]
+```
+
+# Table 1
+
+```{r}
+suppressPackageStartupMessages(library(dplyr))
+
+filter_by_wearable_position <- function(wearable, wearable_position) grepl(paste0("Position: [^\n]*", wearable_position), wearable)
+filter_by_sensor_type <- function(wearable, sensor_type) grepl(paste0("Type of sensor: [^\n]*", sensor_type), wearable)
+filter_by_axes <- function(wearable, axes) grepl(paste0("accelerometer[^\n]*\nNumber of axes: ", axes), wearable)
+
+data$Context = factor(data$Context, levels=c("real-world", "laboratory", "mixed"))
+#data$global_mean_age = as.numeric(ifelse(grepl("^[.\\d]+ \\((\\d|mean)", data$Age, perl=T), gsub(" .*", "", data$Age), NA))
+data$type_not_reported = as.integer(ifelse(grepl("not reported: n=", data$`Type of MS`), gsub(".*not reported: n=(\\d+).*", "\\1", data$`Type of MS`), 0))
+data$RRMS = ifelse(data$`Number of MS patients` == data$type_not_reported, NA, as.integer(ifelse(grepl("RR: n=", data$`Type of MS`), gsub(".*RR: n=(\\d+).*", "\\1", data$`Type of MS`), 0)))
+data$PMS = ifelse(data$`Number of MS patients` == data$type_not_reported, NA, as.integer(ifelse(grepl("SP: n=", data$`Type of MS`), gsub(".*SP: n=(\\d+).*", "\\1", data$`Type of MS`), 0)) +
+  as.integer(ifelse(grepl("PP: n=", data$`Type of MS`), gsub(".*PP: n=(\\d+).*", "\\1", data$`Type of MS`), 0)) +
+  as.integer(ifelse(grepl("(^|\n)P: n=", data$`Type of MS`), gsub(".*(^|\n)P: n=(\\d+).*", "\\2", data$`Type of MS`), 0)))
+#View(data[!(data$`Number of MS patients` == data$type_not_reported) & abs(data$`Number of MS patients` - (data$RRMS + data$PMS + data$type_not_reported))>10,])
+
+data %>% group_by(Context) %>% summarize(
+  median_n = paste0(median(`Number of MS patients`), " [", round(quantile(`Number of MS patients`, 0.25)), "-", round(quantile(`Number of MS patients`, 0.75)), "], range ", min(`Number of MS patients`), "-", max(`Number of MS patients`)),
+  median_perc_female = paste0(round(median(`Thereof female, n` / `Number of MS patients`, na.rm=T)*100), "% [", round(quantile(`Thereof female, n` / `Number of MS patients`, 0.25, na.rm=T)*100), "%-", round(quantile(`Thereof female, n` / `Number of MS patients`, 0.75, na.rm=T)*100), "%], range ", round(min(`Thereof female, n` / `Number of MS patients`, na.rm=T)*100), "%-", round(max(`Thereof female, n` / `Number of MS patients`, na.rm=T)*100), "%, NA=", sum(is.na(`Thereof female, n`))),
+  median_average_age = paste0(round(median(average_age, na.rm=T)), " [", round(quantile(average_age, na.rm=T, 0.25)), "-", round(quantile(average_age, na.rm=T, 0.75)), "], range ", round(min(average_age, na.rm=T)), "-", round(max(average_age, na.rm=T)), ", NA=", sum(is.na(average_age))),
+  median_perc_rrms = paste0(round(median(RRMS / `Number of MS patients`, na.rm=T)*100), "% [", round(quantile(RRMS / `Number of MS patients`, 0.25, na.rm=T)*100), "%-", round(quantile(RRMS / `Number of MS patients`, 0.75, na.rm=T)*100), "%], range ", round(min(RRMS / `Number of MS patients`, na.rm=T)*100), "%-", round(max(RRMS / `Number of MS patients`, na.rm=T)*100), "%, NA=", sum(is.na(RRMS))),
+  median_perc_pms = paste0(round(median(PMS / `Number of MS patients`, na.rm=T)*100), "% [", round(quantile(PMS / `Number of MS patients`, 0.25, na.rm=T)*100), "%-", round(quantile(PMS / `Number of MS patients`, 0.75, na.rm=T)*100), "%], range ", round(min(PMS / `Number of MS patients`, na.rm=T)*100), "%-", round(max(PMS / `Number of MS patients`, na.rm=T)*100), "%, NA=", sum(is.na(PMS))),
+  control = paste0(sum(`Comparator populuation Type (healthy or other)` != "none"), " (", round(mean(`Comparator populuation Type (healthy or other)` != "none") * 100), "%)"),
+  healthy_control = paste0(sum(`Comparator populuation Type (healthy or other)` == "healthy"), " (", round(mean(`Comparator populuation Type (healthy or other)` == "healthy") * 100), "%)"),
+  ms_control = paste0(sum(`Comparator populuation Type (healthy or other)` == "MS patients"), " (", round(mean(`Comparator populuation Type (healthy or other)` == "MS patients") * 100), "%)"),
+  other_disease_control = paste0(sum(`Comparator populuation Type (healthy or other)` == "other disease(s)"), " (", round(mean(`Comparator populuation Type (healthy or other)` == "other disease(s)") * 100), "%)"),
+  sternum = paste0(sum(filter_by_wearable_position(Wearable, "sternum")), " (", round(mean(filter_by_wearable_position(Wearable, "sternum")*100)), "%)"),
+  "upper back" = paste0(sum(filter_by_wearable_position(Wearable, "upper back")), " (", round(mean(filter_by_wearable_position(Wearable, "upper back")*100)), "%)"),
+  "lower back" = paste0(sum(filter_by_wearable_position(Wearable, "lower back")), " (", round(mean(filter_by_wearable_position(Wearable, "lower back")*100)), "%)"),
+  "waist" = paste0(sum(filter_by_wearable_position(Wearable, "waist")), " (", round(mean(filter_by_wearable_position(Wearable, "waist")*100)), "%)"),
+  "upper arm" = paste0(sum(filter_by_wearable_position(Wearable, "upper arm")), " (", round(mean(filter_by_wearable_position(Wearable, "upper arm")*100)), "%)"),
+  "lower arm" = paste0(sum(filter_by_wearable_position(Wearable, "lower arm")), " (", round(mean(filter_by_wearable_position(Wearable, "lower arm")*100)), "%)"),
+  "wrist" = paste0(sum(filter_by_wearable_position(Wearable, "wrist")), " (", round(mean(filter_by_wearable_position(Wearable, "wrist")*100)), "%)"),
+  "hand" = paste0(sum(filter_by_wearable_position(Wearable, "hand")), " (", round(mean(filter_by_wearable_position(Wearable, "hand")*100)), "%)"),
+  "upper leg" = paste0(sum(filter_by_wearable_position(Wearable, "upper leg")), " (", round(mean(filter_by_wearable_position(Wearable, "upper leg")*100)), "%)"),
+  "lower leg" = paste0(sum(filter_by_wearable_position(Wearable, "lower leg")), " (", round(mean(filter_by_wearable_position(Wearable, "lower leg")*100)), "%)"),
+  "ankle" = paste0(sum(filter_by_wearable_position(Wearable, "ankle")), " (", round(mean(filter_by_wearable_position(Wearable, "ankle")*100)), "%)"),
+  "foot" = paste0(sum(filter_by_wearable_position(Wearable, "foot")), " (", round(mean(filter_by_wearable_position(Wearable, "foot")*100)), "%)"),
+  "other positions" = paste0(sum(filter_by_wearable_position(Wearable, "others")), " (", round(mean(filter_by_wearable_position(Wearable, "others")*100)), "%)"),
+  "not reported" = paste0(sum(filter_by_wearable_position(Wearable, "not reported")), " (", round(mean(filter_by_wearable_position(Wearable, "not reported")*100)), "%)"),
+  "accelerometer" = paste0(sum(filter_by_sensor_type(Wearable, "accelerometer")), " (", round(mean(filter_by_sensor_type(Wearable, "accelerometer")*100)), "%)"),
+  "uniaxial" = paste0(sum(filter_by_axes(Wearable, "1")), " (", round(mean(filter_by_axes(Wearable, "1")*100)), "%)"),
+  "biaxial" = paste0(sum(filter_by_axes(Wearable, "2")), " (", round(mean(filter_by_axes(Wearable, "2")*100)), "%)"),
+  "triaxial" = paste0(sum(filter_by_axes(Wearable, "3")), " (", round(mean(filter_by_axes(Wearable, "3")*100)), "%)"),
+  "gyroscope" = paste0(sum(filter_by_sensor_type(Wearable, "gyroscope")), " (", round(mean(filter_by_sensor_type(Wearable, "gyroscope")*100)), "%)"),
+  "magnetometer" = paste0(sum(filter_by_sensor_type(Wearable, "magnetometer")), " (", round(mean(filter_by_sensor_type(Wearable, "magnetometer")*100)), "%)"),
+  "touchscreen" = paste0(sum(filter_by_sensor_type(Wearable, "touchscreen")), " (", round(mean(filter_by_sensor_type(Wearable, "touchscreen")*100)), "%)"),
+  "mechanical pedometer" = paste0(sum(filter_by_sensor_type(Wearable, "mechanical pedometer")), " (", round(mean(filter_by_sensor_type(Wearable, "mechanical pedometer")*100)), "%)"),
+  "other sensors" = paste0(sum(filter_by_sensor_type(Wearable, "others")), " (", round(mean(filter_by_sensor_type(Wearable, "others")*100)), "%)")
+) %>% t() %>% as.data.frame() %>% gt(rownames_to_stub = T)
+```
+
+# Supplementary Table 1: real-world
+
+```{r}
+suppressPackageStartupMessages(library(gt))
+
+result_columns <- c("Association with MS severity", "Association with other measure", "Test-retest reliability", "Group differences MS vs HC", "Group differences MS vs MS", "Group differences MS vs other diseases", "Responsiveness to change", "Responsiveness to intervention", "Subjective patient acceptability")
+
+
+highlight_first_row <- function(x) {
+  sapply(sapply(strsplit(x, "\n\n"), function(x) sub("([^\n]*)\n", "<b>\\1</b>\n", x)), paste, collapse="\n\n")
+}
+
+abbr <- c("significance not tested"="ns", "non-significant"="ns", "some significant"="ss", "significant"="s")
+
+create_table = function(data, filename) {
+  table = data.frame(
+    first_author_year_doi = gsub("\n", "<br><sup>", highlight_first_row(paste0(data$`First author and year`, "\n[", data$DOI, "](https://doi.org/", data$DOI, ")</sup>"))),
+    n_sex_age_type = paste0("n=", data$`Number of MS patients`, ifelse(!is.na(data$`Thereof female, n`), paste0(" (", round(data$`Thereof female, n`/data$`Number of MS patients`*100), "% female)"), ""), "<br>age: ", data$Age, "<br><br>Type: ", data$`Type of MS`),
+    severity_duration = paste0(ifelse(!is.na(data$Severity), paste0("<b>Severity:</b> ", data$Severity), ""), ifelse(!is.na(data$`Duration of disease in years`), paste0("<br><b>Disease duration:</b> ", data$`Duration of disease in years`), "")),
+    comparator = gsub("\n", "<br>", highlight_first_row(data$`Comparator population, number (number of females)`)),
+    wearable = gsub("\n", "<br>", highlight_first_row(gsub("Type of sensor: ", "", gsub("Number of axes: 1", "1 axis", gsub("Number of axes: (2|3)", "\\1 axes", gsub("Number of wearables: ([0-9]+)", "\\1 wearable(s)", data$Wearable)))))),
+    results = gsub("\n", "<br>", gsub("()", "(other type of result)", paste0(
+      "<b>", gsub(",$", "", trimws(gsub(" ,", "", gsub(", ,", "", apply(data, 1, function(x) paste(x["Domain1"], x["Domain2"], x["Domain3"], x["Domain4"], sep=", ")))))), "</b>\n",
+      sapply(apply(data, 1, function(x) {
+        return(paste0(result_columns[x[result_columns]=="yes"], " (", abbr[x[paste0(result_columns, " - Effect")][x[result_columns]=="yes"]], ")"))
+      }), paste, collapse="\n")
+    ), fixed=T))
+  ) %>% 
+    gt() %>%
+    fmt_markdown(columns = everything()) %>%
+    cols_align(align="center")
+  #table %>% gtsave(filename)
+  return(table)
+}
+
+create_table(data[data$Context == "real-world",], "Tables/real-world.html")
+```
+
+# Supplementary Table 2: laboratory
+
+```{r}
+create_table(data[data$Context == "laboratory",], "Tables/laboratory.html")
+```
+
+# Supplementary Table 3: mixed
+
+```{r}
+create_table(data[data$Context == "mixed",], "Tables/mixed.html")
+```
+
+# Supplementary Table 4
+
+```{r}
+gt(data[,c("First author and year", "DOI", colnames(data)[22:30])])
+```
+
+# Reproducibility
+
+```{r}
+sessionInfo()
+```
+

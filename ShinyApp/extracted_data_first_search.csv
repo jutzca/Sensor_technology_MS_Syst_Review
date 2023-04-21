@@ -1,0 +1,2059 @@
+Authors,Year,First author and year,Title,DOI,Number of MS patients,"Thereof female, n",Age,Type of MS,type_not_reported,Severity,Duration of disease in years,Treatments,Comorbidities,Comparator populuation Type (healthy or other),"Comparator population, number (number of females)",Wearable,Context,Duration wearable was worn,clinicaltrials.gov identifier (NCT),Does the study report a clearly defined research objective (including an outcome)?,Does the study adequately describe the inclusion/exclusion criteria?,"Does the study report on the population parameters/demographics (at least age, sex)?","Does the study report details on assessment of MS (severity [EDSS or PDSS], type)?","Does the study provide sufficient details on the wearables used (type, positioning of wearable, context, recording frequency)?",Does the study report proper statistical analysis? Correction for multiple comparisons?,"Does the study adequately report the strength of the results (e.g., reporting confidence intervals / standard deviations)?",Does the study make the data and/or code publicly available?,Do the authors report on the limitations of their study?,Domain1,Domain2,Domain3,Domain4,Association with MS severity,Association with MS severity - Effect,Association with other measure,Association with other measure - Effect,Group differences MS vs HC,Group differences MS vs HC - Effect,Group differences MS vs MS,Group differences MS vs MS - Effect,Group differences MS vs other diseases,Group differences MS vs other diseases - Effect,Test-retest reliability,Test-retest reliability - Effect,Responsiveness to change,Responsiveness to change - Effect,Responsiveness to intervention,Responsiveness to intervention - Effect,Subjective patient acceptability,Subjective patient acceptability - Effect
+"Ng A.V., Kent-Braun J.A.",1997,"Ng et al, 1997",Quantitation of lower physical activity in persons with multiple sclerosis,10.1097/00005768-199704000-00014,17,11,46 (6),"RR: n=10,
+P: n=8",,"EDSS: 3 (median), range: 1.5-6",not reported,"betaseron: n=2,
+prednisone: n=2,
+prozac: n=2,
+baclofen: n=2,
+cardiazem: n=1 (woman)","smoking: n=1 (male),
+no cardiovascular, metabolic, or immunologic disorders",healthy,"healthy sedentary
+n=15 (60% female)
+age: 44 (7)","TriTrac-R3D
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,yes,non-significant,yes,non-significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Motl R.W., Snook E.M., McAuley E., Scott J.A., Douglass M.L.",2006,"Motl et al, 2006",Correlates of physical activity among individuals with multiple sclerosis,10.1207/S15324796ABM3202_13,196,173,46.1 (9.8),"RR: n=174,
+PP: n=3,
+SP: n=19",,"inclusion criteria: ambulatory with minimal assistance (i.e., walking with or without a cane)",9.0 (7.1),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Snook E.M., McAuley E., Gliottoni R.C.",2006,"Motl et al, 2006","Symptoms, self-efficacy, and physical activity among individuals with multiple sclerosis",10.1002/NUR.20161,196,173,46.1 (9.8),"RR: n=174,
+PP: n=3,
+SP: n=19",,"inclusion criteria: ambulatory with minimal assistance (i.e., walking with or without a cane)",9 (7.1),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Snook E.M., Scott J.A.",2006,"Motl et al, 2006",Validity of physical activity measures in ambulatory individuals with multiple sclerosis,10.1080/09638280600551476,30,28,"42.3 (9.5), range: 27-61","RR: n= 26, 
+PP: n=2,
+SP: n=2",,"EDSS: 2.5 (median), range: 0-5, 
+inclusion criteria: participants were ambulatory without an aide",6.2 (4.3),not reported,not reported,none,none,"Yamax SW-200 
+Type of sensor: mechanical pedometer
+Number of wearables: 1
+Position: waist
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,no,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Snook E.M., McAuley E., Scott J.A., Gliottoni R.C.",2007,"Motl et al, 2007",Are Physical Activity and Symptoms Correlates of Functional Limitations and Disability in Multiple Sclerosis?,10.1037/0090-5550.52.4.463,133,104,51.1 (11.4),"RR: n=86,
+PP: n=6, 
+SP: n=41",,not reported,12.0 (9.0),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,no,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Kos, D; Nagels, G; D'Hooghe, MB; Duquet, W; Ilsbroukx, S; Delbeke, S; Kerckhofs, E",2007,"Kos et al, 2007",Measuring activity patterns using actigraphy in multiple sclerosis,10.1080/07420520701282364,19,9,47.2 (12.1),not reported: n=19,19,EDSS: 5.5 [5-6],not reported,not reported,not reported,healthy,"healthy
+n=10 (60% female)
+age: 39.6 (12.3)","ActiGraph
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: wrist, ankle",real-world,3 days,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Gosney J.L., Scott J.A., Snook E.M., Motl R.W.",2007,"Gosney et al, 2007",Physical activity and multiple sclerosis: Validity of self-report and objective measures,10.1097/01.FCH.0000264411.20766.0C,196,173,46.1 (9.8),"RR: n=174, 
+P/SP: n=22",,not reported,9.0 (7.1),not reported,not reported,none,none,"Yamax SW-200 
+Type of sensor: mechanical pedometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,no,yes,applies partially,yes,yes,yes,no,no,RW: Physical activity,,,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Snook E.M.",2007,"Motl et al, 2007","Physical activity and quality of life in multiple sclerosis: Possible roles of social support, self-efficacy, and functional limitations",10.1037/0090-5550.52.2.143,292,245,"48.0 (10.3), range: 20-69","RR: n=246,
+PP: n=12,
+SP: n=34",,"inclusion criteria: being able to walk with or without a can (inclusion criterion), relapse free in last 30 days","10.3 (7.9), range: 1-35",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Hale L., Williams K., Ashton C., Connole T., McDowell H., Taylor C.",2007,"Hale et al, 2007",Reliability of RT3 accelerometer for measuring mobility in people with multiple sclerosis: Pilot study,10.1682/JRRD.2005.09.0155,10,9,49 (9),"RR: n=7,
+SP: n=3",,"EDSS: 3.5 (median), range: 1.5-6.0,
+RMI: 13.5 (1.4), range: 11-15",16.3 (12.2),not reported,not reported,healthy,"healthy
+n=10 (70% female)
+age: 40 (6)","TriTrac RT3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: upper back",laboratory,not reported,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,yes,significance not tested,no,,no,,yes,significant,no,,no,,no,
+"Motl R.W., Zhu W., Park Y., McAuley E., Scott J.A., Snook E.M.",2007,"Motl et al, 2007",Reliability of scores from physical activity monitors in adults with multiple sclerosis,10.1123/APAQ.24.3.245,193,170,46.2 (9.7),"RR: n=171,
+PP: n=3,
+SP: n=19",,inclusion criteria: ambulatory with minimal assistance,9.0 (7.1),not reported,not reported,none,none,"Yamax SW-200 
+Type of sensor: mechanical pedometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,significance not tested,no,,no,,no,
+"Kayes N.M., McPherson K.M., Taylor D., Schluter P.J., Wilson B.-J.K., Kolt G.S.",2007,"Kayes et al, 2007","The Physical Activity and Disability Survey (PADS): Reliability, validity and acceptability in people with multiple sclerosis",10.1177/0269215507075516,30,23,"54 (median), range: 27-76",not reported: n=30,30,not reported,not reported,not reported,not reported,none,none,"Actical
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1 (non-wheelchair user), 2 (wheelchair users)
+Position: waist, wrist (wheelchair users only)",real-world,7 days,,yes,applies partially,yes,no,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,non-significant,no,,no,,no,
+"Klassen L., Schachter C., Scudds R.",2008,"Klassen et al, 2007",An exploratory study of two measures of free-living physical activity for people with multiple sclerosis,10.1177/0269215507082740,30,19,"42.9 (mean), range: 32-60",not reported: n=30,30,EDSS: range: 1-6,not reported,not reported,not reported,healthy,"healthy
+n=9 (89% female)
+age: 41.6 (4.4), range: 37-51","TriTrac RT3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,4 days,,yes,yes,yes,applies partially,yes,yes,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Motl R.W., Snook E.M.",2008,"Motl et al, 2008",Confirmation and extension of the validity of the Multiple Sclerosis Walking Scale-12 (MSWS-12),10.1016/J.JNS.2007.11.003,133,104,51.1 (11.1),"RR: n=85,
+PP: n=6,
+SP: n=52",,"EDSS: 4.9 (2.0),
+MSWS-12: 44.5 (24.4)",12.0 (9.0),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Snook E.M., Gliottoni R.C.",2008,"Motl et al, 2008",Does the relationship between physical activity and quality of life differ based on generic versus disease-targeted instruments?,10.1007/S12160-008-9049-4,292,245,48.0 (10.3),"RR: n=246,
+PP: n=12,
+SP: n=34",,"inclusion criteria: being ambulatory with minimal assistance, relapse free in the last 30 days",10.3 (7.9),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Hale L.A., Pal J., Becker I.",2008,"Hale et al, 2008",Measuring Free-Living Physical Activity in Adults With and Without Neurologic Dysfunction With a Triaxial Accelerometer,10.1016/J.APMR.2008.02.027,11,8,"63.7 (15.5), range: 28-91",not reported: n=11,11,"Rivermead Mobility Index: 12.4 (2.2), range: 8-15",not reported,not reported,not reported,healthy,"healthy sedentary
+n=9 (89% female)
+age: 51 (18.1), range: 28-76","TriTrac RT3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,no,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,yes,significance not tested,no,,yes,significance not tested,yes,significant,no,,no,,yes,significance not tested
+"Snook E.M., Motl R.W.",2008,"Snook et al, 2008","Physical Activity Behaviors in Individuals with Multiple Sclerosis: Roles of Overall and Specific Symptoms, and Self-Efficacy",10.1016/J.JPAINSYMMAN.2007.09.007,80,65,49.0 (11.4),"RR: n=62,
+PP: n=1,
+SP: n=15,
+benign: n=2",,EDSS: 3.9 (1.8),10.1 (7.9),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,applies partially,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Snook E.M., Wynn D.R., Vollmer T.",2008,"Motl et al, 2008",Physical activity correlates with neurological impairment and disability in multiple sclerosis,10.1097/NMD.0B013E318177351B,80,65,49.0 (11.4),"RR: n=65,
+PP: n=1,
+SP: n=14",,"EDSS: 4 (mean), range: 1-6.5",10.1 (7.9),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Snook E.M., Agiovlasitis S., Suh Y.",2009,"Motl et al, 2009",Calibration of Accelerometer Output for Ambulatory Adults With Multiple Sclerosis,10.1016/J.APMR.2009.03.020,24,20,43.5 (12.2),"RR: n=21,
+PP: n=1,
+benign: n=2",,"PDDS: 1.5 (1.4),
+inclusion criteria: ambulatory without an assistive device including a cane, crutch, or walker",9.1 (7.3),not reported,"exclusion criteria: no patients with family history of coronary heart disease, cigarette smoking, hypertension, high cholesterol, diabetes, obesity, and sedentary lifestyle",healthy,"healthy
+n=24 (83% female)
+age: 40.9 (11.4)","ActiGraph
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",laboratory,not reported,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,no,,no,
+"Motl R.W., Schwartz C.E., Vollmer T.",2009,"Motl et al, 2009",Continued validation of the Symptom Inventory in multiple sclerosis,10.1016/J.JNS.2009.06.015,133,not reported,not reported,"RR: n=82,
+progressive: n=51",,"EDSS: 5.5 (median), range: 1-8.5",12 (9),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,applies partially,no,yes,applies partially,applies partially,yes,no,no,RW: Physical activity,,,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Kayes N.M., Schluter P.J., McPherson K.M., Leete M., Mawston G., Taylor D.",2009,"Kayes et al, 2009",Exploring Actical Accelerometers as an Objective Measure of Physical Activity in People With Multiple Sclerosis,10.1016/J.APMR.2008.10.012,31,21,"50 (median), range: 34-80","RR: n=11, 
+SP: n=5, 
+CP: n=12,
+benign: n=3",,used assistive devices: n=14,"7 (median), range: 1-40",not reported,not reported,none,none,"Actical
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+Polar heart rate monitor
+Type of sensor: others (ECG)
+Number of wearables: 1
+Position: chest",laboratory,not reported,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,no,,no,,no,,no,,yes,non-significant,no,,no,,yes,significance not tested
+"Motl R.W., McAuley E.",2009,"Motl et al, 2009",Longitudinal Analysis of Physical Activity and Symptoms as Predictors of Change in Functional Limitations and Disability in Multiple Sclerosis,10.1037/A0015770,292,245,"48.0 (10.3), range: 20-69","RR: n=246, 
+PP: n=12, 
+SP: n=34",,"PDDS: 3.0 (median), range: 0-6","10.3 (7.9), range: 1-35",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,2 weeks,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,yes,some significant,no,,no,
+"Motl R.W., McAuley E.",2009,"Motl et al, 2009",Pathways Between Physical Activity and Quality of Life in Adults With Multiple Sclerosis,10.1037/A0015985,292,245,"48.0 (10.3), range: 20-69","RR: n=246,
+PP: n=12,
+SP: n=34",,"PDDS: 3.0 (median), range: 0-6","10.3 (7.9), range: 1-35",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,yes,some significant,no,,no,
+"Motl R.W., McAuley E., Snook E.M., Gliottoni R.C.",2009,"Motl et al, 2009","Physical activity and quality of life in multiple sclerosis: Intermediary roles of disability, fatigue, mood, pain, self-efficacy and social support",10.1080/13548500802241902,292,245,"48.0 (10.3), range: 20-69","RR: n=246,
+PP: n=12,
+SP: n=34",,not reported,"10.3 (7.9), range: 1-35",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,yes,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Doerksen S., Hu L., Morris K.S.",2009,"Motl et al, 2009",Preliminary evidence that self-efficacy predicts physical activity in multiple sclerosis,10.1097/MRR.0B013E328325A5ED,16,14,43.4 (8.7),RR: n=16,,not reported,not reported,not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,10 days,,yes,yes,,applies partially,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,yes,significance not tested,no,,no,
+"Motl R.W., McAuley E.",2009,"Motl et al, 2009",Symptom Cluster as a Predictor of Physical Activity in Multiple Sclerosis: Preliminary Evidence,10.1016/J.JPAINSYMMAN.2008.08.004,292,245,48.0 (10.3),"RR: n=239,
+PP: n=12,
+SP: n=34,
+benign: n=7",,not reported,10.3 (7.9),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,2 weeks,,yes,yes,yes,applies partially,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Snook E.M., Motl R.W., Gliottoni R.C.",2009,"Snook et al, 2009",The effect of walking mobility on the measurement of physical activity using accelerometry in multiple sclerosis,10.1177/0269215508101757,74,61,49.0 (11.6),"RR: n=58, 
+PP: n=1, 
+SP: n=13, 
+benign: n=2",,EDSS: 3.9 (1.8),10.1 (8.0),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Motl R.W., Dlugonski D., Suh Y., Weikert M., Fernhall B., Goldman M.",2010,"Motl et al, 2010",Accelerometry and its association with objective markers of walking limitations in ambulatory adults with multiple sclerosis,10.1016/J.APMR.2010.08.011,26,22,43.1 (11.9),RR: n=26,,PDDS: 1.8 (1.6),11.6 (8.4),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+Cosmed K4b2
+Type of sensor: others (VO2)
+Number of wearables: 1
+Position: head",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Weikert M., Motl R.W., Suh Y., McAuley E., Wynn D.",2010,"Weikert et al, 2010",Accelerometry in persons with multiple sclerosis: Measurement of physical activity or walking mobility?,10.1016/J.JNS.2009.12.021,269,223,45.9 (9.6),RR: n=269,,"PDDS: 2 (median), range: 0-6",13.3 (9.2),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Sosnoff J.J., Dlugonski D., Suh Y., Goldman M.",2010,"Motl et al, 2010",Does a waist-worn accelerometer capture intra- and inter-person variation in walking behavior among persons with multiple sclerosis?,10.1016/J.MEDENGPHY.2010.08.015,24,20,43.0 (11.7),RR: n=24,,"PDDS: 1 (median), range: 0-4",11.1 (8.5),not reported,"inclusion criterion: absence of self-reported risk-factors for undertaking strenuous physical activity including cardiovascular diseases, diabetes, hyperlipidemia, and hypertension",none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 2
+Position: waist, ankle",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Physical activity,Lab: Gait,,,yes,non-significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Rietberg, MB; van Wegen, EE; Uitdehaag, BM; de Vet, HC; Kwakkel, G",2010,"Rietberg et al, 2010",How Reproducible Is Home-Based 24-Hour Ambulatory Monitoring of Motor Activity in Patients With Multiple Sclerosis?,10.1016/J.APMR.2010.07.018,43,30,48.7 (7.0),"RR: n=26,
+PP: n=7, 
+SP: n=10",,"EDSS: 3.5 [2.5], range: 1-6","14.3 (9.2), range: 2-51",not reported,no comorbidities that could influence fatigue and/or mobility,none,none,"Vitaport Step Watch
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 5
+Position: sternum, waist, upper leg",real-world,2 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,significant,no,,no,,no,
+"Suh Y., Motl R.W., Mohr D.C.",2010,"Suh et al, 2010","Physical activity, disability, and mood in the early stage of multiple sclerosis",10.1016/J.DHJO.2009.09.002,96,75,"42.8 (10.2), range: 20-64","RR: n=91, 
+PP: n=2, 
+SP: n=3",,not reported,"3.0 (1.5), range: 0.5-5",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,no,yes,applies partially,applies partially,applies partially,applies partially,no,yes,RW: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Gijbels D., Alders G., Van Hoof E., Charlier C., Roelants M., Broekmans T., Op 'T Eijnde B., Feys P.",2010,"Gijbels et al, 2010",Predicting habitual walking performance in multiple sclerosis: Relevance of capacity and self-report measures,10.1177/1352458510361357,50,33,"49 (10), range: 25-66","RR: n=23,
+PP: n=14, 
+SP: n=13",,"EDSS: 4.5 (1.2), range: 1.5-6.5",not reported,"exclusion criteria: patients who were under relapse related medical treatment with glucocorticoids in the last month prior to testing, or had an orthopaedic or other condition interfering with walking",not reported,none,none,"SAM 2D
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 1
+Position: ankle",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Sosnoff J.J., Goldman M.D., Motl R.W.",2010,"Sosnoff et al, 2010",Real-life walking impairment in multiple sclerosis: Preliminary comparison of four methods for processing accelerometry data,10.1177/1352458510373111,70,56,"Age by self-reported disability status: 
+mild: 47.4 (10.1), 
+moderate: 49.4 (13.1), 
+severe: 53.2 (10.3)","RR: n=56, 
+PP: n=1,
+SP: n=13 ",,"SR-EDSS: 
+mild: 2.1 (0.77),
+moderate: 5.05 (0.53),
+severe: 6.02 (0.12)","Self-reported disability status: 
+mild: 10.3 (8.4), 
+moderate: 10.7 (9.6), 
+severe: 11.5 (5.1)",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,yes,some significant,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Wynn D., Suh Y., Weikert M., Dlugonski D.",2010,"Motl et al, 2010",Symptoms and physical activity among adults with relapsing-remitting multiple sclerosis,10.1097/NMD.0B013E3181D14131,269,223,45.9 (9.6),RR: n=269,,"PDDS: 2 (median), range: 0-6",13.3 (9.2),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Alaqtash, M; Yu, HY; Brower, R; Abdelgawad, A; Sarkodie-Gyan, T",2011,"Alaqtash et al, 2011",Application of wearable sensors for human gait analysis using fuzzy computational algorithm,10.1016/J.ENGAPPAI.2011.04.010,4,0,"43.5 (14.5), range: 29-63",RR: n=4,,not reported,not reported,not reported,not reported,healthy,"healthy
+n=10 (0% female)
+age: 26.2 (5.2), range: 21-38","ADXL330 iMEMS
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 8
+Position: waist, upper leg, lower leg, foot",laboratory,not reported,,yes,no,yes,no,yes,no,yes,no,no,Lab: Gait,,,,no,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,
+"Motl R.W., Dlugonski D.",2011,"Motl et al, 2011",Increasing physical activity in multiple sclerosis using a behavioral intervention,10.1080/08964289.2011.636769,18,16,45.1 (9.5),RR: n=18,,"PDDS: 1.0 (median), range: 0-4",7.3 (5.0),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+New Lifestyles Digi-Walker SW-201
+Type of sensor: mechanical pedometer
+Number of wearables: 1
+Position: not reported",real-world,3 weeks,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,yes,some significant,yes,some significant,no,
+"Schlesinger S., Neuhaus A., Thiele A., Kippnich M., Rashid A., Griewing B., Daumer M.",2011,"Schlesinger et al, 2011",Is it possible to measure mobility deficits of patients suffering from multiple sclerosis?: Evaluation of mobility of patients with MS and motor dysfunctions by means of accelerometers,10.1055/S-0031-1271750,16,8,"47.56 (7.78), range: 39-70",RR/SP/PP,,"EDSS: 3.56 (1.05), 3.5 (median), range: 2-5.5",not reported,not reported,not reported,healthy,"healthy
+n=26 (42% female)
+age: 37.3 (12.9), range= 25-67","Actibelt
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,not reported,,yes,applies partially,yes,no,yes,applies partially,yes,no,no,RW: Physical activity,,,,yes,non-significant,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Grčić P.F., Matijaca M., Lušić I., Čapkun V.",2011,"Grčić et al, 2011",Responsiveness of walking-based outcome measures after multiple sclerosis relapses following steroid pulses,10.12659/MSM.882130,49,39,"35 (median), range: 18-56",RR: n=49,,"EDSS: 3.0 (median), range: 1.5-6.0","8 (median), range: 1.3-27","relapse with difficulties in walking: Solu-Medrol (1000 mg/day, 3 days)",not reported,none,none,"StepWatch Activity Monitor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: ankle",real-world,2 weeks,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significance not tested,no,,no,,no,,no,,no,,yes,some significant,no,,no,
+"Madeline Weikert, Deirdre Dlugonski, Yoojin Suh, Bo Fernhall, Robert W Motl",2011,"Weikert et al, 2011",The impact of gait disability on the calibration of accelerometer output in adults with multiple sclerosis.,10.7224/1537-2073-13.4.170,24,20,42.0 (11.7),RR: n=24,,"PDDS: 1 (median), range: 0-4, 
+MSWS-12 without gait disability: 10.5 (11.1),
+MSWS-12 with gait disability: 37.8 (11.7)",11.1 (8.5),,,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+Cosmed K4b2
+Type of sensor: others (VO2)
+Number of wearables: 1
+Position: head",laboratory,not reported,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,yes,some significant,no,,yes,some significant,no,,no,,no,,no,,no,
+"Schmidt A.L., Pennypacker M.L., Thrush A.H., Leiper C.I., Craik R.L.",2011,"Schmidt et al, 2011",Validity of the stepwatch step activity monitor: Preliminary findings for use in persons with parkinson disease and multiple sclerosis,10.1519/JPT.0B013E31820AA921,9,9,55.9 (mean),not reported: n=9,9,"EDSS: 5.2 (mean), 95% CI: 3.9-6.6,
+modified fatigue impact scale: 36.3 (mean), 95% CI: 24.2-48.5",not reported,number of medications : 5.6 (mean),not reported,other disease(s),"PD patients
+n=11 (36% female)
+age: 66.8 (mean)
+Severity: 
+-Modified Hoehn and Yahr Staging: mean 2.9, 95% CI 2.1-3.7","StepWatch Activity Monitor
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 1
+Position: ankle",laboratory,not reported,,yes,yes,yes,applies partially,yes,applies partially,applies partially,no,yes,Lab: Physical activity,,,,no,,no,,no,,no,,yes,significance not tested,no,,no,,no,,no,
+"Yu F., Bilberg A., Stenager E., Rabotti C., Zhang B., Mischi M.",2012,"Yu et al, 2012",A wireless body measurement system to study fatigue in multiple sclerosis,10.1088/0967-3334/33/12/2033,17,not reported,range: 20-65 [inclusion criteria],not reported: n=17,17,inclusion criteria: EDSS<5.5,not reported,not reported,"inclusion criteria: no known cardiovascular disorders, pulmonary disorders, blood disorders, infections or other disorders except for MS;
+exclusion criteria: patients who suffered from depression, severe pain, taking medication that may induce fatigue or being severely cognitively handicapped",healthy,"healthy
+n=9 (sex-matched to MS patients)
+age: not specified","FAMOS prototype
+Type of sensor: accelerometer, others (ECG, sEMG, temperature)
+Number of axes: 1
+Number of wearables: 8
+Position: upper back, upper leg, lower leg, ankle",real-world,24 hours,,yes,yes,no,no,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Sandroff B.M., Motl R.W., Suh Y.",2012,"Sandroff et al, 2012",Accelerometer output and its association with energy expenditure in persons with multiple sclerosis,10.1682/JRRD.2011.03.0063,43,38,47.2 (9.1),"RR: n=39,
+PP: n=2, 
+SP: n=2",,"PDDS: 1 (median), range: 0-5,
+MSWS-12: 18.6 (16.5)",10.8 (7.7),not reported,not reported,healthy,"healthy
+n=43 (88% female)
+age: 46.5 (10.0)","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+ActiGraph GTX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",laboratory,not reported,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,yes,significance not tested,yes,some significant,no,,no,,no,,no,,no,,no,
+"Weikert M., Suh Y., Lane A., Sandroff B., Dlugonski D., Fernhall B., Motl R.W.",2012,"Weikert et al, 2012","Accelerometry is associated with walking mobility, not physical activity, in persons with multiple sclerosis",10.1016/J.MEDENGPHY.2011.09.005,33,27,47.5 (10.6),"RR: n=28,
+not reported: n=5",5,"PDDS: 2 (median), range: 0-6",9.2 (6.7),not reported,not reported,healthy,"healthy
+n=33 (82% female)
+age: 47.7 (11.3)","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,yes,significance not tested,no,,no,,no,,no,,no,,no,
+"Motl R.W., Weikert M., Suh Y., Sosnoff J.J., Pula J., Soaz C., Schimpl M., Lederer C., Daumer M.",2012,"Motl et al, 2012",Accuracy of the actibelt(®) accelerometer for measuring walking speed in a controlled environment among persons with multiple sclerosis,10.1016/J.GAITPOST.2011.09.005,51,43,53.1 (11.3),"RR: n=45,
+not reported: n=6",6,"EDSS: 4.0 (median), range: 2.0-6.5, 
+mild disability: n = 21, EDDS: range:2-3.5, 
+moderate disability: n = 13, EDDS: range: 4.0-5.5,
+severe disability: n = 17, EDDS: range: 6.0-6.5",13.4 (9.4),patients on a disease-modifying treatment: n=44 (86%),not reported,none,none,"Actibelt
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",laboratory,6 minutes,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Spain R.I., St. George R.J., Salarian A., Mancini M., Wagner J.M., Horak F.B., Bourdette D.",2012,"Spain et al, 2012",Body-worn motion sensors detect balance and gait deficits in people with multiple sclerosis who have normal walking speed,10.1016/J.GAITPOST.2011.11.026,31,19,"39.8 (mean), range: 24-67 ","RR: n=28; 
+high-risk clinically isolated syndromes (one brainstem, one spinal cord, and one pyramidal tract symptoms with cerebral white matter changes): n=3",,"EDSS: 3.0 (median), range: 0-5.0","6.8 (median), range: 0.2-33",not reported,exclusion criterion: arthritis,healthy,"healthy
+n=28 (67% female)
+age: 37.4 (mean), range: 26 - 60","Xsens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: sternum, lower back, wrist, ankle",laboratory,not reported,,yes,yes,yes,yes,yes,no,yes,no,no,Lab: Physical activity,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Coote S., O'Dwyer C.",2012,"Coote et al, 2012",Comparative validity of accelerometer-based measures of physical activity for people with multiple sclerosis,10.1016/J.APMR.2012.05.010,30,21,"Group MS-A: 50.6 (mean), 95% CI: 46.5-54.8,
+Group MS-B: 56.1 (mean), 95% CI: 49.0-63.2","RR: n=9,
+PP: n=1,
+SP/P: n=15,
+benign: n=5",,"GNDS total score
+Group MS-A: 10.11 (5.87),
+Group MS-B: 11.18 (3.74)","2 MS groups:
+Group MS-A: 10.16 (8.07),
+Group MS-B: 15.36 (9.11)",not reported,not reported,healthy,"healthy
+n=15 (73% female)
+age: 46.1 (mean), range: 39.7 - 52.6        ","SenseWear Armband
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 1
+Position: upper arm
+
+ActivPal
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: upper leg
+
+Oxycon Mobile
+Type of sensor: others (VO2)
+Number of wearables: 1
+Position: head",laboratory,85 minutes,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Sosnoff J.J., Socie M.J., Boes M.K., Sandroff B.M., Motl R.W.",2012,"Sosnoff et al, 2012",Does a waist-worn ActiGraph accelerometer quantify community ambulation in persons with multiple sclerosis?,10.1682/JRRD.2011.11.0218,22,17,"46.9 (11.7), range 23-64",not reported: n=22,22,EDSS: 3.0 [2.5] range: 1-6,"11.0 (6.9), range: 1-23",not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+IDEEA system
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 5
+Position: sternum, waist, upper leg, foot",real-world,1 day,,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Sosnoff J.J., Sandroff B.M., Pula J.H., Morrison S.M., Motl R.W.",2012,"Sosnoff et al, 2012",Falls and physical activity in persons with multiple sclerosis,10.1155/2012/315620,37,28,53.4 (10.0),not reported: n=37,37,EDSS: 5.0 [4],14.6 (10.6),not reported,not reported,MS patients,"MS patients - no fallers
+n=38 (82% female)
+age: 50.1 (13.9)
+Type: not reported
+Severity of MS: 3.0 [2.0]
+Disease duration [yrs]: 11.0 (9.6)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,1 day,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,non-significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Sandroff B.M., Dlugonski D., Weikert M., Suh Y., Balantrapu S., Motl R.W.",2012,"Sandroff et al, 2012",Physical activity and multiple sclerosis: New insights regarding inactivity,10.1111/J.1600-0404.2011.01634.X,77,66,47.3 (9.7)	,"RR: n=66,
+not reported: n=11 ",11,"PDSS: 1 (median), range: 0-6",10.1 (7.3),not reported,not reported,healthy,"healthy
+n=66 (85% female)
+age: 47.0 (10.5)     ","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Dlugonski D.",2012,"Motl et al, 2012",Reactivity in baseline accelerometer data from a physical activity behavioral intervention,10.1037/A0025965,18,15,45.4 (11.2),RR: n=18,,not reported,7.7 (5.5),not reported,"exclusion criteria: contre-indications for physical activity (e.g., cardiovascular disease)",MS patients,"MS patients
+n=20 (80% female)
+age: 48.3 (9.8)
+Type: RR: n=18, not reported: n=2 
+Severity of MS: not reported
+Disease duration [yrs]: 9.9 (8.9)","Yamax SW-200 
+Type of sensor: mechanical pedometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+Omron HJ-720ITC
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,no,,yes,significant,no,
+"Ranadive S.M., Yan H., Weikert M., Lane A.D., Linden M.A., Baynard T., Motl R.W., Fernhall B.",2012,"Ranadive et al, 2012",Vascular dysfunction and physical activity in multiple sclerosis,10.1249/MSS.0B013E31822D7997,33,27,47.0 (1.83),"RR: n=29,
+PP: n=1,
+SP: n=3",,"PDSS: 2 (median), range: 0-6",9.2 (6.7),"subjects taking disease-modifying medications: n=25
+--> Avonex interferon beta (Biogen Idec, Washington, DC): n = 5
+--> Betaseron (Bayer Healthcare Pharmaceuticals, Pinebrook, NJ): n=6
+--> Tysabri (Biogen Idec): n=4
+--> Copaxone (Teva Pharmaceutical Industries Ltd., Petah Tikva, Israel): n=7
+--> Extavia (Novartis Pharmaceuticals Corp., East Hanover, NJ): n=1
+--> Rebif (EMD Serono, Inc., Rockland, MA): n=2. In addition, 
+subjects taking antispasticity medications: n=10,
+subjects taking fatigue medications: n=7",not reported,healthy,"healthy
+n=33 (82% female)
+age: 47.0 (1.97)  ","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Pilutti L.A., Dlugonski D., Pula J.H., Motl R.W.",2012,"Pilutti et al, 2012",Weight status in persons with multiple sclerosis: Implications for mobility outcomes,10.1155/2012/868256,168,42,48.5 (11.6),"RR: n=43,
+PP: n=0, 
+SP: n=8, 
+not reported: n=1",1,PDDS: 3.0 [3.0],13.8 (9.6),not reported,not reported,none,"MS patients
+Overweight: n=61 (77% female), age: 51.5 (9.5), Type: RR: n=45, SP:7, PP: 4, not reported: n=2, severity of MS: PDDS: 3.0 [3.0]; Disease duration [yrs]: 10.9 (7.8);
+Obese: n=55 (43% female), age: 52.5 (10.6), Type: RR: n=46, SP: 4, PP: 4, not reported: n=1, severity of MS: PDDS: 3.0 [3.0]; Disease duration [yrs]: 11.2 (10.3)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,7 days,,yes,yes,yes,yes,applies partially,applies partially,no,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,no,,no,,yes,non-significant,no,,no,,no,,no,,no,
+"Motl R.W., Pilutti L., Sandroff B.M., Dlugonski D., Sosnoff J.J., Pula J.H.",2013,"Motl et al, 2013",Accelerometry as a measure of walking behavior in multiple sclerosis,10.1111/ANE.12036,256,208,49.5 (10.2),"RR: n=215,
+PP: n=13,
+SP: n=24, 
+not reported: n=4",4,"EDSS: 4.0 [3.5], range: 0-6.5",11.3 (8.7),not reported,exclusion criteria: presence of any risk factors for undertaking excercise taking,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Huisinga J.M., Mancini M., St. George R.J., Horak F.B.",2013,"Huisinga et al, 2013",Accelerometry reveals differences in gait variability between patients with multiple sclerosis and healthy controls,10.1007/S10439-012-0697-Y,15,11,43.75 (11.9),not reported: n=15,15,EDSS: 4.21 [1.0],not reported,not reported,"exclusion criteria: any other problems which may affect gait such as vestibular issues, orthopaedic problems, and diabetic neuropathy",healthy,"healthy
+n=15 (80% female)
+age: 42.2 (10.3)","MTX Xsens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: sternum, lower back, wrist, lower leg",laboratory,30s,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,Lab: Physical activity,,,,yes,significant,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Motl R.W., Pilutti L.A., Learmonth Y.C., Goldman M.D., Brown T.",2013,"Motl et al, 2013",Clinical Importance of Steps Taken per Day among Persons with Multiple Sclerosis,10.1371/JOURNAL.PONE.0073247,786,667,47.3 (10.5),"RR: n=705;
+not reported: n=81",81,PDDS: 2.0 [2.0],9.9 (8.0),not reported,not reported,healthy,"healthy
+n=157 (91% female)
+age: 43.4 (9.8)","Yamax SW-200 
+Type of sensor: mechanical pedometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Sandroff B.M., Motl R.W.",2013,"Sandroff et al, 2013",Comparison of ActiGraph activity monitors in persons with multiple sclerosis and controls.,10.3109/09638288.2012.707745,41,36,47.4 (8.8),"RR: n=37, 
+not reported: n=4",4,"PDDS: 1.0 (median), range: 0-4",11.0 (7.9),not reported,exclusion criteria: presence of any risk factors for undertaking excercise taking,healthy,"healthy
+n=41 (88% female)
+age: 47.2 (9.1)","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+ActiGraph GTX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,no,,no,,no,,no,,no,,no,,no,,no,
+"Filipović Grčić P., Matijaca M., Bilić I., Džamonja G., Lušić I., Čaljkušić K., Čapkun V.",2013,"Grčić et al, 2013",Correlation analysis of visual analogue scale and measures of walking ability in multiple sclerosis patients,10.1007/S13760-013-0187-5,82,61,37.8 (9.9),not reported: n=82,82,"EDSS: 2.5 (median), range: 0-6.5",9.0 (6.3),not reported,"exclusion criteria: presence of a risk factor for strenuous physical activity (cardiovascular disease, hypertension), vision impairment, and orthopedic disease",none,none,"StepWatch Activity Monitor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: ankle",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Hilfiker R., Vaney C., Gattlen B., Meichtry A., Deriaz O., Lugon-Moulin V., Anchisi-Bellwald A.M., Palaci C., Foinant D., Terrier P.",2013,"Hilfiker et al, 2013",Local dynamic stability as a responsive index for the evaluation of rehabilitation effect on fall risk in patients with multiple sclerosis: a longitudinal study.,10.1186/1756-0500-6-260,18,12,"54 (11), range: 37-72",not reported: n=18,18,"EDSS: 5.11 (1.27), range: 3-6.5",not reported,not reported,not reported,none,none,"Dynaport
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,3 minutes,http://www.controlled-trials.com/ISRCTN69803702,yes,yes,yes,applies partially,yes,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,no,,no,,no,,no,,no,,yes,significant,no,
+"Motl R.W., McAuley E., Sandroff B.M.",2013,"Motl et al, 2013",Longitudinal change in physical activity and its correlates in relapsing-remitting multiple sclerosis.,10.2522/PTJ.20120479,269,223,45.9 (9.6),RR: n=269,,PDDS: 2 [3],8.8 (7.0),"subjects taking disease-modifying therapy: n=223,
+--> interferon 1a: n=112
+--> glatiramer acetate: n=69
+--> interferon 1b: n=29",not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,yes,significant,no,,no,
+"Lamers I., Kerkhofs L., Raats J., Kos D., Van Wijmeersch B., Feys P.",2013,"Lamers et al, 2013",Perceived and actual arm performance in multiple sclerosis: Relationship with clinical tests according to hand dominance,10.1177/1352458513475832,30,15,58.2 (10.9),"PP: n=5, 
+SP: n=25",,"EDSS: 7.5 (median), range: 7.0-8.0",21.8 (11),not reported,"cognitive impairment, intention tremor, paralysis or severe spasticity in both arms, severe orthopaedic, rheumatoid impairment interfering with arm function",healthy,"healthy
+n=30 (33% female)
+age: 57.9 (10.9)","Motionlogger
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: wrist",mixed,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Sandroff B.M., Pilutti L.A., Dlugonski D., Motl R.W.",2013,"Sandroff et al, 2013",Physical activity and information processing speed in persons with multiple sclerosis: A prospective study,10.1016/J.MHPA.2013.08.001,82,62,49.0 (9.1),"RR: n=65,
+PP: n=3,
+SP: n=10,
+not reported: n=4",4,"SR-EDSS: 3.5 (median), range: 0-6.5",11.8 (8.2),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,applies partially,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Dlugonski D., Pilutti L.A., Sandroff B.M., Suh Y., Balantrapu S., Motl R.W.",2013,"Dlugonski et al, 2013","Steps per day among persons with multiple sclerosis: Variation by demographic, clinical, and device characteristics",10.1016/J.APMR.2012.12.014,645,550,46.3 (10.6),"RR: n=575,
+P: n=63,
+not reported: n=7",7,"PDDS<=2: n=255
+PDDS=>3: n=194","<10 years: n=395, 
+>10 years: n=250",not reported,not reported,none,none,"Yamax SW-200 
+Type of sensor: mechanical pedometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,no,,no,,no,,no,,no,,no,,no,,no,
+"Morrison S., Sosnoff J.J., Sandroff B.M., Pula J.H., Motl R.W.",2013,"Morrison et al, 2013",The dynamics of finger tremor in multiple sclerosis is affected by whole body position,10.1016/J.JNS.2012.10.007,32,22,59.2 (12.4),not reported: n=32,32,not reported,not reported,not reported,not reported,healthy,"healthy
+n=12 (33% female)
+age: 64.3 (6.8)","V94-41
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 2
+Position: hand",laboratory,30s,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,Lab: Dexterity/Tremor,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Learmonth Y.C., Dlugonski D.D., Pilutti L.A., Sandroff B.M., Motl R.W.",2013,"Learmonth et al, 2013","The reliability, precision and clinically meaningful change of walking assessments in multiple sclerosis",10.1177/1352458513483890,82,62,49.2 (9.0),"RR: n=65, 
+PP: n=7, 
+SP: n=10",,"SR-EDSS: 3.5 (2.0), 3.5 [3.5], range: 0-6.5,
+PDDS: 2.6 (1.8), 3 [3], range: 0-6","11.8 (8.2), range: 0.5-32",not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,6 months,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,significant,no,,no,,no,
+"Learmonth Y.C., Motl R.W., Sandroff B.M., Pula J.H., Cadavid D.",2013,"Learmonth et al, 2013",Validation of patient determined disease steps (PDDS) scale scores in persons with multiple sclerosis,10.1186/1471-2377-13-37,96,77,"53.5 (14), range: 30-78","RR: n=79,
+not reported: n=17",17,"EDDS: 4.5 [3.0], range: 2-6.5,
+PDDS: 3.0 [3.0], range: 0-6","9 (12), range: 1-43",not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,no,,no,,no,,no,,no,,no,,no,,no,
+"Sandroff B.M., Riskin B.J., Agiovlasitis S., Motl R.W.",2014,"Sandroff et al, 2014","Accelerometer cut-points derived during over-ground walking in persons with mild, moderate, and severe multiple sclerosis",10.1016/J.JNS.2014.02.024,54,45,50.9 (9.2),"RR: n=42,
+PP: n=6,
+SP: n=5,
+not reported: n=1",1,"EDDS: 4.0 (median), range: 1.0-6.5",11.9 (7.5),not reported,"inclusion criteria: absence of risk-factors for undertaking strenuous physical activity (e.g., cardiovascular diseases, diabetes, hyperlipidemia, and hypertension) ",none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+Cosmed K4b2
+Type of sensor: others (VO2)
+Number of wearables: 1
+Position: head",laboratory,1 day,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,Lab: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Sandroff B.M., Motl R.W., Kam J.P., Pula J.H.",2014,"Sandroff et al, 2014",Accelerometer measured physical activity and the integrity of the anterior visual pathway in multiple sclerosis,10.1016/J.MSARD.2013.06.014,84,66,51.8 (11.3),"RR: n= 69,
+PP: n=4, 
+SP: n= 7, 
+not reported: n= 4",4,"EDDS: 4.5 (median), range: 2.0-6.5",10.8 (9.3),not reported,"exclusion criteria: ocular disease (current or prior history of optic neuritis, glaucoma, macular degeneration, etc., assessed by a neuro-ophthalmologist) or (b) high myopia (minus 7.5 or higher)",none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Sandroff B.M., Motl R.W., Pilutti L.A., Learmonth Y.C., Ensari I., Dlugonski D., Klaren R.E., Balantrapu S., Riskin B.J.",2014,"Sandroff et al, 2014",Accuracy of StepWatch™ and ActiGraph accelerometers for measuring steps taken among persons with multiple sclerosis,10.1371/JOURNAL.PONE.0093511,63,48,50.68 (9.22),"RR: n=50,
+not reported: n=13",13,"EDSS: 4.0 (median), range: 1.0-6.5",12.83 (8.50),not reported,"Inclusion criteria: Absence of risk-factors for undertaking strenuous physical activity (e.g., cardiovascular diseases, diabetes, hyperlipidemia, and hypertension)",none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+StepWatch Activity Monitor
+Type of sensor: mechanical pedometer
+Number of wearables: 1
+Position: ankle",real-world,1 day,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Spain R.I., Mancini M., Horak F.B., Bourdette D.",2014,"Spain et al, 2014","Body-worn sensors capture variability, but not decline, of gait and balance measures in multiple sclerosis over 18 months",10.1016/J.GAITPOST.2013.12.010,27,18,"41 (mean), range: 24-67",RR: n=27,,"SR-EDSS: 3.3 (mean), 4.0 (median), range: 0-5.5","10 (mean), 5 (median), range: 0-46","subjects taking disease modifying therapy: n=16,
+4-aminopyridine: n=1",not reported,healthy,"healthy
+n=18 (78% female)
+age: 34 (mean), range: 27-60","Xsens
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 6
+Position: waist",mixed,30s,,no,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,Lab: Physical activity,Lab: Gait,,no,,no,,yes,significant,yes,significant,no,,no,,yes,some significant,no,,no,
+"Shammas L., Zentek T., von Haaren B., Schlesinger S., Hey S., Rashid A.",2014,"Shammas et al, 2014",Home-based system for physical activity monitoring in patients with multiple sclerosis (Pilot study),10.1186/1475-925X-13-10,11,7,41 (9.3),"RR: n=8,
+PP: n=1,
+SP: n=2",,"Group EDSS 1-2.5: EDSS: 1.75 (0.82),
+Group EDSS 3-5: EDSS: 4.40 (0.89)
+  ",2.18 (10.67),not reported,not reported,none,none,"Move II activity sensor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: waist, ankle",real-world,10 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,yes,significant,no,,no,
+"Schwartz C.E., Ayandeh A., Motl R.W.",2014,"Schwartzt et al, 2014",Investigating the minimal important difference in ambulation in multiple sclerosis: A disconnect between performance-based and patient-reported outcomes?,10.1016/J.JNS.2014.10.021,269,223,45.85 (9.73),RR: n=269,,"PDDS: 2 [3],
+MSWS: 36.0 (28.2)",8.8 (7.0),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,no,RW: Physical activity,,,,no,,yes,non-significant,no,,no,,no,,no,,yes,non-significant,no,,no,
+"Balantrapu S., Sosnoff J.J., Pula J.H., Sandroff B.M., Motl R.W.",2014,"Balantrapu et al, 2014",Leg spasticity and ambulation in multiple sclerosis,10.1155/2014/649390,44,32,52.8 (7.6),"RS: n=36,
+not reported: n=8",8,"EDSS: 6 (median), range: 2.5-6.5  ","10.3 (8.4), range: 0-39",not reported,not reported,MS patients,"MS patients without spasticity
+n=40 (90% female)
+age: 47.7 (11.1)
+Type: RR: n=37
+Severity of MS: EDDS: 3.5 [2.0-6.5]
+Disease duration [yrs]: 11.5 (9.7), range: 0-39","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,applies partially,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,RW: Dexterity/Tremor,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Sandroff B.M., Dlugonski D., Pilutti L.A., Pula J.H., Benedict R.H.B., Motl R.W.",2014,"Sandroff et al, 2014",Physical activity is associated with cognitive processing speed in persons with multiple sclerosis,10.1016/J.MSARD.2013.04.003,212,170,50.0 (10.3),"RR: n=173,
+PP: n=12, 
+SP: n= 22,
+not reported: n=5",5,"PASAT: 42.6 (12.2),
+SDMT: 46.3 (11.6)",11.4 (8.8),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Huisinga, JM; St George, RJ; Spain, R; Overs, S; Horak, FB",2014,"Huisinga et al, 2014",Postural Response Latencies Are Related to Balance Control During Standing and Walking in Patients With Multiple Sclerosis,10.1016/J.APMR.2014.01.004,40,32,"severity group:
+mild: 41.4 (10.5),
+moderate: 50.3 (11.8)",not reported: n=40,40,"mild MS group: SR-EDSS: 3.9 (1.2)
+moderate MS group: SR-EDSS: 5.0 (1.3)",not reported,not reported,not reported,healthy,"healthy
+n=20 (85% female)
+age: 41.8 (10.7)","MTX Xsens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: sternum, lower back, wrist, lower leg",laboratory,not reported,,yes,yes,yes,yes,applies partially,no,applies partially,no,yes,Lab: Physical activity,Lab: Balance,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Carpinella I., Cattaneo D., Ferrarin M.",2014,"Carpinella et al, 2014",Quantitative assessment of upper limb motor function in Multiple Sclerosis using an instrumented Action Research Arm Test,10.1186/1743-0003-11-67,21,9,47.4 (9.0),"RR: n=10, 
+PP: n=4, 
+SP: n=7",,"EDSS: 7 (median), range: 2-8.5 ","15 (median), range: 1-33",not reported,not reported,healthy,"healthy
+n=12 (42% female)
+age: 44.3 (9.5)","MTX Xsens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower arm",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Ickmans K., Simoens F., Nijs J., Kos D., Cras P., Willekens B., Meeus M.",2014,"Ickmans et al, 2014",Recovery of peripheral muscle function from fatiguing exercise and daily physical activity level in patients with multiple sclerosis: A case-control study,10.1016/J.CLINEURO.2014.04.021,19,13,39.74 (10.67),not reported: n=19,19,EDSS: 1.64 (1.02),83.52 (68.50) months,not reported,not reported,healthy,"healthy
+n=32 (69% female)
+age: 39.3 (13.9)","Actical
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,8 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Motl R.W., McAuley E., Klaren R.",2014,"Motl et al, 2014",Reliability of physical-activity measures over six months in adults with multiple sclerosis: Implications for designing behavioral interventions,10.1080/08964289.2013.821966,567,474,"47.0 (10.0), range: 19-84","RR: n=519, 
+PP: n=12, 
+SP: n=36",,"PDDS: 2.0 (median), range: 0-6","9.6 (7.5), range: 1-37",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,6 months,,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,significant,no,,no,,no,
+"Suh Y., Joshi I., Olsen C., Motl R.W.",2014,"Suh et al, 2014",Social cognitive predictors of physical activity in relapsing-remitting multiple sclerosis,10.1007/S12529-013-9382-2,68,56,49.1 (8.8),RR: n=68,,PDDS: 2 [0-3],12.1 (7.9),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,not reported,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Learmonth Y.C., Pilutti L.A., Dlugonski D., Klaren R.",2014,"Motl et al, 2014",Validity of minimal clinically important difference values for the multiple sclerosis walking scale-12?,10.1159/000356116,82,66,49.2 (9.0),"RR: n=67,
+not reported: n=15",15,PDDS: 3.0 [3],11.8 (8.2),"subjects taking disease-modifying therapy at baseline: n=63,
+subjects taking disease-modifying therapy at follow-up: n=57,
+subjects taking symptomatic agents at baseline and follow-up: n=41,
+fampridine at baseline: n=5,
+fampridine at follow-up: n=7",not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,no,,no,,no,,no,,yes,significant,no,,no,,no,
+"Ayache S.-S., Al-ani T., Farhat W.-H., Zouari H.-G., Créange A., Lefaucheur J.-P.",2015,"Ayache et al, 2015",Analysis of tremor in multiple sclerosis using Hilbert-Huang Transform,10.1016/J.NEUCLI.2015.09.013,16,12,"49.6 (10.7), range: 31-74",not reported: n=16,16,"EDSS: 4.4 (2.4), range: 1.5-8.5",not reported,not reported,exclusion criteria: other neurological or psychiatric diseases,MS patients,"MS patients without tremor
+n=10 (60% female)
+age: 47.9 (6.6), range: 35-58 
+Type: not reported
+Severity of MS: EDDS: 33.4 (1.6), range: 2 -6
+Disease duration [yrs]: not reported","TREM0000
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: hand",laboratory,not reported,,yes,yes,yes,applies partially,applies partially,yes,yes,no,yes,Lab: Dexterity/Tremor,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+J. Gong,2015,"Gong et al, 2015",Causal analysis of inertial body sensors for enhancing gait assessment separability towards multiple sclerosis diagnosis,10.1109/BSN.2015.7299400,28,13,not reported,not reported: n=28,28,not reported,not reported,not reported,not reported,healthy,"healthy
+n=13 (female ratio not reported)
+age: not reported","TEMPO Inertial sensors
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 5
+Position: lower back, wrist, ankle",laboratory,6 minutes,,yes,no,no,no,yes,yes,yes,no,no,Lab: Physical activity,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+J. Gong,2015,"Gong et al, 2015",Correlations between inertial body sensor measures and clinical measures in multiple sclerosis,10.4108/EAI.28-9-2015.2261504,41,not reported,not reported,not reported: n=41,41,"inclusion criteria: no participants with
+severe walking disability (EDSS ≥ 4.5)",not reported,not reported,not reported,none,none,"TEMPO Inertial sensors
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 5
+Position: lower back, wrist, ankle",laboratory,6 minutes,,yes,no,no,no,yes,yes,yes,no,applies partially,Lab: Physical activity,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Solomon A.J., Jacobs J.V., Lomond K.V., Henry S.M.",2015,"Solomon et al, 2015",Detection of postural sway abnormalities by wireless inertial sensors in minimally disabled patients with multiple sclerosis: A case-control study,10.1186/S12984-015-0066-9,20,16,"40 (mean), 95% CI: 35-45",not reported: n=20,20,"EDSS: 2.0 (median), range: 1.0-2.5","4 (mean), 95% CI: 1-7",exclusion criteria: Dalfampridine medication,"exclusion criteria: severe pain that limited mobility, significant vision impairment limiting mobility or balance, and any additional neurological or medical conditions that may impair walking or balance, including but not limited to stroke, neuropathy, low back pain, depression, or arthritis",healthy,"healthy
+n=20 (80% female)
+age: not reported","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: sternum, lower back, wrist, ankle",laboratory,15 minutes (for MS patients: 21 minutes),,yes,yes,yes,applies partially,yes,yes,yes,no,no,Lab: Physical activity,Lab: Balance,,,no,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Kahraman T., Savci S., Coskuner-Poyraz E., Ozakbas S., Idiman E.",2015,"Kahraman et al, 2015",Determinants of physical activity in minimally impaired people with multiple sclerosis,10.1016/J.CLINEURO.2015.07.018,52,35,36 (8),"RR: n=43,
+clinically isolated syndrom: n=9",,EDSS: 1.5 (1.0),5 (4.0),not reported,not reported,none,none,"Caltrac
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,no,,no,,no,
+R. Motl,2015,"Motl et al, 2015",Does the effect of a physical activity behavioral intervention vary by characteristics of people with multiple sclerosis?,10.7224/1537-2073.2014-016,41,30,48.4 (9.1),"RR: n=31, 
+P/SP: n=10",,"PDDS mild: n=22,
+PDDS moderate: n=19",10.6 (7.1),subjects taking symptomatic medications: n=23,not reported,MS patients,"Waitlist control (MS patients)
+n=41 (78% female)
+age: 49.5 (9.2)
+Type: RR: n=43, PP: n=7, SP: n=7
+Severity of MS: PDDS mild: n=17, PDDS moderate: n=24
+Disease duration [yrs]: 13.0 (9.1)","Yamax SW-401
+Type of sensor: mechanical pedometer
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,yes,significant,no,
+"Stellmann J.P., Neuhaus A., Götze N., Briken S., Lederer C., Schimpl M., Heesen C., Daumer M.",2015,"Stellmann et al, 2015",Ecological validity of walking capacity tests in multiple sclerosis,10.1371/JOURNAL.PONE.0123822,28,18,"45 [38-51], range: 27-68","RR: n=14,
+PP: n=5, 
+SP: n=8,
+not reported: n=1",1,"EDSS:  3.2 [2.5-4.1], range: 1-6.5"," 9 [4-17], range: 1-24",not reported,not reported,none,none,"Actibelt
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,7 days,,yes,no,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,Lab: Gait,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Kasser S.L., Jacobs J.V., Ford M., Tourville T.W.",2015,"Kasser et al, 2015","Effects of balance-specific exercises on balance, physical activity and quality of life in adults with multiple sclerosis: a pilot investigation",10.3109/09638288.2015.1019008,10,8,"52 (mean),  95% CI: 45-59","RR: n=7, 
+PP: n=2,
+SP: n=1",,"EDSS: 3.1 (1.73), range: 1-6",not reported,not reported,not reported,none,none,"ActiGraph GT1M
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 7
+Position: not reported, sternum, waist, wrist, ankle
+
+APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: wrist, ankle, waist, chest",mixed,7 days,,yes,yes,yes,yes,yes,applies partially,no,no,yes,RW: Physical activity,Lab: Gait,Lab: Balance,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,yes,some significant,no,
+"Bove R., White C.C., Giovannoni G., Glanz B., Golubchikov V., Hujol J., Jennings C., Langdon D., Lee M., Legedza A., Paskavitz J., Prasad S., Richert J., Robbins A., Roberts S., Weiner H., Ramachandran R., Botfield M., De Jager P.L.",2015,"Bove et al, 2015",Evaluating more naturalistic outcome measures,10.1212/NXI.0000000000000162,22,16,34.3 (11.0),"RR: n=15,
+PP: n=9,  
+SP: n=4, 
+clinically isolated syndrom: n=0, 
+neruomyelitis optica: n=1, 
+MS: n=1, 
+undefined: n=1",1,EDSS: 2.5 (2.4),8.0 (6.0),not reported,not reported,healthy,"healthy cohabitants
+n=17 (53% female)
+age: 39.9 (10.5)","HTC Sensation 4G (smartphone)
+Type of sensor: touchscreen
+Number of wearables: 1
+Position: hand",real-world,12 months,,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,RW: Dexterity/Tremor,,,,no,,yes,some significant,yes,some significant,no,,no,,no,,yes,some significant,no,,no,
+"Sandroff B.M., Motl R.W., Sosnoff J.J., Pula J.H.",2015,"Sandroff et al, 2015",Further validation of the Six-Spot Step Test as a measure of ambulation in multiple sclerosis,10.1016/J.GAITPOST.2014.10.011,96,77,52.7 (11.1),"RR: n=79,
+P: n=13,
+not reported: n=4",4,"EDSS: 4.5 (median), range: 2-6.5",11.8 (10.0),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Carpinella I., Cattaneo D., Ferrarin M.",2015,"Carpinella et al, 2015",Hilbert-Huang transform based instrumental assessment of intention tremor in multiple sclerosis,10.1088/1741-2560/12/4/046011,20,8,46.4 (8.5),"RR: n=9, 
+PP: n=4, 
+SP: n=7",,"EDSS: 6.2 (1.6), range: 2-8.5","15 .4 (11.6), range: 1-33",not reported,not reported,healthy,"healthy cohabitants
+n=13 (38% female)
+age: 44.2 (9)","MTX Xsens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: hand",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Dexterity/Tremor,,,,no,,yes,some significant,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Blikman L.J., Van Meeteren J., Horemans H.L., Kortenhorst I.C., Beckerman H., Stam H.J., Bussmann J.B.",2015,"Blikman et al, 2015",Is physical behavior affected in fatigued persons with multiple sclerosis?,10.1016/J.APMR.2014.08.023,23,18,"45.7 (10.2), range: 24-66","RR: n=20, 
+SP: n=3",,EDSS : 2.0 [3.0],"9.3 (7.1), range: 0-21",exclusion criterion: no initiation or change to pharmacologic treatment for fatigue during the previous 3 months,exclusion criterion: no depression,healthy,"healthy (nonfatigued)
+n=23 (78% female)
+age: 45.7(10.2), range: 27-67","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,Clinical Trial Registration No.: ISRCTN 82353628.,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Ezeugwu V., Klaren R.E., Hubbard E.A., Manns P., Motl R.W.",2015,"Ezeugwu et al, 2015",Mobility disability and the pattern of accelerometer-derived sedentary and physical activity behaviors in people with multiple sclerosis,10.1016/J.PMEDR.2015.03.007,439,372,47.3 (10.0),"RR: n=395,
+PP: n=9, 
+SP: n=27, 
+benign: n=6,
+not reported: n=2",2,"PDDS<=2: n=245,
+PDDS>=3 : n=194","<= 10 years:  n=279,
+> 10 years: n=159",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,some significant,no,,no,,no,,no,,no,
+"Klaren R.E., Hubbard E.A., Motl R.W., Pilutti L.A., Wetter N.C., Sutton B.P.",2015,"Klaren et al, 2015",Objectively Measured Physical Activity Is Associated with Brain Volumetric Measurements in Multiple Sclerosis,10.1155/2015/482536,39,30,48.7 (9.6),"RR: n=30, 
+P: n=9",,EDSS: 4.5 [2.5],10.3 (8.5),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Rice I.M., Rice L.A., Motl R.W.",2015,"Rice et al, 2015",Promoting Physical Activity Through a Manual Wheelchair Propulsion Intervention in Persons with Multiple Sclerosis,10.1016/J.APMR.2015.06.011,9,6,53.3 (11.1),"RR: n=3,
+PP: n=2,
+SP: n=4",,inclusion criteria: full-time wheelchair user,13.2 (8.9),not reported,exclusion criterion: no self-reported history of cardiovascular or cardio-pulmonary disease or pressure ulcers,MS patients,"MS patients
+n=5 (80% female)
+age: 54 (0.4)
+Type: RR: n=2, PP: n=1, SP: n=2
+Severity of MS: bilateral gross upperextremity strength of at least 4-/5 and full-time wheelchair user (use of power or manual for>40h/wk and>80% ambulation (inclusion criteria)
+Disease duration [yrs]: 17.6 (8.5)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,2 weeks,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,some significant,no,,no,,no,,yes,significance not tested,no,
+"Sandroff B.M., Klaren R.E., Motl R.W.",2015,"Sandroff et al, 2015","Relationships among physical inactivity, deconditioning, and walking impairment in persons with multiple sclerosis",10.1097/NPT.0000000000000087,31,27,43.4 (7.7),"RR: n=29,
+SP: n=2",,"PDDS: 2 (median), range: 0-5",8.6 (6.3),not reported,not reported,healthy,"healthy
+n=31 (87% female)
+age: 42.4 (7.5)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Hubbard E.A., Motl R.W.",2015,"Hubbard et al, 2015","Sedentary behavior is associated with disability status and walking performance, but not cognitive function, in multiple sclerosis",10.1139/APNM-2014-0271,82,62,49.0 (9.1),"RR: n=65,
+not reported: n=17",17,"SR-EDSS: 3.4 (2.3), 3.5 [4.5]",11.8 (mean),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,some significant,yes,some significant,no,,yes,significance not tested,no,,no,,no,,no,,no,
+"Moon Y., Wajda D.A., Motl R.W., Sosnoff J.J.",2015,"Moon et al, 2015",Stride-time variability and fall risk in persons with multiple sclerosis,10.1155/2015/964790,17,11,62.8 (7.4),"RR: n=10,
+PP: n=3,
+SP: n=4",,"EDSS: 6.0 [4.75-6.0],
+number of falls in the past 3 months: 2.52 (3.91)",19.2 (9.0),not reported,exclusion criterion: no history of neurological or orthopedic conditions that might affect their balance or mobility,healthy,"healthy
+n=17 (71% female)
+age: 62.8 (5.9)","MTX XSens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: lower leg",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,yes,some significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Ayache S.S., Chalah M.A., Al-Ani T., Farhat W.H., Zouari H.G., Créange A., Lefaucheur J.-P.",2015,"Ayache et al, 2015",Tremor in multiple sclerosis: The intriguing role of the cerebellum,10.1016/J.JNS.2015.09.360,18,14,47.7 (10.3),"RR: n=10,
+P: n=8",,"EDSS: 4.3 (2.4), 
+ACS: 5.0 (4.3)",14.4 (11.7),not reported,not reported,MS patients,"MS with no visible tremor
+n=14 (64% female)
+age: 54 (0.4)
+Type: RR: n=8, P: n=6
+Severity: EDSS: 3.5 (1.4)
+Disease duration [yrs]: 11.4 (8.7)","TREM0000
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 2
+Position: upper arm, hand",laboratory,not reported,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,Lab: Dexterity/Tremor,,,,no,,no,,no,,yes,some significant,no,,no,,no,,no,,no,
+C. Fjeldstad,2015,"Fjeldstad et al, 2015",Use of accelerometers to measure real-life physical activity in ambulatory individuals with multiple sclerosis,10.7224/1537-2073.2014-037,13,9,47.6 (3.0),RR: n=13,,EDSS 2.5 (0.5),7.5 (1.0),subjects taking disease-modifying therapies: n=11,not reported,healthy,"healthy
+n=12 (42% female)
+age: 45.5 (5.4)","ActiGraph GT1M
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,applies partially,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,no,,yes,non-significant,no,,no,,no,,no,,no,,no,
+"Sola-Valls N., Blanco Y., Sepúlveda M., Llufriu S., Martínez-Lapiscina E.H., La Puma D., Graus F., Villoslada P., Saiz A.",2015,"Sola-Valls et al, 2015",Walking function in clinical monitoring of multiple sclerosis by telemedicine,10.1007/S00415-015-7764-X,23,12,46.7 (10.0),"RR: n=15, 
+SP: n=8",,EDSS: 3.5 [1.5-6.5],14.2 (9.9),not reported,smokers: n=5,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,
+T. Brown,2016,"Brown et al, 2016",A randomized crossover trial of Dalfampridine extended release for effect on ambulatory activity in people with multiple sclerosis,10.7224/1537-2073.2015-035,22,19,55.0 (2.5),"RR: n=13, 
+PP: n=4, 
+SP: n=5",,EDSS: 5.1 (0.3),13.3 (1.7),"Dalfampridine extended release 10mg twice daily given first for 4 weeks, then 2 weeks off-treatment washout period and then placebo for 4 weeks; no use of any aminopyridine product or mitoxantrone in the past 6 months",not reported,MS patients,"MS patients with placebo first and then treatment 
+n=21 (52% female)
+age: 54 (0.4)
+Type: RR: n=13, PP: n=2, SP: n=6
+Severity: EDSS score: 5.3 (0.2)
+Disease duration [yrs]: 13.5 (1.5)","StepWatch 3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: ankle",real-world,7 days,,applies partially,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,non-significant,no,,no,,no,,yes,non-significant,no,
+"Balto J.M., Kinnett-Hopkins D.L., Motl R.W.",2016,"Balto et al, 2016",Accuracy and precision of smartphone applications and commercially available motion sensors in multiple sclerosis,10.1177/2055217316634754,45,not reported,"46.7 (10.0), range: 23-62","RR: n=43,
+not reported: n=2",2,"EDSS: 3.0 [1.5], range: 1.0-5.0","11.4 (9.3), range: 0.0-35.0",not reported,not reported,none,none,"Yamax Digi-Walker SW-200
+Type of sensor: mechanical pedometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist
+
+Jawbone UP2
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist
+
+Jawbone UP Move
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+Fitbit Flex 
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist
+
+Fitbit One
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+iPhone 5 (smartphone)
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: pocket",laboratory,time to walk 25m,,applies partially,yes,yes,yes,applies partially,applies partially,yes,no,yes,Lab: Physical activity,,,,yes,non-significant,yes,non-significant,no,,no,,no,,no,,no,,no,,no,
+J. Gong,2016,"Gong et al, 2016",Causality Analysis of Inertial Body Sensors for Multiple Sclerosis Diagnostic Enhancement,10.1109/JBHI.2016.2589902,28,21,40.5 (9.4),not reported: n=28,28,EDSS: 2.0 [0-4.0],6.7 (5.9),not reported,not reported,healthy,"healthy
+n=13 (53% female)
+age: 39.3 (10.3)","TEMPO Inertial sensors
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 5
+Position: lower back, wrist, ankle",laboratory,time to walk 6M,,applies partially,no,yes,applies partially,yes,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,yes,significant,yes,significant,no,,no,,no,,no,,no,
+"Pau M., Caggiari S., Mura A., Corona F., Leban B., Coghe G., Lorefice L., Marrosu M.G., Cocco E.",2016,"Pau et al, 2016",Clinical assessment of gait in individuals with multiple sclerosis using wearable inertial sensors: Comparison with patient-based measure,10.1016/J.MSARD.2016.10.007,105,74,"severity:
+MS class 1 [EDSS=0-1.5]: 39.6 (8.3), 
+MS class 2 [EDSS=2.0-4.0]: 43.6 (9.3), 
+MS class 3 [EDSS=4.5-6.0]: 52.1 (10.2)",not reported: n=105,105,"EDSS:
+MS class1: 1.0 (0.2),
+MS class 2: 2.6 (0.6),
+MS class 3: 4.6 (1.1)",not reported,not reported,absence of other conditions that affect gait,healthy,"healthy
+n=47 (45% female)
+age: 39.4 (12.7)","G-Sensor
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,not reported,,applies partially,yes,yes,applies partially,applies partially,yes,yes,no,yes,Lab: Physical activity,,,,yes,significant,yes,significant,yes,significant,yes,significant,no,,no,,no,,no,,no,
+S. Dandu,2016,"Dandu et al, 2016",Determining physiological significance of inertial gait features in multiple sclerosis,10.1109/BSN.2016.7516271,86,not reported,range: 19-61,not reported: n=86,86,EDSS: range: 0-7,not reported,not reported,not reported,healthy,"healthy
+n=29 (female ratio not reported)
+age: range: 19-54","ActiGraph
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",laboratory,6 minutes,,yes,no,applies partially,applies partially,yes,yes,yes,no,no,Lab: Physical activity,,,,yes,significant,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Stellmann J.-P., Jlussi M., Neuhaus A., Lederer C., Daumer M., Heesen C.",2016,"Stellmann et al, 2016",Fampridine and real-life walking in multiple sclerosis: Low predictive value of clinical test for habitual short-term changes,10.1016/J.JNS.2016.07.051,28,17,49 (8.6),"RR: n=3,
+PP: n=7,
+SP: n=18",,EDSS: 4.75 [4-6.5],11.0 (8.4),not reported,not reported,none,none,"Actibelt
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,28 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,no,,no,,no,,no,,no,,no,,yes,significant,no,
+"Brodie M.A.D., Psarakis M., Hoang P.",2016,"Brodie et al, 2016",Gyroscopic corrections improve wearable sensor data prior to measuring dynamic sway in the gait of people with Multiple Sclerosis,10.1080/10255842.2016.1140747,5,5,56 (8),not reported: n=5,5,EDSS: 4.3 (1.0),not reported,not reported,not reported,healthy,"healthy
+n=5 (100% female)
+age: 56 (8)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,not reported,,yes,no,yes,applies partially,applies partially,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Klaren R.E., Sebastiao E., Chiu C.-Y., Kinnett-Hopkins D., McAuley E., Motl R.W.",2016,"Klaren et al, 2016",Levels and rates of physical activity in older adults with multiple sclerosis,10.14336/AD.2015.1025,963,809,"age:
+Young: 33.1 (4.7),
+Middle-aged: 49.6 (5.4),
+Older: 63.0 (3.6)        ","RR: n=885,
+not reported: n=78",78,"EDSS:
+Young: 1.0 [3.0]
+Middle-aged: 2.0 [2.0]
+Older: 3.0 [3.0]","Young: 6.3 (5.0)
+Middle-aged: 10.8 (7.2)
+Older: 16.5 (9.2)    ",not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Grover S.A., Sawicki C.P., Kinnett-Hopkins D., Finlayson M., Schneiderman J.E., Banwell B., Till C., Motl R.W., Yeh E.A.",2016,"Grover et al, 2016",Physical Activity and Its Correlates in Youth with Multiple Sclerosis,10.1016/J.JPEDS.2016.08.104,27,18,16.0 (4.0),not reported: n=27,27,EDSS: 1.5 [0.5],2.0 (2.0),exclusion criteria: steroid treatment in the past 30 days,not reported,healthy,"mixed
+healthy: n=37 (68% female), age: 15.0 (3.0);
+monophasic acquired demyelinating syndromes: n=41 (46%), age: 14.0 (4.0), severity: EDSS: 1.0 [2.0]
+Disease duration [yrs]: 4.0 (7.0)","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,yes,significant,no,,yes,significant,no,,no,,no,,no,
+"Kinnett-Hopkins D., Grover S.A., Yeh E.A., Motl R.W.",2016,"Kinnett-Hopkins et al, 2016",Physical activity in pediatric onset multiple sclerosis: Validating a questionnaire for clinical practice and research,10.1016/J.MSARD.2016.08.010,27,18,15.73 (3.2),not reported: n=27,27,EDSS: 1.5 (0.5),2.03 (2),not reported,not reported,healthy,"healthy
+n=45 (67% female)
+age: 14.76 (3.8)","ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Zörner B., Filli L., Reuter K., Kapitza S., Lörincz L., Sutter T., Weller D., Farkas M., Easthope C.S., Czaplinski A., Weller M., Linnebank M.",2016,"Zoerner et al, 2016",Prolonged-release fampridine in multiple sclerosis: Improved ambulation effected by changes in walking pattern,10.1177/1352458515622695,55,34,48.6 (9.8),"RR: n=29,
+PP: n=5, 
+SP: n=21",,"EDSS: 4.9 (1.3), range: 2.5-6.5",11.9 (7.4),"Natalizumab: n=21,
+INF: n=34, 
+GA: n=2,
+Fingolimod: n=2",not reported,none,none,"Actiwatch 2
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: ankle",real-world,4 weeks,NCT01576354,yes,yes,yes,yes,yes,yes,yes,no,no,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,no,,yes,some significant,no,
+M. Engelhard,2016,"Engelhard et al, 2016",Quantifying six-minute walk induced gait deterioration with inertial sensors in multiple sclerosis subjects,10.1016/J.GAITPOST.2016.07.184,89,73,"46 [38-52], range: 19-61",not reported: n=89,89,"EDSS: 2.5 [2-3.5], range: 0-7",not reported,not reported,not reported,healthy,"healthy
+n=29 (69% female)
+age: 40 (19-54)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",laboratory,1 day,,yes,applies partially,yes,yes,yes,yes,yes,no,no,Lab: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Klaren R.E., Hubbard E.A., Zhu W., Motl R.W.",2016,"Klaren et al, 2016",Reliability of Accelerometer Scores for Measuring Sedentary and Physical Activity Behaviors in Persons With Multiple Sclerosis,10.1123/APAQ.2015-0007,422,359,47.3 (10),"RR: n=380;
+not reported: n=42",42,PDDS: 2.0 [4.0],9.6 (7.4),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,no,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,significant,no,,no,,no,
+"Lorefice L., Coghe G., Fenu G., Porta M., Pilloni G., Frau J., Corona F., Sechi V., Barracciu M.A., Marrosu M.G., Pau M., Cocco E.",2017,"Lorefice et al, 2017",‘Timed up and go’ and brain atrophy: a preliminary MRI study to assess functional mobility performance in multiple sclerosis,10.1007/S00415-017-8612-Y,60,41,41.5 (11.6),"PP: n=4,
+not reported: n=56 ",56,EDSS: 2.3 (1.2),11.6 (7.5),not reported,not reported,none,none,"G-Sensor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,1 day,,yes,yes,yes,yes,applies partially,yes,yes,no,no,Lab: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"McGinnis R.S., Mahadevan N., Moon Y., Seagers K., Sheth N., Wright J.A., DiCristofaro S., Silva I., Jortberg E., Ceruolo M., Pindado J.A., Sosnoff J., Ghaffari R., Patel S.",2017,"McGinnis et al, 2017",A machine learning approach for gait speed estimation using skin-mounted wearable sensors: From healthy controls to individuals with multiple sclerosis,10.1371/JOURNAL.PONE.0178366,30,21,range: 29-74,not reported: n=30,30,"EDSS: range: 0-7,
+MSWS: range: 0.20-0.95",not reported,not reported,not reported,healthy,"healthy
+n=7 (43% female)
+age: range: 37-71","BioSTampRC Sensors
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 5
+Position: lower back, upper leg, lower leg",laboratory,1 day,,yes,yes,yes,applies partially,yes,yes,yes,no,yes,Lab: Physical activity,,,,no,,yes,some significant,no,,yes,non-significant,no,,no,,no,,no,,no,
+"Pau M., Porta M., Coghe G., Corona F., Pilloni G., Lorefice L., Marrosu M.G., Cocco E.",2017,"Pau et al, 2017",Are static and functional balance abilities related in individuals with Multiple Sclerosis?,10.1016/J.MSARD.2017.04.002,106,73,"severity:
+EDSS 0-1.5: 39.8 (8.2), 
+EDSS 2-3.5 43.5 (9.5), 
+EDSS 4-6.5 48.6 (10.1)","RR: n=99,
+PP: n=1, 
+SP: n=6",,"EDSS 0-1.5: 1.0 (0.2),
+EDSS 2-3.5: 2.6 (0.6),
+EDSS 4-6.5: 5.2 (1.1)",not reported,not reported,not reported,healthy,"healthy
+n=42 (28% female)
+age: 39.6 (13.5)","G-Sensor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,1 day,,yes,yes,yes,yes,no,yes,yes,no,yes,Lab: Balance,,,,yes,non-significant,no,,yes,significant,no,,no,,no,,no,,no,,no,
+A. Qureshi,2017,"Qureshi et al, 2017",Demonstrating the real-world significance of the mid-swing to heel strike part of the gait cycle using spectral features,10.1109/BSN.2017.7936025,65,not reported,range: 18-64,not reported: n=65,65,not reported,not reported,not reported,not reported,none,none,"Sensor Nodes
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: ankle",laboratory,1 day,,no,no,no,no,no,yes,applies partially,no,no,Lab: Gait,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Craig J.J., Bruetsch A.P., Lynch S.G., Horak F.B., Huisinga J.M.",2017,"Craig et al, 2017",Instrumented balance and walking assessments in persons with multiple sclerosis show strong test-retest reliability,10.1186/S12984-017-0251-0,15,12,48.2 (8.7),RR: n=15,,EDSS: 1.89 (0.98),12.2 (5.9),not reported,not reported,healthy,"healthy
+n=15 (80% female)
+age: 47.8 (9.5)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: sternum, lower back, wrist, ankle",laboratory,2 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,no,,no,,no,,yes,some significant,no,,no,,no,
+"Sebastião E., Learmonth Y.C., Motl R.W.",2017,"Sebastião et al, 2017",Lower Physical Activity in Persons with Multiple Sclerosis at Increased Fall Risk: A Cross-sectional Study,10.1097/PHM.0000000000000581,47,not reported,53.1 (11.4),"RR: n=44,
+PP: n=1, 
+SP: n=2",,EDSS: 4 [3.0],13.1 (9.6),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Norris M., Anderson R., Motl R.W., Hayes S., Coote S.",2017,"Norris et al, 2017","Minimum number of days required for a reliable estimate of daily step count and energy expenditure, in people with MS who walk unaided",10.1016/J.GAITPOST.2017.02.005,26,not reported,44.5 (11.9),"RR: n=21, 
+PP: n=2, 
+SP: n=1, 
+benign: n=2,
+not reported: n=1",1,inclusion criteria: PDDS <=3,6.5 (6.2),not reported,not reported,none,none,"SenseWear Armband
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 1
+Position: wrist",real-world,7 days,,yes,yes,yes,applies partially,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,yes,significance not tested,no,,no,,no,
+"Sebastião E., Learmonth Y.C., Motl R.W.",2017,"Sebastião et al, 2017",Mobility measures differentiate falls risk status in persons with multiple sclerosis: An exploratory study,10.3233/NRE-161401,21,19,55.5 (9.1),"RR: n=18,
+not reported: n=3",3,EDSS: 6.0 [2.0],14.7 (10.5),not reported,not reported,MS patients,"MS patients (normal fall risk)
+n=26 (88% female)
+age: 51.2 (12.9)
+Type: RR: n=26
+Severity: EDSS: 3.0 [1.5]
+Disease duration [yrs]: 13.5 (1.5)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,applies partially,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Teufl, S; Preston, J; van Wijck, F; Stansfield, B",2017,"Teufl et al, 2017",Objective identification of upper limb tremor in multiple sclerosis using a wrist-worn motion sensor: Establishing validity and reliability,10.1177/0308022617726259,12,7,51.5 (14.1),"RR: n=7, 
+SP: n=5",,not reported,13.9 (9.1),not reported,not reported,none,none,"Axivity AX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",laboratory,not reported,,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,Lab: Dexterity/Tremor,,,,no,,yes,significant,no,,yes,significance not tested,no,,no,,yes,significance not tested,no,,no,
+"Klaren R.E., Hubbard E.A., Wetter N.C., Sutton B.P., Motl R.W.",2017,"Klaren et al, 2017",Objectively measured sedentary behavior and brain volumetric measurements in multiple sclerosis,10.2217/NMT-2016-0036,36,29,49.1 (9.1),"RR: n=28,
+not reported: n=8",8,EDSS: 4.5 [2.5],10.1 (8.6),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,applies partially,no,yes,RW: Physical activity,,,,no,,yes,non-significant,no,,no,,no,,no,,no,,no,,no,
+"Klaren R.E., Sasaki J.E., McAuley E., Motl R.W.",2017,"Klaren et al, 2017",Patterns and Predictors of Change in Moderate-to-Vigorous Physical Activity Over Time in Multiple Sclerosis,10.1123/JPAH.2016-0335,269,223,45.9 (9.8),RR: n=269,,PDDS: 2.0 [3.0],8.8 (7.1),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significance not tested,no,,no,,yes,significance not tested,no,,no,
+"Motl R.W., Sandroff B.M., Pilutti L.A., Klaren R.E., Baynard T., Fernhall B.",2017,"Motl et al, 2017","Physical activity, sedentary behavior, and aerobic capacity in persons with multiple sclerosis",10.1016/J.JNS.2016.11.070,49,42,50.1 (8.3),not reported: n=49,49,"EDSS: 4.75 [2.0], 
+PDDS: 4.0 [2.0]",not reported,not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,applies partially,applies partially,yes,applies partially,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Dalla-Costa G., Radaelli M., Maida S., Sangalli F., Colombo B., Moiola L., Comi G., Martinelli V.",2017,"Dalla-Costa et al, 2017","Smart watch, smarter EDSS: Improving disability assessment in multiple sclerosis clinical practice",10.1016/J.JNS.2017.10.043,73,37,47.6 (7.9),"RR: n=53, 
+P: n=20",,not reported,14.4 (7.3),"subjects with first line disease-modifying treatment: n=61,
+subjects with first line disease-modifying treatment: n=12",not reported,none,none,"Garmin Forerunner 230
+Type of sensor: others (GPS)
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,4 weeks,,yes,applies partially,yes,applies partially,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Pau M., Mandaresu S., Pilloni G., Porta M., Coghe G., Marrosu M.G., Cocco E.",2017,"Pau et al, 2017",Smoothness of gait detects early alterations of walking in persons with multiple sclerosis without disability,10.1016/J.GAITPOST.2017.08.023,50,21,39.4 (12.8),not reported: n=50,50,EDSS: 1.0 (mean),not reported,not reported,absence of any other condition able to affect gait or balance,healthy,"healthy
+n=50 (42% female)
+age: 39.4 (12.8)","G-Sensor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: upper back",laboratory,not reported,,yes,yes,yes,applies partially,yes,applies partially,yes,no,applies partially,Lab: Gait,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Krüger T., Behrens J.R., Grobelny A., Otte K., Mansow-Model S., Kayser B., Bellmann-Strobl J., Brandt A.U., Paul F., Schmitz-Hübsch T.",2017,"Krueger et al, 2017",Subjective and objective assessment of physical activity in multiple sclerosis and their relation to health-related quality of life,10.1186/S12883-016-0783-0,26,18,50.9 (5.2),"RR: n=18,
+PP: n=1, 
+SP: n=7",,"EDSS: 4.0 (median), range: 1.5-6.0",not reported,not reported,not reported,healthy,"healthy
+n=30 (67% female)
+age: 49.7 (8.3)","SenseWear Model mini
+Type of sensor: accelerometer
+Number of axes: 2
+Number of wearables: 1
+Position: upper arm",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,applies partially,no,applies partially,RW: Physical activity,,,,yes,some significant,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Aburub A., Khalil H., Al-Sharman A., Alomari M., Khabour O.",2017,"Aburub et al, 2017",The association between physical activity and sleep characteristics in people with multiple sclerosis,10.1016/J.MSARD.2016.12.010,60,not reported,35.62 (9.14),RR: n=60,,"EDSS: 2.47 (1.63), range: 0-5",7.29 (4.37),not reported,not reported,none,none,"ActiGraph Actisleep
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist
+
+ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,applies partially,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Craig J.J., Bruetsch A.P., Lynch S.G., Huisinga J.M.",2017,"Craig et al, 2017",The relationship between trunk and foot acceleration variability during walking shows minor changes in persons with multiple sclerosis,10.1016/J.CLINBIOMECH.2017.07.011,40,not reported,40 (9),RR: n=40,,EDSS: 1.63 (0.7),not reported,not reported,not reported,healthy,"healthy
+n=40 (female ratio not reported)
+age: 44 (10)","APDM Opal IMU
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: sternum, ankle",laboratory,3 minutes,,yes,yes,applies partially,yes,yes,applies partially,applies partially,no,yes,Lab: Gait,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Coulter E.H., Miller L., McCorkell S., McGuire C., Algie K., Freeman J., Weller B., Mattison P.G., McConnachie A., Wu O., Paul L.",2017,"Coulter et al, 2017",Validity of the activPAL3 activity monitor in people moderately affected by Multiple Sclerosis,10.1016/J.MEDENGPHY.2017.03.008,20,11,53.7 (7.4),not reported: n=20,20,"EDSS: 5.85 (0.75), 6 [0.5], range: 4-6.5",not reported,not reported,not reported,none,none,"activPAL3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: upper leg",laboratory,not reported,NCT02508961,yes,yes,yes,applies partially,yes,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,no,,no,,no,,no,,no,,no,,no,
+"El-Gohary M., Peterson D., Gera G., Horak F.B., Huisinga J.M.",2017,"El-Gohary et al, 2017",Validity of the Instrumented Push and Release Test to Quantify Postural Responses in Persons With Multiple Sclerosis,10.1016/J.APMR.2017.01.030,52,41,49.5 (9.8),"RR: n=33,
+PP: n=6,
+SP: n=13",,self-reported EDSS: 4.3 (0.9),12.7 (10.6),not reported,not reported,healthy,"healthy
+n=21 (67% female)
+age: 49.9 (11.9)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, ankle, foot",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Balance,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Sun R., Moon Y., McGinnis R.S., Seagers K., Motl R.W., Sheth N., Wright J.A., Ghaffari R., Patel S., Sosnoff J.J.",2018,"Sun et al, 2018",Assessment of postural sway in individuals with multiple sclerosis using a novel wearable inertial sensor,10.1159/000485958,39,29,"MS severity:
+mild: 55.9 (11.3),
+severe: 60.1 (8.0)","RR: n=30,
+PP: n=2,
+SP: n=7",,"EDSS: 
+mild: 3.2 (0.6),
+severe: 6.2 (0.3)","MS severity:
+mild: 17.5 (8.5),
+severe: 20.1 (10.2)",not reported,not reported,healthy,"healthy
+n=15 (67% female)
+age: 57.9 (12.9)","BioStamp
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 1
+Position: lower back
+
+Xsens MTx
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Balance,,,,no,,yes,significant,yes,significant,yes,significant,no,,no,,no,,no,,no,
+"Findling O., Rust H., Yaldizli Ö., Timmermans D.P.H., Scheltinga A., Allum J.H.J.",2018,"Findling et al, 2018",Balance changes in patients with relapsing-remitting multiple sclerosis: A pilot study comparing the dynamics of the relapse and remitting phases,10.3389/FNEUR.2018.00686,33,24,"MS type:
+remitting: 43.7 (10.5),
+relapsing: 42.0 (12.7)","RR: n=33 
+(remitting: n=24,
+relapsing: n=9)",,"EDSS: 
+remitting: 2.45 (1.01),
+relapsing: 3.11 (0.96)","MS type:
+remitting: 10.2 (4.5),
+relapsing: 9.8 (8.2)","remitting: 
+--> Natalizumab: n=10,
+--> Fingolimd: n=5, 
+--> no DMT: n=4,
+--> INF beta-1b: n=2,
+--> GA: n=2,
+--> Ocrelizumab: n=1
+relapsing:
+--> Fingolimod: n=2,
+--> no DMT: n=5,
+--> GA: n=1,
+--> INF beta-1a: n=1",not reported,healthy,"healthy
+n=40 (63% female)
+age: 39.7 (12.6)","SwayStar
+Type of sensor: gyroscope
+Number of axes: 2
+Number of wearables: 1
+Position: lower back",laboratory,not reported,,yes,yes,yes,yes,applies partially,yes,yes,yes,yes,Lab: Balance,,,,no,,no,,yes,significant,yes,significant,no,,no,,no,,no,,no,
+"Huisinga J., Mancini M., Veys C., Spain R., Horak F.",2018,"Huisinga et al, 2018",Coherence analysis of trunk and leg acceleration reveals altered postural sway strategy during standing in persons with multiple sclerosis,10.1016/J.HUMOV.2017.12.009,36,32,45.6 (11.7),not reported: n=36,36,self-reported EDSS: 4.3 (1.2),not reported,not reported,not reported,healthy,"healthy
+n=20 (85% female)
+age: 41.8 (10.7)","MTX Xsens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: sternum, lower back, wrist, lower leg",laboratory,not reported,,yes,yes,applies partially,yes,yes,yes,yes,no,no,Lab: Balance,,,,no,,no,,yes,significant,no,,no,,no,,no,,no,,no,
+"Fakolade, A; Finlayson, M; Parsons, T; Latimer-Cheung, A",2018,"Fakolade et al, 2018",Correlating the Physical Activity Patterns of People with Moderate to Severe Multiple Sclerosis Disability and Their Family Caregivers,10.3138/PTC.2017-36.EP,14,10,52.0 (11.7),"RR: n=6, 
+PP: n=3,
+SP: n=2,
+not reported: n=3",3,not reported,13.2 (8.2),not reported,not reported,healthy,"healthy (caregivers)
+n=14 (29% female)
+age: 54.1 (13.5)","Actical
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,no,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,yes,non-significant,no,,no,,no,,no,,no,,no,
+"Neven, A; De Schutter, I; Wets, G; Feys, P; Janssens, D",2018,"Neven et al, 2018",Data Quality of Travel Behavior Studies: Factors Influencing the Reporting Rate of Self-Reported and GPS-Recorded Trips in Persons with Disabilities,10.1177/0361198118772952,108,66,not reported,not reported: n=108,108,not reported,not reported,not reported,not reported,none,none,"GPS Logger
+Type of sensor: others (GPS)
+Number of axes: 3
+Number of wearables: 1
+Position: others (pocket or handbag)",real-world,7 days,,yes,no,yes,no,applies partially,yes,yes,no,no,RW: Physical activity,,,,no,,no,,no,,yes,non-significant,no,,no,,no,,no,,no,
+"Storm F.A., Nair K.P.S., Clarke A.J., Van der Meulen J.M., Mazzà C.",2018,"Storm et al, 2018",Free-living and laboratory gait characteristics in patients with multiple sclerosis,10.1371/JOURNAL.PONE.0196463,14,7,54.8 (11),not reported: n=14,14,(two groups: EDSS 5-5.5 and EDSS 6.0-6.5),not reported,not reported,not reported,none,none,"Mc Roberts PAM Move Monitor
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back
+
+APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: ankle",mixed,7 days,,applies partially,yes,yes,yes,yes,yes,yes,yes,no,RW: Physical activity,Lab: Gait,,,no,,no,,no,,yes,some significant,no,,no,,no,,no,,no,
+"Dasmahapatra P., Chiauzzi E., Bhalerao R., Rhodes J.",2018,"Dasmahapatra et al, 2018",Free-living physical activity monitoring in Adult US Patients with multiple sclerosis using a consumer wearable device,10.1159/000488040,114,86,52 (9),"RR: n=90,
+PP: n=10,
+SP: n=14",,MSRS: 32 (16),16 (10),not reported,not reported,none,none,"Fitbit One
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: others (belt, pocket or bra)",real-world,7 days,,no,applies partially,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Ketelhut N.B., Kindred J.H., Pimentel R.E., Hess A.M., Tracy B.L., Reiser R.F., Rudroff T.",2018,"Ketelhut et al, 2018",Functional factors that are important correlates to physical activity in people with multiple sclerosis: a pilot study,10.1080/09638288.2017.1336647,34,26,53.8 (12.4),"RR: n=29,
+SP: n=2,
+not reported: n=3",3,not reported,13.7 (8.6),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,no,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Boukhvalova A.K., Kowalczyk E., Harris T., Kosa P., Wichman A., Sandford M.A., Memon A., Bielekova B.",2018,"Boukhvalova et al, 2018",Identifying and quantifying neurological disability via smartphone,10.3389/FNEUR.2018.00740,76,43,56.54 (mean),"RR: n=23,
+PP: n=35,
+SP: n=18",,EDSS: 4.91 (mean),16.71 (mean),not reported,not reported,healthy,"healthy (caregivers)
+n=19 (53% female)
+age: not reported","Google Pixel XL 2017 (smartphone)
+Type of sensor: touchscreen
+Number of wearables: 1
+Position: hand",mixed,not reported,,yes,yes,yes,yes,yes,yes,yes,no,no,Lab: Dexterity/Tremor,RW: Dexterity/Tremor,,,no,,yes,significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Carpinella I., Gervasoni E., Anastasi D., Lencioni T., Cattaneo D., Ferrarin M.",2018,"Carpinella et al, 2018","Instrumental Assessment of Stair Ascent in People with Multiple Sclerosis, Stroke, and Parkinson's Disease: A Wearable-Sensor-Based Approach",10.1109/TNSRE.2018.2881324,10,6,51 [35-66],not reported: n=10,10,not reported,8.5 [7-17],not reported,not reported,other disease(s),"mixed 
+healthy: n=20 (50%, female), age: 57 (mean), range: 51-7;
+stroke: n=10 (60% female), age:  59 (mean), range: 47-70;
+PD: n=20 (40% female), age: 73 (mean), range: 61-77","MTW XSense
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: sternum",laboratory,not reported,,yes,yes,yes,no,yes,yes,yes,no,yes,Lab: Gait,,,,no,,yes,some significant,yes,significant,no,,yes,some significant,no,,no,,no,,no,
+"Sirhan B., Frid L., Kalron A.",2018,"Sirhan et al, 2018",Is the dual-task cost of walking and texting unique in people with multiple sclerosis?,10.1007/S00702-018-1939-4,30,15,38.8 (5.7),"RR: n=26,
+P: n=4",,"EDSS: 3.0 (median), range: 2.0-5.0",11.8 (6.8),not reported,not reported,healthy,"healthy 
+n=15 (53% female)
+age: 37.4 (6.3)","Axial
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, foot",laboratory,not reported,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,Lab: Gait,,,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Cederberg K.L., Motl R.W., McAuley E.",2018,"Cederberg, 2018","Physical Activity, Sedentary Behavior, and Physical Function in Older Adults With Multiple Sclerosis",10.1123/JAPA.2016-0358,40,30,60 (5.0),"RR: n=28,
+PP: n=1,
+SP: n=3,
+not reported: n=8",8,EDSS: 4.5 [2.5],18 (14),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Engelhard M.M., Patek S.D., Lach J.C., Goldman M.D.",2018,"Engelhard et al, 2018",Real-world walking in multiple sclerosis: Separating capacity from behavior,10.1016/J.GAITPOST.2017.10.015,88,73,"MS severity:
+mild: 41.43 (9.94),
+moderate: 47.19 (7.85), 
+severe: 46 (8.66)","RR: n=73,
+PP: n=2,
+SP: n=8,
+PR: n=5",,"EDSS:
+mild: range: 0-2.5,
+moderate: range: 3-4,
+severe: range: 4.5-6.5","MS severity:
+mild: 13.17 (6.87),
+moderate: 18.29 (8.3),
+severe: 18.55 (5.07)",not reported,not reported,healthy,"healthy 
+n=38 (71% female)
+age: 35.1 (12.4)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+Polar S610i
+Type of sensor: others (ECG)
+Number of wearables: 1
+Position: others (chest)",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,yes,some significant,yes,some significant,yes,significant,yes,some significant,no,,no,,no,,no,,no,
+"Supratak A., Datta G., Gafson A.R., Nicholas R., Guo Y., Matthews P.M.",2018,"Supratak et al, 2018",Remote monitoring in the home validates clinical gait measures for multiple sclerosis,10.3389/FNEUR.2018.00561,32,17,39.9 (8.6),not reported: n=32,32,"EDSS: 2.5 (mean), range: 1-6",not reported,not reported,not reported,healthy,"healthy 
+n=22 (50% female)
+age: 39.8 (8.9)","Axivity AX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Pau M., Corona F., Pilloni G., Porta M., Coghe G., Cocco E.",2018,"Pau et al, 2018",Texting while walking differently alters gait patterns in people with multiple sclerosis and healthy individuals,10.1016/J.MSARD.2017.11.021,45,41,40.5 (10.5),not reported: n=45,45,"EDSS: 2.4 (1.2), range: 1-5.5",not reported,not reported,not reported,healthy,"healthy 
+n=40 (73% female)
+age: 41.3 (10.4)","G-Sensor
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Witchel H.J., Oberndorfer C., Needham R., Healy A., Westling C.E.I., Guppy J.H., Bush J., Barth J., Herberz C., Roggen D., Eskofier B.M., Rashid W., Chockalingam N., Klucken J.",2018,"Witchel et al, 2018",Thigh-derived inertial sensor metrics to assess the sit-to-stand and stand-to-sit transitions in the timed up and go (TUG) Task for quantifying mobility impairment in multiple sclerosis,10.3389/FNEUR.2018.00684,17,13,53.06 (11.06),not reported: n=17,17,self-reported EDSS: 4.0 (1.8),not reported,not reported,not reported,healthy,"healthy 
+n=23 (61% female)
+age: 46.13 (11.12)","x-IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Physical activity,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+S. Dandu,2018,"Dandu et al, 2018",Understanding the physiological significance of four inertial gait features in multiple sclerosis,10.1109/JBHI.2017.2773629,115,not reported,not reported,not reported: n=115,115,not reported,not reported,not reported,not reported,healthy,"healthy 
+n=29 (female ratio not reported)
+age: not reported","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+TEMPO Inertial sensors
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 6
+Position: lower back, wrist, ankle",laboratory,1 day,,yes,applies partially,applies partially,applies partially,applies partially,yes,yes,no,yes,Lab: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Bollaert R.E., Sandroff B.M.",2018,"Motl et al, 2018",Validation of the godin leisure-time exercise questionnaire classification coding system using accelerometry in multiple sclerosis,10.1037/REP0000162,684,554,47.1 (10.2),"RR: n=598,
+P: n=71,
+unknown: n=15",15,PDDS: 2.0 [3.0],9.8 (7.5),not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Psarakis M., Greene D.A., Cole M.H., Lord S.R., Hoang P., Brodie M.",2018,"Psarakis et al, 2018","Wearable technology reveals gait compensations, unstable walking patterns and fatigue in people with multiple sclerosis",10.1088/1361-6579/AAC0A3,12,9,52 (9.1),not reported: n=12,12,EDSS: 4.25 [1.1],not reported,not reported,not reported,healthy,"healthy 
+n=12 (67% female)
+age: 55.8 (12.3)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: lower back, others (head)",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,yes,some significant,yes,some significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Bernhard F.P., Sartor J., Bettecken K., Hobert M.A., Arnold C., Weber Y.G., Poli S., Margraf N.G., Schlenstedt C., Hansen C., Maetzler W.",2018,"Bernhard et al, 2018",Wearables for gait and balance assessment in the neurological ward - study design and first results of a prospective cross-sectional feasibility study with 384 inpatients,10.1186/S12883-018-1111-7,23,not reported,not reported,not reported: n=23,23,not reported,not reported,not reported,not reported,none,none,"Rehawatch
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, ankle",real-world,16 weeks,,yes,yes,no,no,yes,yes,yes,no,yes,RW: Gait,,,,no,,no,,no,,no,,yes,some significant,no,,no,,no,,no,
+"Midaglia L., Mulero P., Montalban X., Graves J., Hauser S.L., Julian L., Baker M., Schadrack J., Gossens C., Scotland A., Lipsmeier F., van Beek J., Bernasconi C., Belachew S., Lindemann M.",2019,"Midaglia et al, 2019",Adherence and Satisfaction of Smartphone- and Smartwatch-Based Remote Active Testing and Passive Monitoring in People With Multiple Sclerosis: Nonrandomized Interventional Feasibility Study,10.2196/14863,76,53,39.5 (7.9),"RR: n=69,
+PP: n=3,
+SP: n=4",,EDSS: 2.4 (1.4),11.3 (7.0),"Natalizumab: n=19,
+Glatirameracetate: n=13,
+Dimethyl Fumarate: n=9,
+Fingolimod: n=9,
+INFB-1a: n=11,
+INFB-1b: n=7,
+Teriflunomide: n=3,
+Alemtuzumab: n=2,
+other: n=5",not reported,healthy,"healthy 
+n=25 (28% female)
+age: 34.9 (9.3)","Undefined smartphone
+Type of sensor: accelerometer, gyroscope, touchscreen
+Number of axes: 3
+Number of wearables: 1
+Position: pocket, hand
+
+Undefined smartwatch
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,24 weeks,NCT02952911,yes,yes,yes,yes,no,yes,yes,no,yes,RW: Physical activity,RW: Gait,RW: Balance,RW: Dexterity/Tremor,no,,no,,no,,no,,no,,no,,no,,no,,yes,some significant
+"Block V.J., Bove R., Zhao C., Garcha P., Graves J., Romeo A.R., Green A.J., Allen D.D., Hollenbach J.A., Olgin J.E., Marcus G.M., Pletcher M.J., Cree B.A.C., Gelfand J.M.",2019,"Block et al, 2019",Association of Continuous Assessment of Step Count by Remote Monitoring With Disability Progression Among Adults With Multiple Sclerosis,10.1001/JAMANETWORKOPEN.2019.0570,95,59,49.6 (13.6),not reported: n=95,95,"EDSS: 4.0 (median), range: 0-6.5",not reported,not reported,not reported,none,none,"Fitbit Flex
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,12 months,,yes,yes,yes,yes,no,yes,yes,no,yes,RW: Physical activity,,,,yes,significant,no,,no,,yes,some significant,no,,no,,yes,some significant,no,,no,
+"Kratz A.L., Fritz N.E., Braley T.J., Scott E.L., Foxen-Craft E., Murphy S.L.",2019,"Kratz et al, 2019",Daily Temporal Associations Between Physical Activity and Symptoms in Multiple Sclerosis,10.1093/ABM/KAY018,107,74,45.16 (11.73),"RR: n=78,
+P: n=29",,not reported,9.49 (8.36),not reported,not reported,none,none,"PRO-Diary
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Shema-Shiratzky S., Gazit E., Sun R., Regev K., Karni A., Sosnoff J.J., Herman T., Mirelman A., Hausdorff J.M.",2019,"Shema-Shiratzky et al, 2019",Deterioration of specific aspects of gait during the instrumented 6-min walk test among people with multiple sclerosis,10.1007/S00415-019-09500-Z,58,41,"MS severity:
+mild: 49 (11.2),
+moderate 48.9 (8.0)",RR: n=58,,"EDSS:
+mild: 2.5 [2-3],
+moderate: 5.25 [4-6]","MS severity:
+mild: 13.8 (10.9), 
+moderate: 13.6 (7.5)",not reported,not reported,none,none,"APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, ankle",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Balance,,,,no,,yes,some significant,no,,yes,some significant,no,,no,,no,,no,,no,
+"Silveira S.L., Motl R.W.",2019,"Silveira et al, 2019",Do Social Cognitive Theory constructs explain response heterogeneity with a physical activity behavioral intervention in multiple sclerosis?,10.1016/J.CONCTC.2019.100366,22,20,52.2 (10.5),"RR: n=19,
+not reported: n=3",3,"PDDS: 1.5 [4.0],
+EDSS: 3.5 [2.0]",13.9 (10.3),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,yes,some significant,no,,no,
+"Ehling R., Bsteh G., Muehlbacher A., Hermann K., Brenneis C.",2019,"Ehling et al, 2019",Ecological validity of walking capacity tests following rehabilitation in people with multiple sclerosis,10.1371/JOURNAL.PONE.0220613,76,not reported,47.9 (8.3),"RR: n=46,
+PP: n=17,
+SP: n=13",,EDSS: 3.0 [2-5.5],11.9 (8.8),"treated: n=40,
+untreated: n=36",not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: not reported",mixed,2 weeks,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,no,,no,,no,,no,,no,,yes,some significant,no,,no,
+"Anastasi D., Carpinella I., Gervasoni E., Matsuda P.N., Bovi G., Ferrarin M., Cattaneo D.",2019,"Anastasi et al, 2019",Instrumented Version of the Modified Dynamic Gait Index in Patients With Neurologic Disorders,10.1002/PMRJ.12137,9,4,49.6 (16.4),not reported: n=9,9,not reported,15.1 (6.8),not reported,not reported,healthy,"healthy 
+n=20 (50% female)
+age: 58 (14.5)","MTW XSens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: sternum",laboratory,1 day,,yes,yes,yes,no,yes,yes,yes,no,yes,Lab: Gait,,,,no,,yes,significant,yes,significant,no,,yes,significant,no,,no,,no,,no,
+"Angelini L., Carpinella I., Cattaneo D., Ferrarin M., Gervasoni E., Sharrack B., Paling D., Nair K.P.S., Mazzà C.",2019,"Angelini et al, 2019",Is a Wearable Sensor-Based Characterisation of Gait Robust Enough to Overcome Differences Between Measurement Protocols? A Multi-Centric Pragmatic Study in Patients with Multiple Sclerosis,10.3390/S20010079,13,10,"51 (median), range: 35-63",RR: n=13,,"EDSS: 4.5 (median), range: 2.0-6.5",not reported,not reported,not reported,MS patients,"MS patients
+n=13 (77% female)
+age: 57 (mean), range: 34-64
+Type: SP: n=13
+Severity: 4.5 [2.5-6.5]
+Disease duration [yrs]: not reported","MTw XSens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, ankle
+
+APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, ankle",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,yes,yes,Lab: Gait,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Baird J.F., Cederberg K.L.J., Sikes E.M., Silveira S.L., Jeng B., Sasaki J.E., Sandroff B.M., Motl R.W.",2019,"Baird et al, 2019",Physical activity and walking performance across the lifespan among adults with multiple sclerosis,10.1016/J.MSARD.2019.07.003,124,93,"age:
+young: 33.3 (5.0),
+middle-aged 48.5 (5.8),
+older 65.8 (4.5)","RR: n=107,
+not reported: n=17",17,not reported,"young: 6.7 (5.0),
+middle-aged: 12.4 (5.8),
+older: 19.9 (8.7)",not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,some significant,no,,no,,no,,no,,no,
+"Rooney S., Riemenschneider M., Dalgas U., Jørgensen M.-L.K., Michelsen A.-S., Brønd J.C., Hvid L.G.",2019,"Rooney et al, 2019",Physical activity is associated with neuromuscular and physical function in patients with multiple sclerosis independent of disease severity,10.1080/09638288.2019.1634768,91,62,48.1 (11.9),"RR: n=63,
+PP: n=14,
+SP: n=14",,"EDSS: 2.9 (1.5), range: 0-6.5",8.8 (7.2),not reported,not reported,none,none,"Axivity AX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: upper leg",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Cederberg K.L.J., Jeng B., Sasaki J.E., Braley T.J., Walters A.S., Motl R.W.",2019,"Cederberg et al, 2019","Physical activity, sedentary behavior, and restless legs syndrome in persons with multiple sclerosis",10.1016/J.JNS.2019.116531,253,204,59.4 (10),"RR: n=170,
+PP: n=29,
+SP: n=51,
+benign: n=3",,not reported,20.3 (9.7),subjects on disease-modifying treatment: n=187,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Bollaert R.E., Motl R.W.",2019,"Bollaert et al, 2019","Physical and Cognitive Functions, Physical Activity, and Sedentary Behavior in Older Adults With Multiple Sclerosis",10.1519/JPT.0000000000000163,40,25,65.3 (4.3),"RR: n=27,
+not reported: n=13",13,EDSS: 4.0 [2.0],21.5 (8.6),not reported,not reported,healthy,"healthy 
+n=40 (63% female)
+age: 66.5 (6.7)","ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: not reported",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,no,RW: Physical activity,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Chitnis T., Glanz B.I., Gonzalez C., Healy B.C., Saraceno T.J., Sattarnezhad N., Diaz-Cruz C., Polgar-Turcsanyi M., Tummala S., Bakshi R., Bajaj V.S., Ben-Shimol D., Bikhchandani N., Blocker A.W., Burkart J., Cendrillon R., Cusack M.P., Demiralp E., Jooste S.K., Kharbouch A., Lee A.A., Lehár J., Liu M., Mahadevan S., Murphy M., Norton L.C., Parlikar T.A., Pathak A., Shoeb A., Soderberg E., Stephens P., Stoertz A.H., Thng F., Tumkur K., Wang H., Rhodes J., Rudick R.A., Ransohoff R.M., Phillips G.A., Bruzik E., Marks W.J., Weiner H.L., Snyder T.M.",2019,"Chitnis et al, 2019",Quantifying neurologic disease using biosensor measurements in-clinic and in free-living settings in multiple sclerosis,10.1038/S41746-019-0197-7,25,23,46.5 (7.4),not reported: n=25,25,"EDSS: 3.4 (mean), range: 1.0-6.5",16 (5),not reported,not reported,none,none,"Cardiac and Activity Monitor (CAM)
+Type of sensor: accelerometer, others (ECG, PPG, skin impedance, temperature, light exposure, barometer)
+Number of axes: 3
+Number of wearables: 3 (real-world), 9 (lab setting)
+Position: sternum, lower back, waist, wrist, upper leg, ankle",mixed,8 weeks,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Gait,Lab: Gait,,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+R.E. Bollaert,2019,"Bollaert et al, 2019",Self-efficacy and physical and cognitive function in older adults with multiple sclerosis,10.7224/1537-2073.2018-001,40,25,65.3 (4.3),"RR: n=27,
+not reported: n=13",13,EDSS: 4.0 [2.0],21.5 (8.6),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Boukhvalova, AK; Fan, O; Weideman, AM; Harris, T; Kowalczyk, E; Pham, L; Kosa, P; Bielekova, B",2019,"Boukhvalova et al, 2019",Smartphone Level Test Measures Disability in Several Neurological Domains for Patients With Multiple Sclerosis,10.3389/FNEUR.2019.00358,93,50,"MS type:
+RR: 50 (10.2), 
+SP: 60 (8.2), 
+PP: 58.8 (7.8)","RR: n=35,
+PP: n=38,
+SP: n=19,
+not reported: n=1",1,"EDSS:
+RR: 3.3 (1.6), range: 1.0-6.5
+SP: 6.0 (1.1), range: 3.5-7.5
+PP: 5.7 (1.3), range: 2.5-8.0","MS type:
+RR: 12.4 (10.1),
+SP: 26.8 (11.2),
+PP: 15.7 (8.3)",not reported,not reported,healthy,"healthy 
+n=15 (53% female)
+age: not reported","Google Pixel XL 2017 (smartphone)
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: hand",mixed,6 months,NCT03109288/ NCT00794352,yes,yes,yes,yes,applies partially,yes,yes,applies partially,no,RW: Dexterity/Tremor,Lab: Dexterity/Tremor,,,yes,some significant,yes,some significant,yes,significant,no,,no,,no,,no,,no,,no,
+"Motl R.W., Sasaki J.E., Cederberg K.L., Jeng B.",2019,"Motl et al, 2019",Social-cognitive theory variables as correlates of sedentary behavior in multiple sclerosis: Preliminary evidence,10.1016/J.DHJO.2019.05.002,275,223,57 (10.1),"RR: n=181,
+not reported: n=94",94,not reported,20.4 (9.7),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,no,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Grinberg Y., Berkowitz S., Hershkovitz L., Malcay O., Kalron A.",2019,"Grinberg et al, 2019",The ability of the instrumented tandem walking tests to discriminate fully ambulatory people with MS from healthy adults,10.1016/J.GAITPOST.2019.02.022,25,17,35.2 (8.6),not reported: n=25,25,not reported,not reported,not reported,not reported,healthy,"healthy 
+n=25 (72% female)
+age: 34.3 (6.1)","APDM IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, foot",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Braakhuis H.E.M., Berger M.A.M., Van Der Stok G.A., Van Meeteren J., De Groot V., Beckerman H., Bussmann J.B.J., Malekzadeh A., Van Den Akker L.E., Looijmans M., Sanches S.A., Dekker J., Collette E.H., Van Oosten B.W., Teunissen C.E., Blankenstein M.A., Eijssen I.C.J.M., Rietberg M., Heine M., Verschuren O., Kwakkel G., Visser-Meily J.M.A., Van De Port I.G.L., Lindeman E., Blikman L.J.M., Van Meeteren J., Bussmann J.B.J., Stam H.J., Hintzen R.Q., Hacking H.G.A., Hoogervorst E.L., Frequin S.T.F.M., Knoop H., De Jong B.A., Bleijenberg G., De Laat F.A.J., Verhulsdonck M.C., Van Munster E.T.L., Oosterwijk C.J., Aarts G.J.",2019,"Braakhuis et al, 2019",Three distinct physical behavior types in fatigued patients with multiple sclerosis,10.1186/S12984-019-0573-1,212,156,47.9 (10.4),"RR: n=155,
+PP: n=22,  
+SP: n=21, 
+other: n=14",,EDSS: 2.5 [1.5],6.4 (7.5),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Block V.J., Zhao C., Hollenbach J.A., Olgin J.E., Marcus G.M., Pletcher M.J., Henry R., Gelfand J.M., Cree B.A.C.",2019,"Block et al, 2019",Validation of a consumer-grade activity monitor for continuous daily activity monitoring in individuals with multiple sclerosis,10.1177/2055217319888660,31,17,53.4 (11.7),"RR: n=16,
+P: n=15",,"EDSS: 4.0 (mean), range: 0-6.5",17.5 [8.5-23],not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist
+
+Fitbit Flex
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist
+
+Fitbit Flex2
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Motl R.W., Sasaki J.E., Cederberg K.L., Jeng B.",2019,"Motl et al, 2019",Validity of Sitting Time Scores From the International Physical Activity Questionnaire-Short Form in Multiple Sclerosis,10.1037/REP0000280,295,223,59.7 (10.1),"RR: n=181,
+not reported: n=114",114,not reported,20.4 (9.7),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,no,no,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Sasaki J.E., Motl R.W., McAuley E.",2019,"Sasaki et al, 2019",Validity of the Marshall Sitting Questionnaire in people with multiple sclerosis,10.1080/02640414.2018.1554614,63,48,56.6 (7.3),"RR: n=50, 
+SP: n=7, 
+P: n=3, 
+other: n=3",,not reported,not reported,not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,applies partially,no,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Schwab P., Karlen W.",2020,"Schwab et al, 2020",A Deep Learning Approach to Diagnosing Multiple Sclerosis from Smartphone Data,10.1109/JBHI.2020.3021143,774,not reported,not reported,not reported: n=774,774,not reported,not reported,not reported,not reported,healthy,"healthy 
+n=372 (female ratio not reported)
+age:not reported","Bring-your-own-device (smartphone)
+Type of sensor: accelerometer, gyroscope, touchscreen
+Number of axes: 3
+Number of wearables: 1
+Position: pocket, hand",real-world,not reported,,yes,applies partially,applies partially,no,no,applies partially,applies partially,yes,yes,RW: Gait,RW: Dexterity/Tremor,,,no,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,
+"Shema-Shiratzky S., Hillel I., Mirelman A., Regev K., Hsieh K.L., Karni A., Devos H., Sosnoff J.J., Hausdorff J.M.",2020,"Shema-Shiratzky et al, 2020",A wearable sensor identifies alterations in community ambulation in multiple sclerosis: contributors to real-world gait quality and physical activity,10.1007/S00415-020-09759-7,44,32,49.2 (10.7),RR: n=44,,EDSS: 3.5 [2.5-5.0],13.3 (9.3),not reported,not reported,healthy,"healthy 
+n=60 (51% female)
+age: 52.1 (7.1)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",mixed,7 days,NCT02427997,yes,yes,yes,yes,no,yes,yes,no,yes,RW: Gait,Lab: Gait,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Mosquera-Lopez C., Wan E., Shastry M., Folsom J., Leitschuh J., Condon J., Rajhbeharrysingh U., Hildebrand A., Cameron M.H., Jacobs P.G.",2020,"Mosquera-lopez et al, 2020",Automated Detection of Real-World Falls: Modeled from People with Multiple Sclerosis,10.1109/JBHI.2020.3041035,25,17,"54 (mean), range: 33-76","RR: n=11,
+PP: n=6,
+SP: n=8",,EDSS: range: 4.0-6.0,not reported,not reported,not reported,none,none,"MotioWear
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,8 weeks,NCT02583386,yes,yes,yes,yes,yes,yes,applies partially,applies partially,applies partially,RW: Gait,RW: Balance,,,no,,no,,no,,no,,no,,no,,no,,no,,no,
+K. Daunoraviciene,2020,"Daunoraviciene et al, 2020",Biomechanical markers of impaired motor coordination,10.1109/MSM49833.2020.9201642,31,19,"sex:
+women: 40 (12.3)
+men: 34.4 (11.3)",not reported: n=31,31,"EDSS: 3.71 (1.43), range: 2.0-6.0",not reported,not reported,not reported,healthy,"healthy 
+n=23 (74% female)
+age: women: 28 (4.0), men: 31.14 (5.7)","Shimmer IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: upper leg, lower leg, foot",laboratory,not reported,,yes,yes,yes,applies partially,yes,applies partially,yes,no,yes,Lab: Dexterity/Tremor,,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+K.K.V. Mate,2020,"Mate et al, 2020",Clinically assessed walking capacity versus real-world walking performance in people with multiple sclerosis,10.7224/1537-2073.2019-047,125,98,45.4 (10.0),not reported: n=125,125,not reported,6.1 (3.4),not reported,not reported,none,none,"activPAL3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: upper leg",real-world,7 days,NCT01611987,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,RW: Physical activity,,,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,
+"Næss-Schmidt E., Pedersen A., Christiansen D., Andersen N.-B., Brincks J., Grimm B., Nielsen J., Mechlenburg I.",2020,"Naess-Schmidt et al, 2020",Daily activity and functional performance in people with chronic disease: A cross-sectional study,10.1080/2331205X.2020.1713280,28,22,56.3 (8.8),not reported: n=28,28,not reported,12.4 (7.4)	,not reported,not reported,other disease(s),"mixed 
+stroke: n=22 (55%, female), age: 65.1 (10.8);
+PD: n=34 (29% female), age:  67.9 (7.8);
+RA: n=15 (100% female), age: 57.3 (17.0)","Axivity AX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: upper leg",real-world,7 days,,applies partially,yes,yes,no,yes,applies partially,applies partially,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,yes,significance not tested,no,,no,,no,,no,
+"Sandroff B.M., Motl R.W.",2020,"Sandroff et al, 2020",Device-Measured Physical Activity and Cognitive Processing Speed Impairment in a Large Sample of Persons with Multiple Sclerosis,10.1017/S1355617720000284,385,301,49.9 (11.6),"RR: n=299, 
+P: n=45,
+not reported: n=41",41,PDDS: 2.0 [4.0],12.3 ± 9.4,not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Cohen M., Mondot L., Fakir S., Landes C., Lebrun C.",2020,"Cohen et al, 2020",Digital biomarkers can highlight subtle clinical differences in radiologically isolated syndrome compared to healthy controls,10.1007/S00415-020-10276-W,21,14,"44 (mean), range: 25-66",radiologically isolated syndrome: n=21,,not reported,not reported,not reported,not reported,healthy,"healthy 
+n=32 (72% female)
+age: 42.4 (mean), range: 20-58","iPhone X (smartphone)
+Type of sensor: touchscreen
+Number of wearables: 1
+Position: hand",laboratory,not reported,,yes,applies partially,yes,yes,yes,applies partially,applies partially,no,yes,Lab: Dexterity/Tremor,,,,no,,yes,some significant,yes,significant,no,,no,,yes,significant,no,,no,,no,
+"Pau M., Porta M., Coghe G., Frau J., Lorefice L., Cocco E.",2020,"Pau et al, 2020",Does multiple sclerosis differently impact physical activity in women and man? A quantitative study based on wearable accelerometers,10.3390/IJERPH17238848,45,23,"sex:
+women: 49.4 (9.0), 
+men: 51.2 (11.8)","RR: n=30,
+PP: n=8,
+SP: n=7",,EDSS: 3.6 (1.8),"Sex:
+women: 17.6 (10.2), 
+men: 18.4 (13.4)",not reported,not reported,healthy,"healthy 
+n=41 (51% female)
+age: women: 46.7 (14.6), men: 49.6 (14.4)","ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,7 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Twose J., Licitra G., McConchie H., Lam K.H., Killestein J.",2020,"Twose et al, 2020",Early-warning signals for disease activity in patients diagnosed with multiple sclerosis based on keystroke dynamics,10.1063/5.0022031,34,not reported,range: 18-65 [inclusion criteria],not reported: n=34,34,inclusion criteria: EDSS<7.5,not reported,not reported,not reported,healthy,"healthy 
+n=24 (female ratio not reported)
+age: not reported","Bring-your-own-device (smartphone)
+Type of sensor: touchscreen
+Number of wearables: 1
+Position: hand",real-world,12 months,https://www.trialregister.nl/trial/7070,yes,yes,no,no,yes,yes,yes,no,yes,RW: Dexterity/Tremor,,,,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,yes,significance not tested,no,,no,
+"Pratap A., Grant D., Vegesna A., Tummalacherla M., Cohan S., Deshpande C., Mangravite L., Omberg L.",2020,"Pratap et al, 2020","Evaluating the Utility of Smartphone-Based Sensor Assessments in Persons With Multiple Sclerosis in the Real-World Using an App (elevateMS): Observational, Prospective Pilot Digital Health Study",10.2196/22108,495,232,"MS diagnosis:
+self-referred: 45.2 (11.6),
+clinic-referred: 48.93 (11.20)","RR: n=423,
+PP: n=40,
+SP: n=30,
+not reported: n=2",2,"PDDS:
+normal: n=153,
+mild disability: n=109,
+moderate disability: n=142,
+gait disability: n=2","MS diagnosis:
+self-referred: 11.14 (8.84),
+clinic-referred: 14.29 (8.89)","infusion disease-modifying therapy: n=170,
+injection disease-modifying therapy: n=107,
+oral disease-modifying therapy: n=154,
+none disease-modifying therapy: n=52,
+missing data about disease-modifying therapy: n=2",not reported,healthy,"healthy 
+n=134 (64% female)
+age: 39.3 (11.4)","Bring-your-own-device (smartphone)
+Type of sensor: accelerometer, gyroscope, touchscreen
+Number of axes: 3
+Number of wearables: 1
+Position: hand",real-world,12 weeks,,applies partially,yes,yes,yes,applies partially,applies partially,yes,yes,yes,RW: Gait,RW: Balance,RW: Dexterity/Tremor,,yes,significant,yes,significant,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,no,
+"Nasseri N.N., Ghezelbash E., Zhai Y., Patra S., Riemann-Lorenz K., Heesen C., Rahn A.C., Stellmann J.-P.",2020,"Nasseri et al, 2020",Feasibility of a smartphone app to enhance physical activity in progressive MS: A pilot randomized controlled pilot trial over three months,10.7717/PEERJ.9303,18,9,49.6 (8.5),chronic progressive: n=18,,"EDSS: 3.5 (median), range: 2.5-6.0",13.1 (5.6),not reported,not reported,MS patients,"MS patients
+n=20 (64% female)
+age: 52.5 (7.3)
+Type: chronic progressive: n=20
+Severity: EDSS: 3.5 [3.0-6.0]
+Disease duration [yrs]: 20.1 (13.0)","ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: not reported",real-world,7 days,NCT03114293,yes,yes,yes,yes,no,yes,applies partially,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,non-significant,no,,no,,yes,significant,yes,non-significant,no,
+"Bourke A.K., Scotland A., Lipsmeier F., Gossens C., Lindemann M.",2020,"Bourke et al, 2020",Gait Characteristics Harvested During a Smartphone-Based Self-Administered 2-Minute Walk Test in People with Multiple Sclerosis: Test-Retest Reliability and Minimum Detectable Change,10.3390/S20205906,76,53,39.5 (7.9),"RR: n=69,
+PP: n=3,
+SP: n=4",,EDSS: 2.4 (1.4),11.3 (7.0),not reported,not reported,healthy,"healthy 
+n=25 (28% female)
+age: 34.9 (9.3)","Samsung Galaxy S7 (smartphone)
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: others (trouser pocket or running belt)",real-world,24 weeks,NCT02952911,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Gait,,,,no,,no,,yes,significance not tested,no,,no,,yes,some significant,no,,no,,no,
+"Cofré Lizama L.E., Bruijn S.M., Galea M.P.",2020,"Cofré et al, 2020",Gait stability at early stages of multiple sclerosis using different data sources,10.1016/J.GAITPOST.2020.02.006,30,25,42.5 (9.2),RR: n=30,,"EDSS: 1.2 (0.9), range: 0-2.5",<15,not reported,not reported,healthy,"healthy 
+n=15 (60% female)
+age: 36.8 (7.0)","Cometa accelerometer
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,yes,some significant,no,,no,,no,,no,,no,,no,
+"Ibrahim A.A., Küderle A., Gaßner H., Klucken J., Eskofier B.M., Kluge F.",2020,"Ibrahim et al, 2020",Inertial sensor-based gait parameters reflect patient-reported fatigue in multiple sclerosis,10.1186/S12984-020-00798-9,49,32,41.6 (10.4),not reported: n=49,49,"EDSS: 3.7 (median), range: 1-6.5",not reported,not reported,not reported,none,none,"Shimmer IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: foot",laboratory,not reported,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,Lab: Gait,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Neal W.N., Cederberg K.L., Jeng B., Sasaki J.E., Motl R.W.",2020,"Neal et al, 2020",Is Symptomatic Fatigue Associated With Physical Activity and Sedentary Behaviors Among Persons With Multiple Sclerosis?,10.1177/1545968320916159,174,141,58.7 (10.4),"RR: n=115, 
+P: n=59",,PDDS: 4.0 [2.0],20.1 (10.2),not reported,not reported,MS patients,"MS patients (non-fatigued FSS < 4)
+n=78 (96% female)
+age: 60.6 (8.9)
+Type: RR: n=57, P: n=21
+Severity: PDDS: 1.0 [0.0-4.0]
+Disease duration [yrs]: 20.7 (8.5)","ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,applies partially,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Shah V.V., McNames J., Mancini M., Carlson-Kuhta P., Spain R.I., Nutt J.G., El-Gohary M., Curtze C., Horak F.B.",2020,"Shah et al, 2020","Laboratory versus daily life gait characteristics in patients with multiple sclerosis, Parkinson’s disease, and matched controls",10.1186/S12984-020-00781-4,15,not reported,49 (10),RR: n=15,,inclusion criteria: EDSS <6.0,not reported,not reported,not reported,healthy,"healthy 
+n=16 (female ratio not reported)
+age: 45 (11)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, foot",mixed,7 days,,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,RW: Gait,Lab: Gait,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Tulipani L.J., Meyer B., Larie D., Solomon A.J., McGinnis R.S.",2020,"Tulipani et al, 2020",Metrics extracted from a single wearable sensor during sit-stand transitions relate to mobility impairment and fall risk in people with multiple sclerosis,10.1016/J.GAITPOST.2020.06.014,21,not reported,55.3 (8.6),not reported: n=21,21,EDSS: 3.4 (1.2),not reported,not reported,not reported,MS patients,"MS patients (non-fallers)
+n=17 (female ratio not reported)
+age: 4.8 (13.5)
+Type: not reported
+Severity: EDSS: 2.3 (1.2)
+Disease duration [yrs]: not reported","Biostamp MC10
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: sternum, upper leg",laboratory,not reported,,yes,yes,applies partially,applies partially,yes,applies partially,applies partially,yes,applies partially,Lab: Balance,,,,yes,significant,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Maillart E., Labauge P., Cohen M., Maarouf A., Vukusic S., Donzé C., Gallien P., De Sèze J., Bourre B., Moreau T., Louapre C., Mayran P., Bieuvelet S., Vallée M., Bertillot F., Klaeylé L., Argoud A.-L., Zinaï S., Tourbah A.",2020,"Maillart et al, 2020","MSCopilot, a new multiple sclerosis self-assessment digital solution: results of a comparative study versus standard tests",10.1111/ENE.14091,116,71,46 (10),"RR: n=86, 
+progressive: n=29,
+not reported: n=1",1,EDSS: 3.6 (1.6),12 (7),not reported,not reported,healthy,"healthy 
+n=69 (65% female)
+age: 39 (11)","Smartphone
+Type of sensor: accelerometer, gyroscope, magnetometer, touchscreen
+Number of axes: 3
+Number of wearables: 1
+Position: hand",laboratory,not reported,NCT03148938,yes,yes,yes,yes,applies partially,yes,applies partially,no,yes,Lab: Gait,Lab: Dexterity/Tremor,,,no,,yes,significant,yes,significant,no,,no,,yes,significant,no,,no,,yes,significance not tested
+"Akhbardeh A., Arjona J.K., Krysko K.M., Nourbakhsh B., Gourraud P.A., Graves J.S.",2020,"Akhbardeh et al, 2020",Novel MS vital sign: multi-sensor captures upper and lower limb dysfunction,10.1002/ACN3.50988,117,88,47 (12.4),not reported: n=117,117,"EDSS: 2.5 (median), range: 1-7","10 (median), range: 0.4-44",not reported,not reported,healthy,"healthy 
+n=30 (50% female)
+age: 39.7 (10.7)","MYO-band
+Type of sensor: accelerometer, gyroscope, others (sEMG)
+Number of axes: 3
+Number of wearables: 1
+Position: lower arm, lower leg",laboratory,5 min,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,Lab: Balance,Lab: Dexterity/Tremor,,,yes,significant,yes,significant,yes,significant,no,,no,,yes,significance not tested,no,,no,,no,
+"Flachenecker F, Gaßner H, Hannik J, Lee DH, Flachenecker P, Winkler J, Eskofier B, Linker R, Klucken J",2019,"Flachenecker et al, 2019",Objective sensor-based gait measures reflect motor impairment in multiple sclerosis patients: Reliability and clinical validation of a wearable sensor device,10.1016/J.MSARD.2019.101903,102,69,43.0 (11.6),"RR: n=68, 
+PP: n=12,
+SP: n=22",,"EDSS: 4.0 (median), range: 1.0-7.0",10.1 (10.5),not reported,not reported,healthy,"healthy 
+n=22 (46% female)
+age: 34.2 (15.5)","Shimmer IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: foot",laboratory,not reported,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,Lab: Gait,,,,yes,significant,yes,significant,yes,significant,yes,significant,no,,yes,significant,no,,no,,no,
+"Vienne-Jumeau A., Oudre L., Moreau A., Quijoux F., Edmond S., Dandrieux M., Legendre E., Vidal P.P., Ricard D.",2020,"Vienne-Jumeau et al, 2020",Personalized Template-Based Step Detection From Inertial Measurement Units Signals in Multiple Sclerosis,10.3389/FNEUR.2020.00261,22,13,"walking aid:
+yes: 57 (9),
+no: 59 (13)",P: n=22,,"EDSS: 
+walking aid: 6.0 [6.0-6.5],
+no aid: 3.5 [3.0-6.0]",not reported,not reported,not reported,healthy,"healthy 
+n=10 (60% female)
+age: 26 (1)","XSens IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: foot",laboratory,6 months,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,yes,significant,yes,non-significant,no,,yes,some significant,no,,no,,yes,significant,no,,no,
+"Hibner B.A., Hilgenkamp T.I.M., Schroeder E.C., Motl R.W., Bollaert R.E., Griffith G., Grigoriadis G., Baynard T., Fernhall B.",2020,"Hibner et al, 2020",Physical activity and peak oxygen consumption are associated with walking in multiple sclerosis,10.1016/J.MSARD.2020.101941,50,38,46 (12),RR: n=50,,EDSS: 3.3 [2.5-4],not reported,not reported,not reported,none,none,"ActiGraph 7164
+Type of sensor: accelerometer
+Number of axes: 1
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,applies partially,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,
+"Stuart C.M., Varatharaj A., Domjan J., Philip S., Galea I., Adams E., Ali R., Cader S., Chartres S., Cornick F., Darekar A., Fenn M., Furby J., Guillochon R., Halfpenny C., Hillier C., Hyde R., Jacob C., Jarman E., Nabag M., O’Neill A., Perry V.H., Sayce C., Spanoulis A., Temple-Brown C., Zotova E.",2020,"Stuart et al, 2020",Physical activity monitoring to assess disability progression in multiple sclerosis,10.1177/2055217320975185,56,30,53.6 (8.0),"PP: n=32,
+SP: n=24",,EDSS: 5.7 (1.3),12.2 (8.6),untreated,not reported,none,none,"SenseWear Armband
+Type of sensor: accelerometer, others (thermometer, skin impedance)
+Number of axes: 3
+Number of wearables: 1
+Position: upper arm",real-world,4 weeks,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,yes,significant,no,,no,
+K. Daunoraviciene,2020,"Daunoraviciene et al, 2020",Quantitative body symmetry assessment during neurological examination,10.3233/THC-208003,28,16,38 (11.9),not reported: n=28,28,EDSS: range: 2.0-6.5,not reported,not reported,not reported,healthy,"healthy 
+n=23 (70% female)
+age: 29.1 (4.6)","Shimmer IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 6
+Position: upper arm, lower arm, hand, upper leg, lower leg, foot",laboratory,not reported,,yes,yes,yes,applies partially,yes,yes,applies partially,no,no,Lab: Dexterity/Tremor,,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+V.V. Shah,2020,"Shah et al, 2020","Quantity and quality of gait and turning in people with multiple sclerosis, Parkinson’s disease and matched controls during daily living",10.1007/S00415-020-09696-5,13,not reported,48.69 (11.10),not reported: n=13,13,PREDSS: range: 3.5=6.0,not reported,not reported,not reported,healthy,"healthy 
+n=21 (female not reported)
+age: 46.4 (11.1)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, foot",real-world,7 days,,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,RW: Gait,,,,yes,significant,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,
+"Sato S., Lim J., Miehm J.D., Buonaccorsi J., Rajala C., Khalighinejad F., Ionete C., Kent J.A., van Emmerik R.E.A.",2020,"Sato et al, 2020",Rapid foot-tapping but not hand-tapping ability is different between relapsing-remitting and progressive multiple sclerosis,10.1016/J.MSARD.2020.102031,29,26,52.03 (9.94),RR: n=29,,EDSS: 3.26 (2.19),12.75 (8.73),not reported,not reported,MS patients,"MS patients (PMS)
+n=29 (66% female)
+age: 60.38 (8.3)
+Type: P: n=29
+Severity: EDSS: 6.0 (1.7)
+Disease duration [yrs]: 21.85 (12.35)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: hand, foot",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Dexterity/Tremor,,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Lam K.H., Meijer K.A., Loonstra F.C., Coerver E., Twose J., Redeman E., Moraal B., Barkhof F., de Groot V., Uitdehaag B., Killestein J.",2020,"Lam et al, 2020",Real-world keystroke dynamics are a potentially valid biomarker for clinical disability in multiple sclerosis,10.1177/1352458520968797,85,64,46.4 (10.1),"RR: n=51,
+PP: n=9,
+SP: n=25",,EDSS: 3.5 [2.5-4.0],11.3 [ 5.1-17.7],not reported,not reported,healthy,"healthy 
+n=18 (56% female)
+age: 45.2 (13.5)","Bring-your-own-device (smartphone)
+Type of sensor: touchscreen
+Number of wearables: 1
+Position: hand",real-world,2 weeks,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Dexterity/Tremor,,,,yes,some significant,yes,some significant,yes,some significant,yes,non-significant,no,,yes,significance not tested,no,,no,,no,
+"Brull A., Zubizarreta A., Cabanes I., Rodriguez-Larrad A.",2020,"Brull et al, 2020",Sensorized Tip for Monitoring People with Multiple Sclerosis that Require Assistive Devices for Walking,10.3390/S20154329,3,not reported,not reported,not reported: n=3,3,"EDSS: 6.5 (median), range: 4.5-7.5",not reported,not reported,not reported,none,none,"MTi-1 XSens
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: tip of cane or crutch (others)
+
+HBM C9C
+Type of sensor: others (force sensor)
+Number of wearables: 1
+Position: tip of cane or crutch (others)
+
+Bosch BMP280
+Type of sensor: others (barometer)
+Number of wearables: 1
+Position: tip of cane or crutch (others)",laboratory,not reported,,yes,applies partially,no,applies partially,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,no,,no,,no,,no,,no,,no,,no,
+"Ader L.G.M., Greene B.R., McManus K., Tubridy N., Caulfield B.",2020,"Ader et al, 2020",Short bouts of gait data and body-worn inertial sensors can provide reliable measures of spatiotemporal gait parameters from bilateral gait data for persons with multiple sclerosis,10.3390/BIOS10090128,37,23,45.1 (9.9),RR: n=37,,"EDSS: 1.0 (median), range: 0-4.5",7.4 (7.7),not reported,not reported,none,none,"Kinesis Gait IMU
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 2
+Position: lower leg",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,no,,no,,no,,yes,significance not tested,no,,no,,no,
+"Zhai Y., Nasseri N., Pöttgen J., Gezhelbash E., Heesen C., Stellmann J.-P.",2020,"Zhai et al, 2020",Smartphone Accelerometry: A Smart and Reliable Measurement of Real-Life Physical Activity in Multiple Sclerosis and Healthy Individuals,10.3389/FNEUR.2020.00688,67,42,42.9 (10.9),"RR: n=34,
+P: n=33",,"EDSS: 3.0 (median), range: 1.0-6.0",8.5 (8.1),not reported,not reported,healthy,"healthy 
+n=70 (67% female)
+age: 41.5 (12.8)","Samsung Galaxy S4 (smartphone)
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: habitual phone position
+
+ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,7 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,yes,some significant,yes,some significant,yes,significant,yes,non-significant,no,,no,,no,,no,,no,
+"Creagh A.P., Simillion C., Scotland A., Lipsmeier F., Bernasconi C., Belachew S., van Beek J., Baker M., Gossens C., Lindemann M., De Vos M.",2020,"Creagh et al, 2020",Smartphone-based remote assessment of upper extremity function for multiple sclerosis using the Draw a Shape Test,10.1088/1361-6579/AB8771,71,49,40 (8),"RR: n=64,
+PP: n=3,
+SP: n=4",,"EDSS:
+normal 9PHT: 2.1 (1.26),
+abnormal 9HPT: 3.3 (1.4)",not reported,not reported,not reported,healthy,"healthy 
+n=22 (32% female)
+age: not reported","Samsung Galaxy S7 (smartphone)
+Type of sensor: touchscreen
+Number of wearables: 1
+Position: hand",real-world,24 weeks,NCT02952911,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Dexterity/Tremor,,,,no,,yes,some significant,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,no,
+"Huang S.-C., Dalla Costa G., Pisa M., Gregoris L., Leccabue G., Congiu M., Comi G., Leocani L.",2020,"Huang et al, 2020",The Danger of Walking with Socks: Evidence from Kinematic Analysis in People with Progressive Multiple Sclerosis,10.3390/S20216160,40,20,50.9 (9.8),P: n=40,,EDSS: 5.5 (1.1),not reported,not reported,not reported,healthy,"healthy 
+n=15 (60% female)
+age: 52.7 (4.4)","BTS bioengineering G-Walk IMU
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back, waist
+
+BTS bioengineering FREEEMG-1000
+Type of sensor: others (sEMG)
+Number of wearables: 8
+Position: upper leg, lower leg",laboratory,not reported,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,Lab: Gait,,,,yes,some significant,yes,some significant,yes,significant,yes,some significant,no,,no,,no,,no,,no,
+"Shalmoni N., Kalron A.",2020,"Shamlmoni et al, 2020",The immediate effect of stroboscopic visual training on information-processing time in people with multiple sclerosis: an exploratory study,10.1007/S00702-020-02190-2,26,16,47.9 (9.1),"RR: n=17, 
+P: n=9",,"EDSS: 4.5 (median), range: 3.0-5.5",9.3 (7.6),not reported,not reported,none,none,"APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetomter
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, foot",laboratory,not reported,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,Lab: Gait,Lab: Balance,,,no,,no,,no,,no,,no,,no,,no,,yes,non-significant,no,
+"Karle V., Hartung V., Ivanovska K., Mäurer M., Flachenecker P., Pfeifer K., Tallner A.",2020,"Karle et al, 2020",The two-minute walk test in persons with multiple sclerosis: Correlations of cadence with free-living walking do not support ecological validity,10.3390/IJERPH17239044,20,15,44.2 (12.2),"RR: n=14, 
+PP: n=2,
+SP: n=4",,"EDSS: 3.1 (1.4), range: 1-6",9.1 (7.7),not reported,not reported,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",mixed,7 days,NCT04057066,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,yes,non-significant,no,,no,,no,,no,,no,,no,,no,
+"Craig J.J., Bruetsch A.P., Lynch S.G., Huisinga J.M.",2020,"Craig et al, 2020",Trunk and foot acceleration variability during walking relates to fall history and clinical disability in persons with multiple sclerosis,10.1016/J.CLINBIOMECH.2020.105100,15,8,48 (9.6),not reported: n=15,15,EDSS: 4.4 (1.1),not reported,not reported,not reported,MS patients,"MS patients (non-fallers)
+n=25 (80% female)
+age: 44 (9.9)
+Type: not reported
+Severity: EDSS: 3.3 (1.9)
+Disease duration [yrs]: not reported","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 2
+Position: lower back, foot",laboratory,not reported,,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,Lab: Gait,,,,yes,some significant,yes,some significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Pilloni G., Choi C., Shaw M.T., Coghe G., Krupp L., Moffat M., Cocco E., Pau M., Charvet L.",2020,"Pilloni et al, 2020","Walking in multiple sclerosis improves with tDCS: a randomized, double-blind, sham-controlled study",10.1002/ACN3.51224,9,6,52.1 (12.8),"RR: n=2,
+SP: n=7",,EDSS: 5.3 (1.1),not reported,not reported,not reported,MS patients,"MS patients (sham tDCS)
+n=6 (83% female)
+age: 53.5 (9.8)
+Type: RR: n=3, SP: n=3
+Severity: EDSS: 4.5 (1.7)
+Disease duration [yrs]: not reported","BTS Bioengineering G-Walk IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",laboratory,4 weeks,NCT03658668,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,no,,yes,some significant,no,,no,,no,,yes,some significant,no,
+"Angelini L., Hodgkinson W., Smith C., Dodd J.M., Sharrack B., Mazzà C., Paling D.",2020,"Angelini et al, 2020",Wearable sensors can reliably quantify gait alterations associated with disability in people with progressive multiple sclerosis in a clinical setting,10.1007/S00415-020-09928-8,57,38,49.8 (8.4),SP: n=57,,"EDSS: 5.5 (median), range: 3.0-6.5",not reported,not reported,not reported,healthy,"healthy 
+n=24 (67% female)
+age: 49.8 (8.4)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, lower leg",laboratory,not reported,,yes,applies partially,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,yes,significant,no,,yes,some significant,no,,no,,yes,significance not tested,no,,no,,no,
+"Meyer B.M., Tulipani L.J., Gurchiek R.D., Allen D.A., Adamowicz L., Larie D., Solomon A.J., Cheney N., McGinnis R.",2020,"Meyer et al, 2020",Wearables and Deep Learning Classify Fall Risk from Gait in Multiple Sclerosis,10.1109/JBHI.2020.3025049,37,26,51 (12),not reported: n=37,37,EDSS: 2.99 (1.47),not reported,not reported,not reported,none,none,"Biostamp MC10
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 2
+Position: sternum, upper leg
+
+APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 4
+Position: sternum, lower back, lower leg",laboratory,not reported,,yes,yes,yes,applies partially,yes,applies partially,applies partially,no,applies partially,Lab: Gait,Lab: Balance,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Angelini L., Buckley E., Bonci T., Radford A., Sharrack B., Paling D., Nair K.P.S., Mazza C.",2021,"Angelini et al, 2021",A Multifactorial Model of Multiple Sclerosis Gait and its Changes Across Different Disability Levels,10.1109/TBME.2021.3061998,114,71,"MS severity:
+mild: 43.6 (10.5), 
+noderate: 43.6 (10.5),
+severe: 43.6 (10.5)","RR: n=41,
+PP: n=3,
+SP: n=70",,"EDSS:
+mild: <=3.5,
+moderate: range: 4.0-5.5,
+severe: >=6.0",not reported,not reported,not reported,healthy,"healthy 
+n=24 (67% female)
+age: 49.9 (8.3)","APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 3
+Position: lower back, lower leg",laboratory,not reported,,yes,applies partially,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,
+"Abbadessa G., Lavorgna L., Miele G., Mignone A., Signoriello E., Lus G., Clerico M., Sparaco M., Bonavita S.",2021,"Abbadessa et al, 2021",Assessment of multiple sclerosis disability progression using a wearable biosensor: A pilot study,10.3390/JCM10061160,25,12,40.08 (8.87),RR: n=25,,EDSS: 4.45 (1.39),9.3 (6.6),not reported,not reported,none,none,"Samsung Gear S2
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",real-world,4 weeks,,yes,yes,yes,yes,applies partially,applies partially,applies partially,no,yes,RW: Physical activity,,,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,
+"Krysko K.M., Akhbardeh A., Arjona J., Nourbakhsh B., Waubant E., Antoine Gourraud P., Graves J.S.",2021,"Krysko et al, 2021",Biosensor vital sign detects multiple sclerosis progression,10.1002/ACN3.51187,68,49,48.3 (12.1),"RR: n=53,
+PP: n=9,
+SP: n=6",,"EDSS: 2.5 (median), range: 0.0-7.0","10.5 (median), range: 0.1-44.0","none: n=19,
+IFN- 12 Glatirameracetat: n=4,
+Dimethylfumarat: n=12,
+Fingolimod: n=5,
+Natalizumab: n=10,
+Rituximab: n=6",not reported,none,none,"MYO-band
+Type of sensor: accelerometer, gyroscope, others (sEMG)
+Number of axes: 3
+Number of wearables: 1
+Position: lower arm, lower leg",laboratory,not reported,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,Lab: Dexterity/Tremor,,,,yes,significant,yes,significant,no,,yes,significant,no,,no,,yes,some significant,no,,no,
+"Shah V.V., McNames J., Harker G., Curtze C., Carlson-Kuhta P., Spain R.I., El-Gohary M., Mancini M., Horak F.B.",2021,"Shah et al, 2021",Does gait bout definition influence the ability to discriminate gait quality between people with and without multiple sclerosis during daily life?,10.1016/J.GAITPOST.2020.11.024,15,not reported,49 (10.25),RR: n=15,,inclusion criteria: EDSS<=6.0,not reported,not reported,not reported,healthy,"healthy 
+n=16 (female ratio not reported)
+age: 44.7 (10.7)","APDM instrumented socks prototype
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables: 2
+Position: foot
+
+APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",real-world,7 days,,yes,yes,applies partially,applies partially,yes,applies partially,applies partially,no,yes,RW: Gait,,,,no,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,
+"Abonie U.S., Hettinga F.J.",2021,"Abonie et al, 2021",Effect of a tailored activity pacing intervention on fatigue and physical activity behaviours in adults with multiple sclerosis,10.3390/IJERPH18010017,11,3,57.9 (8.0),"RR: n=6,
+PP: n=1,
+SP: n=4",,PDDS: 2.0 [2.0],12 [24],not reported,not reported,MS patients,"MS patients (no tailored information group)
+n=10 (30% female)
+age: 60.9 (9.5)
+Type: RR: n=4, PP: n=1, SP: n=5
+Severity: PDDS: 3.5 [2.0]
+Disease duration [yrs]: 9.5 [19.5]","ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,2 weeks,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,yes,significant,no,
+"Teufl, S; Preston, J; van Wijck, F; Stansfield, B",2021,"Teufl et al, 2021",Quantifying upper limb tremor in people with multiple sclerosis using Fast Fourier Transform based analysis of wrist accelerometer signals,10.1177/2055668320966955,5,3,57.6 (15.3),SP: n=5,,not reported,13.5 (3.1),not reported,not reported,healthy,"healthy 
+n=10 (50% female)
+age: 42.4 (10.9)","Axivity AX3
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist",laboratory,not reported,,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,Lab: Dexterity/Tremor,,,,no,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,
+"Hsieh K.L., Sosnoff J.J.",2021,"Hsieh et al, 2021",Smartphone accelerometry to assess postural control in individuals with multiple sclerosis,10.1016/J.GAITPOST.2020.11.011,12,9,62.1 (8.1),"RR: n=7,
+PP: n=1, 
+SP: n=4",,EDSS: 6 [5.3− 6.4],18.6 (10.1),not reported,not reported,MS patients,"MS patients (non-assisted device users)
+n=15 (87% female)
+age: 46.5 (12.2)
+Type: RR: n=14, not reported: n=1
+Severity: EDSS: 2.5 [2.5− 3.5]
+Disease duration [yrs]: 12.9 (11.6)","Samsung Galaxy S6 (smartphone)
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: sternum
+
+APDM Opal IMU
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: attached to smartphone",laboratory,not reported,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,Lab: Balance,,,,no,,yes,some significant,no,,yes,significant,no,,no,,no,,no,,no,
+"Creagh A.P., Simillion C., Bourke A.K., Scotland A., Lipsmeier F., Bernasconi C., Van Beek J., Baker M., Gossens C., Lindemann M., De Vos M.",2021,"Creagh et al, 2021",Smartphone-and Smartwatch-Based Remote Characterisation of Ambulation in Multiple Sclerosis during the Two-Minute Walk Test,10.1109/JBHI.2020.2998187,73,50,"MS severity:
+moderate: 40.5 (6.9),
+mild: 39.3 (8.3)",not reported: n=73,73,"EDSS:
+moderate: 4.2 (0.7), 
+mild: 1.7 (0.8)",not reported,not reported,not reported,healthy,"healthy 
+n=24 (75% female)
+age: 35.6 (8.9)","Samsung Galaxy S7 (smartphone)
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: others (trouser pocket or running belt)
+
+Motorola 360 Sport
+Type of sensor: accelerometer, gyroscope
+Number of axes: 3
+Number of wearables:1 
+Position: wrist",real-world,24 weeks,NCT02952911,yes,applies partially,yes,applies partially,yes,yes,yes,yes,yes,RW: Gait,,,,yes,some significant,yes,some significant,yes,significant,yes,significant,no,,yes,some significant,no,,no,,no,
+"Jeng B., Sasaki J.E., Cederberg K.L., Motl R.W.",2021,"Jeng et al, 2021",Sociodemographic and clinical correlates of device-measured sedentary behaviour in multiple sclerosis,10.1080/09638288.2019.1614683,233,188,59.1 (9.8),"RR: n=171,
+P: n=62",,PDDS: 3 [1-5],19.8 (9.7),not reported,not reported,none,none,"ActiGraph GT3X+
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,no,,no,,yes,significant,no,,no,,no,,no,,no,
+"Cheng W.-Y., Bourke A.K., Lipsmeier F., Bernasconi C., Belachew S., Gossens C., Graves J.S., Montalban X., Lindemann M.",2021,"Cheng et al, 2021",U-turn speed is a valid and reliable smartphone-based measure of multiple sclerosis-related gait and balance impairment,10.1016/J.GAITPOST.2020.11.025,76,53,39.5 (7.9),"RR: n=69,
+PP: n=3,
+SP: n=4",,EDSS: 2.4 (1.4),11.3 (7.0),not reported,not reported,healthy,"healthy 
+n=25 (28% female)
+age: 34.9 (9.3)","Samsung Galaxy S7 (smartphone)
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: others (trouser pocket or running belt)",real-world,24 weeks,NCT02952911,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Gait,,,,yes,significant,yes,significant,yes,significance not tested,no,,no,,yes,significant,no,,no,,no,
+"Massimiliano Pau, Micaela Porta, Giancarlo Coghe, Eleonora Cocco",2021,"Pau et al, 2021",What gait features influence the amount and intensity of physical activity in people with multiple sclerosis?,10.1097/MD.0000000000024931,31,17,52.5 (11.3),RR: n=31,,"EDSS: 3.1 (1.7), range: 1.0-6.0",not reported,inclusion criteria: on treatment with disease modifying agents at least for 6 months,inclusion criteria: free from other associated medical conditions able to severely influence gait and balance,none,none,"ActiGraph GT3X
+Type of sensor: accelerometer
+Number of axes: 3
+Number of wearables: 1
+Position: wrist
+
+BTS Bioengineering G-Sensor
+Type of sensor: accelerometer, gyroscope, magnetometer
+Number of axes: 3
+Number of wearables: 1
+Position: lower back",mixed,7 days,,yes,yes,yes,yes,yes,applies partially,applies partially,no,yes,RW: Physical activity,Lab: Gait,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,

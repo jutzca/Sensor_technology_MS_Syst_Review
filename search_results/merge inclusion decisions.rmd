@@ -9,7 +9,7 @@ Out of 959: 165 included, 657 excluded, 137 undecided
 
 ```{r}
 # Load
-screened = read.csv("search_results/21-03-19 merged 959.csv", stringsAsFactors = F)
+screened = read.csv("21-03-19 merged 959.csv", stringsAsFactors = F)
 colnames(screened)[8] = "ID"
 yvonne = read.csv2("21-03-22 selection YN.csv", stringsAsFactors = F)
 
@@ -53,7 +53,9 @@ included = merged[merged$both_yes,1:15]
 #write.csv2(merged[!(merged$both_yes | merged$both_no),], "21-04-07 YN CJ conflicts.csv")
 ```
 
-## Agreement YN & CJ
+## Abstract screening agreement
+
+### First search 03/2021: YN & CJ
 
 ```{r}
 library(DescTools)
@@ -66,14 +68,38 @@ ratertab = xtabs(~ yvonne_in + catherine_in)
 CohenKappa(ratertab, conf.level=0.95)
 
 mean(yvonne_in == catherine_in)
+cat(sum(yvonne_in != catherine_in), " / ", length(yvonne_in))
 ```
 
-## Reasons for exclusion
-
-YN's reasons for exclusion of the 657 items excluded by both YN & CJ
+### Second search 02/2023: TW & LB
 
 ```{r}
-table(merged[merged$yvonne_included == "No" & merged$catherine_included == "no", "yvonne_excluded"])
+new_search = read.csv("23-02-19 new search/new-search-unique-doi.csv", stringsAsFactors = F)
+new_search = new_search[!new_search$already.in.old.search == "yes",]
+
+tw_in = new_search$TW.decision != "exclude"
+lb_in = new_search$LB.Include.exclude != "exclude"
+
+ratertab = xtabs(~ tw_in + lb_in)
+
+CohenKappa(ratertab, conf.level=0.95)
+
+mean(tw_in == lb_in)
+cat(sum(tw_in != lb_in), " / ", length(tw_in))
+```
+
+### Both searches combined
+
+```{r}
+first_rater_in = c(yvonne_in, tw_in)
+second_rater_in = c(catherine_in, lb_in)
+
+ratertab = xtabs(~ first_rater_in + second_rater_in)
+
+CohenKappa(ratertab, conf.level=0.95)
+
+mean(first_rater_in == second_rater_in)
+cat(sum(first_rater_in != second_rater_in), " / ", length(first_rater_in))
 ```
 
 # 21-05-05 Merge JL & TW
@@ -100,21 +126,6 @@ colnames(merged)[16:17] = c("johannes_included", "johannes_comment")
 included = rbind(cbind(included, johannes_included=NA,johannes_comment=NA,tim_included=NA,tim_comment=NA), merged[merged$JL_TW_both_yes, 1:19])
 ```
 
-## Agreement JL & TW
-
-```{r}
-tim_in = tim$tim == "included"
-johannes_in = johannes$In.ex == "Included"
-
-ratertab = xtabs(~ tim_in + johannes_in)
-
-ratertab
-
-CohenKappa(ratertab, conf.level=0.95)
-
-mean(tim_in == johannes_in)
-```
-
 ## Reasons for exclusion
 
 JL's reasons for exclusion of the 44 items excluded by both JL & TW
@@ -124,7 +135,7 @@ table(merged$johannes_included)
 table(merged[merged$tim_included != "included" & merged$johannes_included != "Included", "johannes_included"])
 ```
 
-# Merge all included in phase 1
+# Merge all included in first search
 
 Out of the 35 undecided (2vs2 tie): 26 included, 9 excluded as per team decision
 
@@ -140,15 +151,15 @@ included = included[order(as.integer(rownames(included))),]
 
 ## Reasons for exclusion
 
-Team's reason for exclusion of the 9 items excluded by team decision
-
-```{r}
-table(team_decision[team_decision$team_decision == "ex", "team_reason"])
-```
-
 Total reasons for exclusion based on abstract step (sums to 710):
 Duplicate 14
 Abstract only 54
 Letter with insufficient data 5
 Review / Meta-Analysis 73
 Out of Scope (including animal studies) 564
+
+Total reasons for exclusion based on full-text step (sums to 26):
+Abstract only 3
+Insufficient data 15
+No PwMS 2
+Out of scope 6
