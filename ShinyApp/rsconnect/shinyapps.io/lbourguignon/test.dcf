@@ -1,0 +1,13 @@
+name: test
+title: test
+username:
+account: lbourguignon
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6361293
+bundleId: 7125713
+url: https://lbourguignon.shinyapps.io/test/
+when: 1682298000.34494
+lastSyncTime: 1682298000.34495
+asMultiple: FALSE
+asStatic: FALSE
