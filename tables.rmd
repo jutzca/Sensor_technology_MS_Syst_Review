@@ -123,7 +123,7 @@ create_table(data[data$Context == "mixed",], "Tables/mixed.html")
 # Supplementary Table 4
 
 ```{r}
-gt(data[,c("First author and year", "DOI", colnames(data)[22:30])])
+gt(data[,c("First author and year", "DOI", colnames(data)[21:29])])
 ```
 
 # Reproducibility

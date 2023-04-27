@@ -614,7 +614,7 @@ server <- function(input, output) {
     }
     
     p = create_barplot(yearly_publication_counts_wearable_domain, "domain", "domain", input$barplot_domain_proportion)
-    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 10 Wearable domains over time.png", p, width=8, height=6)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Wearable domains over time.png", p, width=8, height=6)
     ggplotly(p)
   })
   
@@ -707,7 +707,7 @@ server <- function(input, output) {
     yearly_publication_counts_context$context = factor(yearly_publication_counts_context$context, levels=rev(wearable_contexts))
     
     p = create_barplot(yearly_publication_counts_context, "context", "context", input$barplot_publications_context_proportion)
-    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 7 Context over time.png", p, width=8, height=6)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Context over time.png", p, width=8, height=6)
     p
   })
   
@@ -730,7 +730,7 @@ server <- function(input, output) {
     yearly_publication_counts_positions$position = factor(yearly_publication_counts_positions$position, rev(c("waist", "lower extremities", "trunk", "upper extremities", "others", "not reported")))
     
     p <- create_barplot(yearly_publication_counts_positions, "position", "positions", input$barplot_publications_positions_proportion)
-    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 9 Positions over time.png", p, width=8, height=6)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Positions over time.png", p, width=8, height=6)
     p
   })
   
@@ -750,7 +750,7 @@ server <- function(input, output) {
         legend.title = element_text(size=14, face="bold"),
         axis.text.x = element_text(angle = 45, vjust = 0.5),
       )
-    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 6 Number of MS patients over time.png", p, width=8, height=6)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Number of MS patients over time.png", p, width=8, height=6)
     p
   })
   
@@ -767,7 +767,7 @@ server <- function(input, output) {
     yearly_publication_counts_number_patients$number_bins = factor(yearly_publication_counts_number_patients$number_bins, levels=rev(unique(yearly_publication_counts_number_patients$number_bins)))
     
     p = create_barplot(yearly_publication_counts_number_patients, "number_bins", "number of MS patients", input$barplot_publications_number_patients_proportion)
-    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 6 Number of MS patients over time.png", p, width=8, height=6)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Number of MS patients over time.png", p, width=8, height=6)
     ggplotly(p)
   })
   
@@ -783,7 +783,7 @@ server <- function(input, output) {
     yearly_publication_counts_number_wearables$number_bins = factor(yearly_publication_counts_number_wearables$number_bins, levels=rev(unique(yearly_publication_counts_number_wearables$number_bins)))
     
     p = create_barplot(yearly_publication_counts_number_wearables, "number_bins", "number of wearables", input$barplot_publications_number_wearables_proportion)
-    #if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 9B Publications number of MS wearables over time.png", p, width=8, height=6)
+    #if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Publications number of MS wearables over time.png", p, width=8, height=6)
     ggplotly(p)
   })
   
@@ -807,7 +807,7 @@ server <- function(input, output) {
       stat_bin(binwidth=1, geom="text", aes(label=after_stat(count)), vjust=-1) +
       scale_x_continuous(breaks = c(1:max(plot_data$number_wearables))) +
       ylim(0, 150)
-    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix 8 Number wearables per context.png", p, width=6, height=6)
+    if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Number wearables per context.png", p, width=6, height=6)
     p
   })
   
