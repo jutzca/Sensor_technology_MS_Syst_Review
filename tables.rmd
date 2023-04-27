@@ -13,6 +13,9 @@ output:
 ---
 
 ```{r}
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(gt))
+
 data <- read.csv("ShinyApp/extracted_data_new.csv", check.names = F, na.strings = c("NA", "not reported"))
 data <- data[order(data$Year, data$Authors, data$Title, data$DOI),]
 ```
@@ -20,8 +23,6 @@ data <- data[order(data$Year, data$Authors, data$Title, data$DOI),]
 # Table 1
 
 ```{r}
-suppressPackageStartupMessages(library(dplyr))
-
 filter_by_wearable_position <- function(wearable, wearable_position) grepl(paste0("Position: [^\n]*", wearable_position), wearable)
 filter_by_sensor_type <- function(wearable, sensor_type) grepl(paste0("Type of sensor: [^\n]*", sensor_type), wearable)
 filter_by_axes <- function(wearable, axes) grepl(paste0("accelerometer[^\n]*\nNumber of axes: ", axes), wearable)
@@ -74,8 +75,6 @@ data %>% group_by(Context) %>% summarize(
 # Supplementary Table 1: real-world
 
 ```{r}
-suppressPackageStartupMessages(library(gt))
-
 result_columns <- c("Association with MS severity", "Association with other measure", "Test-retest reliability", "Group differences MS vs HC", "Group differences MS vs MS", "Group differences MS vs other diseases", "Responsiveness to change", "Responsiveness to intervention", "Subjective patient acceptability")
 
 

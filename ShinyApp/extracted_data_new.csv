@@ -5,7 +5,7 @@ prednisone: n=2,
 prozac: n=2,
 baclofen: n=2,
 cardiazem: n=1 (woman)","smoking: n=1 (male),
-no cardiovascular, metabolic, or immunologic disorders",healthy,"healthy sedentary
+no cardiovascular, metabolic, or immunologic disorders",healthy,"healthy (sedentary)
 n=15 (60% female)
 age: 44 (7)","TriTrac R3D
 Type of sensor: accelerometer
@@ -120,7 +120,7 @@ Type of sensor: accelerometer
 Number of axes: 1
 Number of wearables: 1
 Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,,
-"Hale L.A., Pal J., Becker I.",2008,"Hale et al, 2008",Measuring Free-Living Physical Activity in Adults With and Without Neurologic Dysfunction With a Triaxial Accelerometer,10.1016/J.APMR.2008.02.027,11,8,"63.7 (15.5), range: 28-91",63.7,not reported: n=11,"Rivermead Mobility Index: 12.4 (2.2), range: 8-15",not reported,not reported,not reported,healthy,"healthy sedentary
+"Hale L.A., Pal J., Becker I.",2008,"Hale et al, 2008",Measuring Free-Living Physical Activity in Adults With and Without Neurologic Dysfunction With a Triaxial Accelerometer,10.1016/J.APMR.2008.02.027,11,8,"63.7 (15.5), range: 28-91",63.7,not reported: n=11,"Rivermead Mobility Index: 12.4 (2.2), range: 8-15",not reported,not reported,not reported,healthy,"healthy (sedentary)
 n=9 (89% female)
 age: 51 (18.1), range: 28-76","TriTrac RT3
 Type of sensor: accelerometer
@@ -276,7 +276,7 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significance not tested,yes,significance not tested,no,,no,,no,,no,,no,,no,,no,,
 "Alaqtash, M; Yu, HY; Brower, R; Abdelgawad, A; Sarkodie-Gyan, T",2011,"Alaqtash et al, 2011",Application of wearable sensors for human gait analysis using fuzzy computational algorithm,10.1016/J.ENGAPPAI.2011.04.010,4,0,"43.5 (14.5), range: 29-63",43.5,RR: n=4,not reported,not reported,not reported,not reported,healthy,"healthy
 n=10 (0% female)
-age: 26.2 (5.2), range: 21-38","ADXL330 iMEMS
+age: 26.2 (5.2)","ADXL330 iMEMS
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 8
@@ -293,7 +293,7 @@ Number of wearables: 1
 Position: not reported",real-world,3 weeks,,yes,yes,yes,yes,yes,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,yes,some significant,yes,some significant,no,,
 "Schlesinger S., Neuhaus A., Thiele A., Kippnich M., Rashid A., Griewing B., Daumer M.",2011,"Schlesinger et al, 2011",Is it possible to measure mobility deficits of patients suffering from multiple sclerosis?: Evaluation of mobility of patients with MS and motor dysfunctions by means of accelerometers,10.1055/S-0031-1271750,16,8,"47.56 (7.78), range: 39-70",47.56,not reported: n=16,"EDSS: 3.56 (1.05), 3.5 (median), range: 2-5.5",not reported,not reported,not reported,healthy,"healthy
 n=26 (42% female)
-age: 37.3 (12.9), range= 25-67","Actibelt
+age: 37.3 (12.9)","Actibelt
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -327,7 +327,7 @@ Position: ankle",laboratory,not reported,,yes,yes,yes,applies partially,yes,appl
 "Yu F., Bilberg A., Stenager E., Rabotti C., Zhang B., Mischi M.",2012,"Yu et al, 2012",A wireless body measurement system to study fatigue in multiple sclerosis,10.1088/0967-3334/33/12/2033,17,not reported,range: 20-65 [inclusion criteria],NA,not reported: n=17,inclusion criteria: EDSS<5.5,not reported,not reported,"inclusion criteria: no known cardiovascular disorders, pulmonary disorders, blood disorders, infections or other disorders except for MS;
 exclusion criteria: patients who suffered from depression, severe pain, taking medication that may induce fatigue or being severely cognitively handicapped",healthy,"healthy
 n=9 (sex-matched to MS patients)
-age: not specified","FAMOS prototype
+age: not reported","FAMOS prototype
 Type of sensor: accelerometer, others (ECG, sEMG, temperature)
 Number of axes: 1
 Number of wearables: 8
@@ -365,7 +365,7 @@ Position: waist",laboratory,6 minutes,,yes,yes,yes,yes,yes,applies partially,yes
 "Spain R.I., St. George R.J., Salarian A., Mancini M., Wagner J.M., Horak F.B., Bourdette D.",2012,"Spain et al, 2012",Body-worn motion sensors detect balance and gait deficits in people with multiple sclerosis who have normal walking speed,10.1016/J.GAITPOST.2011.11.026,31,19,"39.8 (mean), range: 24-67 ",39.8,"RR: n=28,
 CIS: n=3","EDSS: 3.0 (median), range: 0-5.0","6.8 (median), range: 0.2-33",not reported,exclusion criteria: arthritis,healthy,"healthy
 n=28 (67% female)
-age: 37.4 (mean), range: 26 - 60","Xsens
+age: 37.4 (mean)","Xsens
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 6
@@ -380,7 +380,7 @@ Group MS-B: 11.18 (3.74)","2 MS groups:
 Group MS-A: 10.16 (8.07),
 Group MS-B: 15.36 (9.11)",not reported,not reported,healthy,"healthy
 n=15 (73% female)
-age: 46.1 (mean), range: 39.7 - 52.6","SenseWear Armband
+age: 46.1 (mean)","SenseWear Armband
 Type of sensor: accelerometer
 Number of axes: 2
 Number of wearables: 1
@@ -407,12 +407,11 @@ Type of sensor: accelerometer
 Number of axes: 1
 Number of wearables: 5
 Position: sternum, waist, upper leg, foot",real-world,1 day,,yes,no,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,no,,
-"Sosnoff J.J., Sandroff B.M., Pula J.H., Morrison S.M., Motl R.W.",2012,"Sosnoff et al, 2012",Falls and physical activity in persons with multiple sclerosis,10.1155/2012/315620,37,28,53.4 (10.0),53.4,not reported: n=37,EDSS: 5.0 [4],14.6 (10.6),not reported,not reported,MS patients,"MS patients - no fallers
+"Sosnoff J.J., Sandroff B.M., Pula J.H., Morrison S.M., Motl R.W.",2012,"Sosnoff et al, 2012",Falls and physical activity in persons with multiple sclerosis,10.1155/2012/315620,37,28,53.4 (10.0),53.4,not reported: n=37,EDSS: 5.0 [4],14.6 (10.6),not reported,not reported,MS patients,"MS patients (non-fallers)
 n=38 (82% female)
 age: 50.1 (13.9)
-Type: not reported
-Severity of MS: 3.0 [2.0]
-Disease duration [yrs]: 11.0 (9.6)","ActiGraph GT3X
+Severity: EDSS: 3.0 [2.0]
+Disease duration: 11.0 (9.6)","ActiGraph GT3X
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -430,7 +429,7 @@ n=20 (80% female)
 age: 48.3 (9.8)
 Type: RR: n=18, not reported: n=2 
 Severity of MS: not reported
-Disease duration [yrs]: 9.9 (8.9)","Yamax SW-200 
+Disease duration: 9.9 (8.9)","Yamax SW-200 
 Type of sensor: mechanical pedometer
 Number of axes: 1
 Number of wearables: 1
@@ -467,8 +466,8 @@ Position: not reported",real-world,7 days,,yes,yes,yes,yes,applies partially,app
 PP: n=11,
 SP: n=19,
 not reported: n=4",PDDS: 3.0 [3.0],13.8 (9.6),not reported,not reported,none,"MS patients
-Overweight: n=61 (77% female), age: 51.5 (9.5), Type: RR: n=45, SP:7, PP: 4, not reported: n=2, severity of MS: PDDS: 3.0 [3.0]; Disease duration [yrs]: 10.9 (7.8);
-Obese: n=55 (43% female), age: 52.5 (10.6), Type: RR: n=46, SP: 4, PP: 4, not reported: n=1, severity of MS: PDDS: 3.0 [3.0]; Disease duration [yrs]: 11.2 (10.3)","ActiGraph GT3X
+Overweight: n=61 (77% female), age: 51.5 (9.5), Type: RR: n=45, SP: 7, PP: 4, not reported: n=2, severity: PDDS: 3.0 [3.0]; Disease duration: 10.9 (7.8);
+Obese: n=55 (43% female), age: 52.5 (10.6), Type: RR: n=46, SP: 4, PP: 4, not reported: n=1, severity: PDDS: 3.0 [3.0]; Disease duration: 11.2 (10.3)","ActiGraph GT3X
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -642,12 +641,12 @@ Number of axes: 1
 Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,no,RW: Physical activity,,,,no,,yes,non-significant,no,,no,,no,,no,,yes,non-significant,no,,no,,
 "Balantrapu S., Sosnoff J.J., Pula J.H., Sandroff B.M., Motl R.W.",2014,"Balantrapu et al, 2014",Leg spasticity and ambulation in multiple sclerosis,10.1155/2014/649390,44,32,52.8 (7.6),52.8,"RR: n=36,
-not reported: n=8","EDSS: 6 (median), range: 2.5-6.5 ","10.3 (8.4), range: 0-39",not reported,not reported,MS patients,"MS patients without spasticity
+not reported: n=8","EDSS: 6 (median), range: 2.5-6.5 ","10.3 (8.4), range: 0-39",not reported,not reported,MS patients,"MS patients (without spasticity)
 n=40 (90% female)
 age: 47.7 (11.1)
 Type: RR: n=37
-Severity of MS: EDDS: 3.5 [2.0-6.5]
-Disease duration [yrs]: 11.5 (9.7), range: 0-39","ActiGraph GT3X
+Severity: EDDS: 3.5 [2.0-6.5]
+Disease duration: 11.5 (9.7)","ActiGraph GT3X
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -709,12 +708,11 @@ Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
 Position: waist",mixed,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,Lab: Physical activity,,,no,,no,,no,,no,,no,,yes,significant,no,,no,,no,,
-"Ayache S.-S., Al-ani T., Farhat W.-H., Zouari H.-G., Créange A., Lefaucheur J.-P.",2015,"Ayache et al, 2015",Analysis of tremor in multiple sclerosis using Hilbert-Huang Transform,10.1016/J.NEUCLI.2015.09.013,16,12,"49.6 (10.7), range: 31-74",49.6,not reported: n=16,"EDSS: 4.4 (2.4), range: 1.5-8.5",not reported,not reported,exclusion criteria: other neurological or psychiatric diseases,MS patients,"MS patients without tremor
+"Ayache S.-S., Al-ani T., Farhat W.-H., Zouari H.-G., Créange A., Lefaucheur J.-P.",2015,"Ayache et al, 2015",Analysis of tremor in multiple sclerosis using Hilbert-Huang Transform,10.1016/J.NEUCLI.2015.09.013,16,12,"49.6 (10.7), range: 31-74",49.6,not reported: n=16,"EDSS: 4.4 (2.4), range: 1.5-8.5",not reported,not reported,exclusion criteria: other neurological or psychiatric diseases,MS patients,"MS patients (without tremor)
 n=10 (60% female)
-age: 47.9 (6.6), range: 35-58 
-Type: not reported
-Severity of MS: EDDS: 33.4 (1.6), range: 2 -6
-Disease duration [yrs]: not reported","MiR TREM0000
+age: 47.9 (6.6)
+Severity: EDDS: 33.4 (1.6)
+Disease duration: not reported","MiR TREM0000
 Type of sensor: accelerometer
 Number of axes: 1
 Number of wearables: 1
@@ -746,12 +744,12 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,,
 R. Motl,2015,"Motl et al, 2015",Does the effect of a physical activity behavioral intervention vary by characteristics of people with multiple sclerosis?,10.7224/1537-2073.2014-016,41,30,48.4 (9.1),48.4,"RR: n=31, 
 P: n=10","PDDS mild: n=22,
-PDDS moderate: n=19",10.6 (7.1),subjects taking symptomatic medications: n=23,not reported,MS patients,"Waitlist control (MS patients)
+PDDS moderate: n=19",10.6 (7.1),subjects taking symptomatic medications: n=23,not reported,MS patients,"MS patients (waitlist control)
 n=41 (78% female)
 age: 49.5 (9.2)
 Type: RR: n=43, PP: n=7, SP: n=7
-Severity of MS: PDDS mild: n=17, PDDS moderate: n=24
-Disease duration [yrs]: 13.0 (9.1)","Yamax SW-401
+Severity: PDDS mild: n=17, PDDS moderate: n=24
+Disease duration: 13.0 (9.1)","Yamax SW-401
 Type of sensor: mechanical pedometer
 Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,yes,significant,no,,
@@ -780,7 +778,7 @@ Position: wrist, ankle, waist, others (chest)",mixed,7 days,,yes,yes,yes,yes,yes
 PP: n=9, 
 SP: n=4, 
 NMO: n=1, 
-not reported: n=2",EDSS: 2.5 (2.4),8.0 (6.0),not reported,not reported,healthy,"healthy cohabitants
+not reported: n=2",EDSS: 2.5 (2.4),8.0 (6.0),not reported,not reported,healthy,"healthy (cohabitants)
 n=17 (53% female)
 age: 39.9 (10.5)","HTC Sensation 4G (smartphone)
 Custom app
@@ -796,7 +794,7 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,,
 "Carpinella I., Cattaneo D., Ferrarin M.",2015,"Carpinella et al, 2015",Hilbert-Huang transform based instrumental assessment of intention tremor in multiple sclerosis,10.1088/1741-2560/12/4/046011,20,8,46.4 (8.5),46.4,"RR: n=9, 
 PP: n=4, 
-SP: n=7","EDSS: 6.2 (1.6), range: 2-8.5","15 .4 (11.6), range: 1-33",not reported,not reported,healthy,"healthy cohabitants
+SP: n=7","EDSS: 6.2 (1.6), range: 2-8.5","15 .4 (11.6), range: 1-33",not reported,not reported,healthy,"healthy (cohabitants)
 n=13 (38% female)
 age: 44.2 (9)","Xsens MTx
 Type of sensor: accelerometer, gyroscope, magnetometer
@@ -806,7 +804,7 @@ Position: hand",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab:
 "Blikman L.J., Van Meeteren J., Horemans H.L., Kortenhorst I.C., Beckerman H., Stam H.J., Bussmann J.B.",2015,"Blikman et al, 2015",Is physical behavior affected in fatigued persons with multiple sclerosis?,10.1016/J.APMR.2014.08.023,23,18,"45.7 (10.2), range: 24-66",45.7,"RR: n=20, 
 SP: n=3",EDSS : 2.0 [3.0],"9.3 (7.1), range: 0-21",not reported,exclusion criteria: no depression,healthy,"healthy (nonfatigued)
 n=23 (78% female)
-age: 45.7(10.2), range: 27-67","ActiGraph GT3X
+age: 45.7(10.2)","ActiGraph GT3X
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -834,8 +832,8 @@ SP: n=4",inclusion criteria: full-time wheelchair user,13.2 (8.9),not reported,e
 n=5 (80% female)
 age: 54 (0.4)
 Type: RR: n=2, PP: n=1, SP: n=2
-Severity of MS: bilateral gross upperextremity strength of at least 4-/5 and full-time wheelchair user (use of power or manual for>40h/wk and>80% ambulation (inclusion criteria)
-Disease duration [yrs]: 17.6 (8.5)","ActiGraph GT3X
+Severity: inclusion criteria: full-time wheelchair user
+Disease duration: 17.6 (8.5)","ActiGraph GT3X
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -864,12 +862,12 @@ Number of axes: 3
 Number of wearables: 2
 Position: lower leg",laboratory,not reported,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,yes,some significant,yes,significant,no,,no,,no,,no,,no,,no,,
 "Ayache S.S., Chalah M.A., Al-Ani T., Farhat W.H., Zouari H.G., Créange A., Lefaucheur J.-P.",2015,"Ayache et al, 2015",Tremor in multiple sclerosis: The intriguing role of the cerebellum,10.1016/J.JNS.2015.09.360,18,14,47.7 (10.3),47.7,"RR: n=10,
-P: n=8",EDSS: 4.3 (2.4),14.4 (11.7),not reported,not reported,MS patients,"MS with no visible tremor
+P: n=8",EDSS: 4.3 (2.4),14.4 (11.7),not reported,not reported,MS patients,"MS patients (no visible tremor)
 n=14 (64% female)
 age: 54 (0.4)
 Type: RR: n=8, P: n=6
 Severity: EDSS: 3.5 (1.4)
-Disease duration [yrs]: 11.4 (8.7)","MiR TREM0000
+Disease duration: 11.4 (8.7)","MiR TREM0000
 Type of sensor: accelerometer
 Number of axes: 1
 Number of wearables: 2
@@ -889,12 +887,12 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,yes,significant,yes,significant,no,,yes,significant,no,,no,,no,,no,,no,,
 T. Brown,2016,"Brown et al, 2016",A randomized crossover trial of Dalfampridine extended release for effect on ambulatory activity in people with multiple sclerosis,10.7224/1537-2073.2015-035,22,19,55.0 (2.5),55,"RR: n=13, 
 PP: n=4, 
-SP: n=5",EDSS: 5.1 (0.3),13.3 (1.7),"Dalfampridine extended release 10mg twice daily given first for 4 weeks, then 2 weeks off-treatment washout period and then placebo for 4 weeks; no use of any aminopyridine product or mitoxantrone in the past 6 months",not reported,MS patients,"MS patients with placebo first and then treatment 
+SP: n=5",EDSS: 5.1 (0.3),13.3 (1.7),"Dalfampridine extended release 10mg twice daily given first for 4 weeks, then 2 weeks off-treatment washout period and then placebo for 4 weeks; no use of any aminopyridine product or mitoxantrone in the past 6 months",not reported,MS patients,"MS patients (placebo first and then treatment)
 n=21 (52% female)
 age: 54 (0.4)
 Type: RR: n=13, PP: n=2, SP: n=6
-Severity: EDSS score: 5.3 (0.2)
-Disease duration [yrs]: 13.5 (1.5)","StepWatch 3
+Severity: EDSS: 5.3 (0.2)
+Disease duration: 13.5 (1.5)","StepWatch 3
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -981,8 +979,7 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,applies partially,applies partially,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,yes,significant,no,,no,,no,,no,,no,,
 "Grover S.A., Sawicki C.P., Kinnett-Hopkins D., Finlayson M., Schneiderman J.E., Banwell B., Till C., Motl R.W., Yeh E.A.",2016,"Grover et al, 2016",Physical Activity and Its Correlates in Youth with Multiple Sclerosis,10.1016/J.JPEDS.2016.08.104,27,18,16.0 (4.0),16,not reported: n=27,EDSS: 1.5 [0.5],2.0 (2.0),exclusion criteria: steroid treatment in the past 30 days,not reported,healthy,"mixed
 healthy: n=37 (68% female), age: 15.0 (3.0);
-monophasic acquired demyelinating syndromes: n=41 (46%), age: 14.0 (4.0), severity: EDSS: 1.0 [2.0]
-Disease duration [yrs]: 4.0 (7.0)","ActiGraph 7164
+monophasic acquired demyelinating syndromes: n=41 (46%), age: 14.0 (4.0), severity: EDSS: 1.0 [2.0], disease duration: 4.0 (7.0)","ActiGraph 7164
 Type of sensor: accelerometer
 Number of axes: 1
 Number of wearables: 1
@@ -1078,7 +1075,7 @@ n=26 (88% female)
 age: 51.2 (12.9)
 Type: RR: n=26
 Severity: EDSS: 3.0 [1.5]
-Disease duration [yrs]: 13.5 (1.5)","ActiGraph GT3X
+Disease duration: 13.5 (1.5)","ActiGraph GT3X
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -1436,8 +1433,8 @@ Position: sternum",laboratory,1 day,,yes,yes,yes,no,yes,yes,yes,no,yes,Lab: Gait
 n=13 (77% female)
 age: 57 (mean), range: 34-64
 Type: SP: n=13
-Severity: 4.5 [2.5-6.5]
-Disease duration [yrs]: not reported","Xsens MTw
+Severity: EDSS: 4.5 [2.5-6.5]
+Disease duration: not reported","Xsens MTw
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 3
@@ -1568,7 +1565,7 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,applies partially,no,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,,
 "Schwab P., Karlen W.",2020,"Schwab et al, 2020",A Deep Learning Approach to Diagnosing Multiple Sclerosis from Smartphone Data,10.1109/JBHI.2020.3021143,774,not reported,not reported,NA,not reported: n=774,not reported,not reported,not reported,not reported,healthy,"healthy 
 n=372 (female ratio not reported)
-age:not reported","Bring-your-own-smartphone
+age: not reported","Bring-your-own-smartphone
 Floodlight Open app
 Type of sensor: accelerometer, gyroscope, touchscreen
 Number of axes: 3
@@ -1672,7 +1669,7 @@ n=20 (64% female)
 age: 52.5 (7.3)
 Type: P: n=20
 Severity: EDSS: 3.5 [3.0-6.0]
-Disease duration [yrs]: 20.1 (13.0)","ActiGraph GT3X+
+Disease duration: 20.1 (13.0)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -1700,12 +1697,12 @@ Number of axes: 3
 Number of wearables: 2
 Position: foot",laboratory,not reported,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,Lab: Gait,,,,no,,yes,significant,no,,no,,no,,no,,no,,no,,no,,
 "Neal W.N., Cederberg K.L., Jeng B., Sasaki J.E., Motl R.W.",2020,"Neal et al, 2020",Is Symptomatic Fatigue Associated With Physical Activity and Sedentary Behaviors Among Persons With Multiple Sclerosis?,10.1177/1545968320916159,174,141,58.7 (10.4),58.7,"RR: n=115, 
-P: n=59",PDDS: 4.0 [2.0],20.1 (10.2),not reported,not reported,MS patients,"MS patients (non-fatigued FSS < 4)
+P: n=59",PDDS: 4.0 [2.0],20.1 (10.2),not reported,not reported,MS patients,"MS patients (non-fatigued)
 n=78 (96% female)
 age: 60.6 (8.9)
 Type: RR: n=57, P: n=21
 Severity: PDDS: 1.0 [0.0-4.0]
-Disease duration [yrs]: 20.7 (8.5)","ActiGraph GT3X+
+Disease duration: 20.7 (8.5)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -1720,9 +1717,8 @@ Position: lower back, foot",mixed,7 days,,yes,yes,yes,applies partially,yes,yes,
 "Tulipani L.J., Meyer B., Larie D., Solomon A.J., McGinnis R.S.",2020,"Tulipani et al, 2020",Metrics extracted from a single wearable sensor during sit-stand transitions relate to mobility impairment and fall risk in people with multiple sclerosis,10.1016/J.GAITPOST.2020.06.014,21,not reported,55.3 (8.6),55.3,not reported: n=21,EDSS: 3.4 (1.2),not reported,not reported,not reported,MS patients,"MS patients (non-fallers)
 n=17 (female ratio not reported)
 age: 4.8 (13.5)
-Type: not reported
 Severity: EDSS: 2.3 (1.2)
-Disease duration [yrs]: not reported","Biostamp MC10
+Disease duration: not reported","Biostamp MC10
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 2
@@ -1794,7 +1790,7 @@ n=29 (66% female)
 age: 60.38 (8.3)
 Type: P: n=29
 Severity: EDSS: 6.0 (1.7)
-Disease duration [yrs]: 21.85 (12.35)","APDM Opal IMU
+Disease duration: 21.85 (12.35)","APDM Opal IMU
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 2
@@ -1882,9 +1878,7 @@ Position: waist",mixed,7 days,NCT04057066,yes,yes,yes,yes,yes,yes,applies partia
 "Craig J.J., Bruetsch A.P., Lynch S.G., Huisinga J.M.",2020,"Craig et al, 2020",Trunk and foot acceleration variability during walking relates to fall history and clinical disability in persons with multiple sclerosis,10.1016/J.CLINBIOMECH.2020.105100,15,8,48 (9.6),48,not reported: n=15,EDSS: 4.4 (1.1),not reported,not reported,not reported,MS patients,"MS patients (non-fallers)
 n=25 (80% female)
 age: 44 (9.9)
-Type: not reported
-Severity: EDSS: 3.3 (1.9)
-Disease duration [yrs]: not reported","APDM Opal IMU
+Severity: EDSS: 3.3 (1.9)","APDM Opal IMU
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 2
@@ -1895,7 +1889,7 @@ n=6 (83% female)
 age: 53.5 (9.8)
 Type: RR: n=3, SP: n=3
 Severity: EDSS: 4.5 (1.7)
-Disease duration [yrs]: not reported","BTS Bioengineering G-Walk
+Disease duration: not reported","BTS Bioengineering G-Walk
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 1
@@ -1970,7 +1964,7 @@ n=10 (30% female)
 age: 60.9 (9.5)
 Type: RR: n=4, PP: n=1, SP: n=5
 Severity: PDDS: 3.5 [2.0]
-Disease duration [yrs]: 9.5 [19.5]","ActiGraph GT3X+
+Disease duration: 9.5 [19.5]","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -1988,8 +1982,8 @@ SP: n=4",EDSS: 6 [5.3-6.4],18.6 (10.1),not reported,not reported,MS patients,"MS
 n=15 (87% female)
 age: 46.5 (12.2)
 Type: RR: n=14, not reported: n=1
-Severity: EDSS: 2.5 [2.5− 3.5]
-Disease duration [yrs]: 12.9 (11.6)","Samsung Galaxy S6 (smartphone)
+Severity: EDSS: 2.5 [2.5-3.5]
+Disease duration: 12.9 (11.6)","Samsung Galaxy S6 (smartphone)
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2048,7 +2042,7 @@ Position: lower back",mixed,7 days,,yes,yes,yes,yes,yes,applies partially,applie
 "Montalban X, Graves J, Midaglia L, Mulero P, Julian L, Baker M, Schadrack J, Gossens C, Ganzetti M, Scotland A, Lipsmeier F, van Beek J, Bernasconi C, Belachew S, Lindemann M, Hauser SL.",2022,"Montalban et al, 2022",A smartphone sensor-based digital outcome assessment of multiple sclerosis,10.1177/13524585211028561,76,53,39.5 (7.9),39.5,"RR: n=69,
 PP: n=3,
 SP: n=4",EDSS: 2.4 (1.4),not reported,not reported,not reported,healthy,"healthy 
-n=25 (not reported)
+n=25 (female ratio not reported)
 age: not reported","Samsung Galaxy S7 (smartphone)
 Floodlight app
 Type of sensor: accelerometer, gyroscope, touchscreen
@@ -2104,7 +2098,7 @@ Number of wearables: 2
 Position: wrist",real-world,2 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Dexterity/Tremor,,,,yes,significant,yes,significant,yes,some significant,no,,no,,no,,no,,no,,no,,
 "Tanoh, IC; Maillart, E; Labauge, P; Cohen, M; Maarouf, A; Vukusic, S; Donze, C; Gallien, P; De Seze, J; Bourre, B; Moreau, T; Louapre, C; Vallee, M; Bieuvelet, S; Klaeyle, L; Argoud, AL; Zinai, S; Tourbah, A",2021,"Tanoh et al, 2021",MSCopilot: New smartphone-based digital biomarkers correlate with Expanded Disability Status Scale scores in people with Multiple Sclerosis,10.1016/j.msard.2021.103164,116,71,46 (10),46,"RR: n=86,
 P: n=30",EDSS: 3.6 (1.6),12 (7),not reported,not reported,healthy,"healthy
-n=69 (65.2% female)
+n=69 (65% female)
 age: 39 (11)","Bring-your-own-smartphone
 MSCopilot app
 Type of sensor: accelerometer, gyroscope, touchscreen
@@ -2112,8 +2106,10 @@ Number of axes: 3
 Number of wearables: 1
 Position: not reported",laboratory,1 day,NCT03148938,yes,applies partially,yes,yes,applies partially,yes,applies partially,no,applies partially,Lab: Gait,Lab: Dexterity/Tremor,,,yes,some significant,no,,yes,significance not tested,yes,significant,no,,no,,no,,no,,no,,
 "Tulipani, LJ; Meyer, B; Allen, D; Solomon, AJ; McGinnis, RS",2022,"Tulipani et al, 2022",Evaluation of unsupervised 30-second chair stand test performance assessed by wearable sensors to predict fall status in multiple sclerosis,10.1016/j.gaitpost.2022.02.016,37,not reported,50.6 (12.3),50.6,not reported: n=37,EDSS: 2.7 (1.3),not reported,not reported,not reported,MS patients,"MS patients (non-fallers)
-n=16 (proportion female not reported)
-age: 44.5 (12.8)","Biostamp MC10
+n=16 (female ratio not reported)
+age: 44.5 (12.8)
+Severity: EDSS: 2.0 (0.8)
+Disease duration: not reported","Biostamp MC10
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2205,7 +2201,7 @@ Position: not reported",real-world,12 weeks,,applies partially,yes,yes,yes,appli
 "Sagawa, Y; Watelain, E; Moulin, T; Decavel, P",2021,"Sagawa et al, 2021",Physical Activity during Weekdays and Weekends in Persons with Multiple Sclerosis,10.3390/s21113617,41,29,51.3 (12.7),51.3,"RR: n=11,
 PP: n=13,
 SP: n=17",EDSS: 5.1 (1.1),13.9 (10.5),not reported,not reported,healthy,"healthy
-n=16 (43.7% female)
+n=16 (44% female)
 age: 48.0 (7.6)","ActiGraph wGT3X
 Type of sensor: accelerometer
 Number of axes: 3
@@ -2222,7 +2218,7 @@ Position: wrist",real-world,7 days,,yes,yes,yes,yes,yes,applies partially,applie
 PP: n=8,
 SP: n=15",EDSS: 5.05 (1.80),14.92 (10.32),not reported,not reported,healthy,"healthy
 n=43 (51% female)
-age: 50.74 (16.75)","Yost Lab 3-Space Sensor
+age: 50.7 (16.8)","Yost Lab 3-Space Sensor
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 2
@@ -2248,13 +2244,9 @@ Number of axes: 3
 Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,,
 "Hossen, A; Anwar, AR; Koirala, N; Ding, H; Budker, D; Wickenbrock, A; Heute, U; Groppa, S; Muthuraman, M; Deuschl, G",2022,"Hossen et al, 2022",Machine learning aided classification of tremor in multiple sclerosis,10.1016/j.ebiom.2022.104152,40,23,"Train: 52.5, range: 35-84
-Test: 55.7, range: 43-79",54.1,RR: n=40,not reported,not reported,not reported,not reported,other disease(s),"PD
-n=39 (41% female)
-age: Train 64.5 / Test: 68.2
-
-Essential Tremor
-n=41 (44% female)
-age: Train 63.2 / Test 64.5","Unspecified accelerometer
+Test: 55.7, range: 43-79",54.1,RR: n=40,not reported,not reported,not reported,not reported,other disease(s),"mixed
+PD: n=39 (41% female), age: Train 64.5 / Test: 68.2;
+Essential Tremor: n=41 (44% female), age: Train 63.2 / Test 64.5","Unspecified accelerometer
 Type of sensor: accelerometer
 Number of axes: not reported
 Number of wearables: 1
@@ -2285,8 +2277,8 @@ Number of axes: 3
 Number of wearables: 1
 Position: sternum",laboratory,1 day,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Balance,,,,yes,some significant,yes,some significant,yes,some significant,yes,significant,no,,no,,no,,no,,no,,
 "Salomon, A; Galperin, I; Buzaglo, D; Mirelman, A; Regev, K; Karni, A; Schmitz-Hubsch, T; Paul, F; Devos, H; Sosnoff, JJ; Gazit, E; Tamir, R; Shimoni, N; Hausdorff, JM",2022,"Salomon et al, 2022","Fragmentation, circadian amplitude, and fractal pattern of daily-living physical activity in people with multiple sclerosis: Is there relevant information beyond the total amount of physical activity?",10.1016/j.msard.2022.104108,132,92,47.13 (11.24),47.13,RR: n=132,"EDSS: 3 (median), IQR: 2-4",not reported,not reported,not reported,healthy,"healthy
-n=90 (47.8% female)
-age: 46.06 (11.26)","Axivity AX3 or AX6
+n=90 (48% female)
+age: 46.1 (11.3)","Axivity AX3 or AX6
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2294,21 +2286,19 @@ Position: lower back",real-world,7 days,NCT02427997,yes,yes,yes,yes,yes,yes,appl
 "Jeng, B; Silic, P; Huynh, TLT; Motl, RW",2022,"Jeng et al, 2022",Sedentary Behavior and Lower-Extremity Physical Function across the Lifespan of Adults with Multiple Sclerosis,10.3390/ijerph191912466,216,163,49.6 (13.3),49.6,"RR: n=190,
 P: n=19,
 not reported: n=7","PDDS: 1 (median), IQR: 3",13.0 (9.6),not reported,not reported,MS patients,"MS patients
-young: n=59 (76% female), age: 32.9 (4.7),
-middle-aged: n=93 (74% female), age: 49.3 (5.6),
+young: n=59 (76% female), age: 32.9 (4.7);
+middle-aged: n=93 (74% female), age: 49.3 (5.6);
 older: n=64 (77% female), age: 65.5 (4.4)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,applies partially,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,yes,some significant,no,,no,,no,,no,,no,,
 "Tulipani, LJ; Meyer, B; Fox, S; Solomon, AJ; Mcginnis, RS",2022,"Tulipani et al, 2022",The Sit-to-Stand Transition as a Biomarker for Impairment: Comparison of Instrumented 30-Second Chair Stand Test and Daily Life Transitions in Multiple Sclerosis,10.1109/TNSRE.2022.3169962,37,not reported,50.6 (12.3),50.6,not reported: n=37,EDSS: 2.6 (1.4),not reported,not reported,not reported,MS patients,"MS patients
-non-fallers: n=16, age: 44.7 (12.4)
-fallers: n=21, age: 55.2 (10.3)
-
-no pyramidal impairment: n=23, age: 46.6 (12.4)
-pyramidal impairment: n=14, age: 57.3 (8.9)
-
-no sensory impairment: n=13, age: 45.8 (12.9)
+non-fallers: n=16, age: 44.7 (12.4);
+fallers: n=21, age: 55.2 (10.3);
+no pyramidal impairment: n=23, age: 46.6 (12.4);
+pyramidal impairment: n=14, age: 57.3 (8.9);
+no sensory impairment: n=13, age: 45.8 (12.9);
 sensory impairment: n=24, age: 53.3 (11.3)","Biostamp MC10
 Type of sensor: accelerometer 
 Number of axes: 3 
@@ -2325,7 +2315,9 @@ Position: lower leg, sternum",laboratory,not reported,,yes,yes,yes,yes,yes,yes,y
 P: n=18,
 not reported: n=6","PDDS: 1 (median), IQR: 0-3",12.8 (9.5),not reported,not reported,MS patients,"MS patients (fatigued)
 n=134 (76% female)
-age: 50.2 (13.5)","ActiGraph GT3X+
+age: 50.2 (13.5)
+Severity: PDDS: 0 (median), IQR: 0-2
+Disease duration: 12.8 (8.4)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2361,7 +2353,9 @@ Black: 44.7 (12.1)",50.2,"RR: n=184,
 not reported: n=24",PDDS: 1 (3),"White: 14.8 (10.4)
 Black: 10.4 (7.0)",not reported,not reported,MS patients,"MS patients (Black)
 n=67 (82% female)
-age: 44.7 (12.1)","ActiGraph GT3X+
+age: 44.7 (12.1)
+PDDS: 1 (median), IQR: 3
+Disease duration: 10.4 (7.0)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2371,7 +2365,9 @@ PP: n=5,
 SP: n=13,
 not reported: n=6",PDDS: 1 (3),13.4 (9.6),not reported,Number of comorbid conditions,MS patients,"MS patients (Black)
 n=67 (82% female)
-age: 44.7 (12.1)","ActiGraph GT3X+
+age: 44.7 (12.1)
+PDDS: 1 (median), IQR: 3
+Disease duration: 10.4 (7.0)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2411,9 +2407,11 @@ Position: waist",real-world,7 days,,yes,applies partially,yes,yes,yes,yes,applie
 Non-fallers: 48.2 (15.0)",49.9,not reported: n=94,"EDSS:
 Fallers: 5.5 (median), range: 0.0–6.5
 Non-fallers: 2.5 (median), range: 0.0–6.5","Fallers: 14.2 (median), IQR: 8.2–22.8
-Non-fallers: 7.7 (median), IQR: 3.1–15.9",not reported,not reported,MS patients,"MS patients (Non-fallers)
+Non-fallers: 7.7 (median), IQR: 3.1–15.9",not reported,not reported,MS patients,"MS patients (non-fallers)
 n=44 (61% female)
-age: 48.2 (15.0)","Fitbit Flex (smartwatch)
+age: 48.2 (15.0)
+EDSS: 2.5 (median), range: 0.0–6.5
+Disease duration: 7.7 (median), IQR: 3.1–15.9","Fitbit Flex (smartwatch)
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2465,7 +2463,9 @@ PP: n=39,
 SP: n=71,
 benign: n=5","PDDS: 2.0 (median), IQR: 3",17.1 (10.3),not reported,not reported,MS patients,"MS patients (Elevated Depression)
 n=127 (75% female)
-age: 52.8 (12.7)","ActiGraph GT3X+
+age: 52.8 (12.7)
+PDSS: 3.0 (median), IQR: 4
+Disease duration: 15.2 (9.4)","ActiGraph GT3X+
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
@@ -2489,9 +2489,11 @@ Type of sensor: accelerometer, others (EMG)
 Number of axes: 3
 Number of wearables: 3
 Position: upper leg, others (chest)",real-world,6 weeks,,yes,yes,yes,applies partially,yes,yes,applies partially,no,yes,RW: Gait,,,,no,,yes,some significant,no,,no,,no,,yes,significance not tested,no,,no,,no,,
-"Marotta, N; de Sire, A; Marinaro, C; Moggio, L; Inzitari, MT; Russo, I; Tasselli, A; Paolucci, T; Valentino, P; Ammendolia, A",2022,"Marotta et al, 2022",Efficacy of Transcranial Direct Current Stimulation (tDCS) on Balance and Gait in Multiple Sclerosis Patients: A Machine Learning Approach,10.3390/jcm11123505,17,12,40.6 (14.4),40.6,RR: n=17,"EDSS: 3.0 (median), IQR: 1",not reported,transcranial direct current stimulation (tDCS),not reported,MS patients,"MS patients (control group)
+"Marotta, N; de Sire, A; Marinaro, C; Moggio, L; Inzitari, MT; Russo, I; Tasselli, A; Paolucci, T; Valentino, P; Ammendolia, A",2022,"Marotta et al, 2022",Efficacy of Transcranial Direct Current Stimulation (tDCS) on Balance and Gait in Multiple Sclerosis Patients: A Machine Learning Approach,10.3390/jcm11123505,17,12,40.6 (14.4),40.6,RR: n=17,"EDSS: 3.0 (median), IQR: 1",not reported,transcranial direct current stimulation (tDCS),not reported,MS patients,"MS patients
 n=8 (75% female)
-age: 39.75 (8.39)","G-Sensor
+age: 39.75 (8.39)
+EDSS: 3 (median), IQR: 0
+Disease duration: not reported","G-Sensor
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 1
@@ -2522,7 +2524,7 @@ Type of sensor: accelorometer
 Number of axes: 3 
 Number of wearables: 1 
 Position: foot",mixed,7 days and during tests,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Dexterity/Tremor,,,,no,,yes,some significant,no,,yes,significant,no,,yes,some significant,no,,no,,no,,"Study is comparing PwMS with and without RLS, compares a quesitionnaire to sensor activity."
-"Arpan, I; Shah, VV; McNames, J; Harker, G; Carlson-Kuhta, P; Spain, R; El-Gohary, M; Mancini, M; Horak, FB",2022,"Arpan et al, 2022",Fall Prediction Based on Instrumented Measures of Gait and Turning in Daily Life in People with Multiple Sclerosis,10.3390/s22165940,13,10,49.1 (3.5),49.1,not reported: n=13,EDSS 4.2 (0.18),16.8 (2.9),not reported,not reported,MS patients,"MS patients (""non-fallers"")
+"Arpan, I; Shah, VV; McNames, J; Harker, G; Carlson-Kuhta, P; Spain, R; El-Gohary, M; Mancini, M; Horak, FB",2022,"Arpan et al, 2022",Fall Prediction Based on Instrumented Measures of Gait and Turning in Daily Life in People with Multiple Sclerosis,10.3390/s22165940,13,10,49.1 (3.5),49.1,not reported: n=13,EDSS 4.2 (0.18),16.8 (2.9),not reported,not reported,MS patients,"MS patients (non-fallers)
 n=13 (85% female)
 age: 49.2 (2.4)
 EDSS: 4.3 (0.23)
@@ -2575,13 +2577,9 @@ Type of sensor: accelerometer, others (PPG)
 Number of axes: 3 
 Number of wearable: 1 
 Position: wrist",real-world,"12 weeks (n=56), 24 weeks (n=39/56)",,yes,yes,yes,yes,applies partially,yes,yes,no,yes,RW: Physical activity,,,,no,,no,,no,,no,,no,,no,,no,,no,,no,,"Machine Learning Approach to predict health outcomes. 1 Accelerometer used with a Fitbit Device (step counts, sleep) amongst others"
-"van Gelder, LMA; Angelini, L; Buckley, EE; Mazza, C",2021,"van et al, 2021",A Proposal for a Linear Calculation of Gait Asymmetry,10.3390/sym13091560,20,6,45 (14),45,not reported: n=20,EDSS 3.7 (1.6),not reported,not reported,not reported,healthy,"healthy
-n=24 (67% female)
-age: 50 (8)
-
-Parkinson's Disease
-n=20 (30% female)
-age: 59 (7)","APDM Opal IMU
+"van Gelder, LMA; Angelini, L; Buckley, EE; Mazza, C",2021,"van et al, 2021",A Proposal for a Linear Calculation of Gait Asymmetry,10.3390/sym13091560,20,6,45 (14),45,not reported: n=20,EDSS 3.7 (1.6),not reported,not reported,not reported,healthy,"mixed
+healthy: n=24 (67% female), age: 50 (8);
+PD: n=20 (30% female); age: 59 (7)","APDM Opal IMU
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 3
@@ -2595,20 +2593,22 @@ Type of sensor: others (GPS)
 Number of axes: n/a
 Number of wearables: 1
 Position: upper arm (antenna on right shoulder)",laboratory,during tests,,yes,yes,yes,yes,yes,yes,yes,yes,yes,Lab: Gait,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,,
-"Tonning, LU; Mechlenburg, I; Christiansen, DH; Andersen, NBV; Stabel, HH; Pedersen, AR; Nielsen, JF; Grimm, B; Naess-Schmidt, E",2022,"Tonning et al, 2022",Disability and physical activity in people with chronic disease receiving physiotherapy. A prospective cohort study,10.3389/fspor.2022.1006422,24,19,55.5 (7.8),55.5,not reported: n=24,not reported,"10.5 (median, IQR 6;18)",not reported,not reported,other disease(s),"PD n=24 (female 9, age 66.5 (7.8), DD 7 y (median, IQR 4;9))
-RA n=8 (female 7, age 57.0 (16.1), DD 11.5 (median, IQR 8;16.5)
-Stroke n=14 (female 7, age 65.1 (12.7), DD 8 (median, IQR 2;13)","Axivity AX3
+"Tonning, LU; Mechlenburg, I; Christiansen, DH; Andersen, NBV; Stabel, HH; Pedersen, AR; Nielsen, JF; Grimm, B; Naess-Schmidt, E",2022,"Tonning et al, 2022",Disability and physical activity in people with chronic disease receiving physiotherapy. A prospective cohort study,10.3389/fspor.2022.1006422,24,19,55.5 (7.8),55.5,not reported: n=24,not reported,"10.5 (median), IQR: 6-18",not reported,not reported,other disease(s),"mixed
+PD: n=24, 38% female, age: 66.5 (7.8), disease duration: 7 (median), IQR: 4-9;
+RA: n=8, 88% female, age: 57.0 (16.1), disease duration: 11.5 (median), IQR: 8-16.5;
+Stroke: n=14, 50% female, age: 65.1 (12.7), disease duration: 8 (median), IQR: 2-13","Axivity AX3
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
 Position: upper leg",real-world,"for at least 7 consecutive days
 average at BL: 6.4 days (SD 1.6)/at FU: 6.7 days (SD1.4)",,yes,yes,yes,no,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,non-significant,no,,no,,no,,no,,no,,yes,non-significant,no,,all participants were pooled for the results.
-"Warmerdam, E; Hansen, C; Romijnders, R; Hobert, MA; Welzel, J; Maetzler, W",2022,"Warmerdam et al, 2022",Full-Body Mobility Data to Validate Inertial Measurement Unit Algorithms in Healthy and Neurological Cohorts,10.3390/data7100136,21,13,39 (13),39,not reported: n=21,not reported,not reported,not reported,not reported,healthy,"HC age 18-60 n=43, female 21, age 29 (8)
-HC age over 60 n=24, female 12, age 72 (6)
-PD n=34, female 13, age 65 (11)
-Stroke n=23, female 6, age 68 (16)
-CLBP (chronic low back pain) n=10, female 3, age 64 (15)
-Other n=12, female 3, age 66 (17)","Noraxon myoMOTION
+"Warmerdam, E; Hansen, C; Romijnders, R; Hobert, MA; Welzel, J; Maetzler, W",2022,"Warmerdam et al, 2022",Full-Body Mobility Data to Validate Inertial Measurement Unit Algorithms in Healthy and Neurological Cohorts,10.3390/data7100136,21,13,39 (13),39,not reported: n=21,not reported,not reported,not reported,not reported,healthy,"mixed
+healthy (young): n=43 (49% female), age: 29 (8);
+healthy (over 60): n=24 (50% female), age: 72 (6);
+PD: n=34 (38% female), age: 65 (11);
+Stroke: n=23 (26% female), age: 68 (16);
+Chronic low back pain: n=10 (30% female), age: 64 (15);
+Other: n=12 (25% female), age: 66 (17)","Noraxon myoMOTION
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
 Number of wearables: 16
@@ -2637,8 +2637,8 @@ Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
 Position: others (chest)",laboratory,during tests,,yes,yes,applies partially,no,applies partially,applies partially,no,no,yes,Lab: Balance,,,,no,,no,,no,,no,,no,,no,,no,,no,,yes,significance not tested,"Usability focussed on design and acceptability, no sensor data used for this first usability study"
-"Shah, VV; Curtze, C; Sowalsky, K; Arpan, I; Mancini, M; Carlson-Kuhta, P; El-Gohary, M; Horak, FB; McNames, J",2022,"Shah et al, 2022",Inertial Sensor Algorithm to Estimate Walk Distance,10.3390/s22031077,29,not reported,not reported,NA,not reported: n=29,not reported,not reported,not reported,not reported,healthy,"Older adults with impaired fasting glucose
-n=108
+"Shah, VV; Curtze, C; Sowalsky, K; Arpan, I; Mancini, M; Carlson-Kuhta, P; El-Gohary, M; Horak, FB; McNames, J",2022,"Shah et al, 2022",Inertial Sensor Algorithm to Estimate Walk Distance,10.3390/s22031077,29,not reported,not reported,NA,not reported: n=29,not reported,not reported,not reported,not reported,healthy,"healthy (impaired fasting glucose)
+n=108 (female ratio not reported)
 age: 71.2 (5.1)","APDM Opal IMU
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
@@ -2652,11 +2652,12 @@ Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 1
 Position: sternum",laboratory,during tests,,yes,yes,yes,yes,yes,yes,yes,no,yes,Lab: Gait,,,,no,,yes,some significant,no,,no,,no,,no,,no,,yes,some significant,no,,
-"Scott, K; Bonci, T; Salis, F; Alcock, L; Buckley, E; Gazit, E; Hansen, C; Schwickert, L; Aminian, K; Bertuletti, S; Caruso, M; Chiari, L; Sharrack, B; Maetzler, W; Becker, C; Hausdorff, JM; Vogiatzis, I; Brown, P; Del Din, S; Eskofier, B; Paraschiv-Ionescu, A; Keogh, A; Kirk, C; Kluge, F; Mico-Amigo, EM; Mueller, A; Neatrour, I; Niessen, M; Palmerini, L; Sillen, H; Singleton, D; Ullrich, M; Vereijken, B; Froehlich, M; Brittain, G; Caulfield, B; Koch, S; Carsin, AE; Garcia-Aymerich, J; Kuederle, A; Yarnall, A; Rochester, L; Cereatti, A; Mazza, C",2022,"Scott et al, 2022","Design and validation of a multi-task, multi-context protocol for real-world gait simulation",10.1186/s12984-022-01116-1,20,9,48.7 (9.7),48.7,not reported: n=20,EDSS: 3.5 (1.7),not reported,not reported,not reported,healthy,"HC n=20 (female 9, age 71.7 (5.8))
-PD n=20 (female 4, age 69.8 (7.2))
-PFF (proximal femure fracture) n=19 (female 11, age 80.0 (8.5))
-COPD n=17 (female 8, age 69.4 (9.1))
-CHF (congestive heart failure) n=12 (female 4, age 69.1 (11.7))","INDIP system with IMUs
+"Scott, K; Bonci, T; Salis, F; Alcock, L; Buckley, E; Gazit, E; Hansen, C; Schwickert, L; Aminian, K; Bertuletti, S; Caruso, M; Chiari, L; Sharrack, B; Maetzler, W; Becker, C; Hausdorff, JM; Vogiatzis, I; Brown, P; Del Din, S; Eskofier, B; Paraschiv-Ionescu, A; Keogh, A; Kirk, C; Kluge, F; Mico-Amigo, EM; Mueller, A; Neatrour, I; Niessen, M; Palmerini, L; Sillen, H; Singleton, D; Ullrich, M; Vereijken, B; Froehlich, M; Brittain, G; Caulfield, B; Koch, S; Carsin, AE; Garcia-Aymerich, J; Kuederle, A; Yarnall, A; Rochester, L; Cereatti, A; Mazza, C",2022,"Scott et al, 2022","Design and validation of a multi-task, multi-context protocol for real-world gait simulation",10.1186/s12984-022-01116-1,20,9,48.7 (9.7),48.7,not reported: n=20,EDSS: 3.5 (1.7),not reported,not reported,not reported,healthy,"mixed
+healthy: n=20 (45% female), age: 71.7 (5.8);
+PD: n=20 (20% female), age: 69.8 (7.2);
+Proximal femure fracture: n=19 (58% female), age: 80.0 (8.5);
+Chronic obstructive pulmonary disease: n=17 (47% female), age: 69.4 (9.1);
+Congestive heart failure: n=12 (33% female), age: 69.1 (11.7)","INDIP system with IMUs
 Type of sensor: accelerometer, gyroscope, others (pressure insoles, infrared time-of-flight distance sensors)
 Number of axes: 3
 Number of wearables: 7
@@ -2722,7 +2723,7 @@ Number of wearables: 1
 Position: waist",real-world,7 days,,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,no,,no,,no,,no,,no,,no,,no,,
 "Swanson C.W., Richmond S.B., Sharp B.E., Fling B.W.",2021,"Swanson et al, 2021",Middle-age people with multiple sclerosis demonstrate similar mobility characteristics to neurotypical older adults,10.1016/j.msard.2021.102924,30,20,47.8 (12.08),47.8,RR: n=30,"EDSS: 4.0 (median), range: 0-6.5",12.9 (10.67),not reported,not reported,healthy,"healthy middle-age adults and older adults (two groups)
 n=19 (79% female) and n=21 (48% female)
-age: 47.1 (10.50) and 70.3 (5.92)","APDM Opal V2
+age: 47.1 (10.5) and 70.3 (5.9)","APDM Opal V2
 Type of sensor: accelerometer, gyroscope, magnetometer, others (barometer)
 Number of axes: 3
 Number of wearables: 6
@@ -2753,14 +2754,14 @@ Number of axes: 3
 Number of wearables: 1
 Position: waist",real-world,3 days,NCT03255460,yes,yes,yes,yes,yes,yes,yes,no,yes,RW: Physical activity,,,,no,,yes,some significant,yes,some significant,no,,no,,no,,no,,no,,no,,
 "Prochazka A., Dostal O., Cejnar P., Mohamed H.I., Pavelek Z., Valis M., Vysata O.",2021,"Prochazka et al, 2021",Deep Learning for Accelerometric Data Assessment and Ataxic Gait Monitoring,10.1109/TNSRE.2021.3051093,16,not reported,38.6 (16.1),38.6,not reported: n=16,not reported,not reported,not reported,not reported,healthy,"healthy
-n=19 (%female not reported)
+n=19 (female ratio not reported)
 age: 39.6 (9.7)","Noitom Perception Neuron
 Type of sensor: accelerometer
 Number of axes: 3
 Number of wearables: 31
 Position: not reported",laboratory,not reported,,yes,applies partially,applies partially,no,applies partially,yes,yes,no,no,Lab: Gait,Lab: Balance,,,no,,no,,yes,significance not tested,no,,no,,no,,no,,no,,no,,
 "Lam, J.S., Hasan, M.R., Ahmed, K.A., Hossain, M.Z.",2022,"Lam et al, 2022",Machine Learning to Diagnose Neurodegenerative Multiple Sclerosis Disease,10.1007/978-981-19-8234-7_20,1355,not reported,not reported,NA,not reported: n=1355,not reported,not reported,not reported,not reported,healthy,"healthy
-n=1150 (%female not reported)
+n=1150 (female ratio not reported)
 age: not reported","Bring-your-own-smartphone
 Floodlight Open app
 Type of sensor: accelerometer, gyroscope, touchscreen
@@ -2787,7 +2788,7 @@ Number of axes: 3
 Number of wearables: 1
 Position: not reported",real-world,7 days,,yes,yes,yes,applies partially,applies partially,yes,yes,no,yes,RW: Physical activity,,,,yes,some significant,yes,non-significant,yes,non-significant,no,,no,,no,,no,,no,,no,,
 "Nagasubramony, A., Player, R.F., Westling, C.E.I., Galvin, K., Witchel, H.J.",2021,"Nagasubramony et al, 2021",Using wearable inertial sensors to detect different strategies for the sit-to-stand transition in multiple sclerosis,10.1145/3452853.3452862,12,not reported,not reported,NA,not reported: n=12,EDSS: range: 1-5.5,not reported,not reported,not reported,healthy,"healthy
-n=11 (%female not reported)
+n=11 (female ratio not reported)
 age: not reported","x-io NGIMU
 Type of sensor: accelerometer, gyroscope, magnetometer
 Number of axes: 3
@@ -2814,7 +2815,7 @@ Number of wearables: 1
 Position: others (chest)",laboratory,,,yes,yes,yes,yes,applies partially,yes,yes,no,yes,Lab: Balance,,,,no,,no,,no,,no,,no,,no,,no,,no,,yes,significance not tested,
 "Silveira, S.L., Baird, J.F., Motl, R.W.",2021,"Silveira et al, 2021","Rates, patterns, and correlates of fitness tracker use among older adults with multiple sclerosis",10.1016/j.dhjo.2020.100966,122,95,66.0 (11.3),66,"RR: n=98,
 PP: n=17,
-SP: n=7","PDDS: 1.0 (median), IQR: 3.0",18.8 (14.9),not reported,not reported,MS patients,"MS patients non-users of fitness tracker
+SP: n=7","PDDS: 1.0 (median), IQR: 3.0",18.8 (14.9),not reported,not reported,MS patients,"MS patients (non-users of fitness trackers)
 n=318 (77.4% female)
 age: 66.1 (6.1)","Bring-your-own-smartwatch
 Type of sensor: accelerometer
