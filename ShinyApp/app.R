@@ -31,7 +31,7 @@ if (SANITY_CHECK) stopifnot(names(table(unlist(data[c("Domain1", "Domain2", "Dom
 # Explore brands
 # sort(table(unlist(sapply(strsplit(data$Wearable, "\n\n"), function(x) gsub(" .*", "", gsub("\n.*", "", x))))))
 wearable_brands <- c("ActiGraph", "APDM", "Axivity", "Bring-your-own-smartphone", "Fitbit", "G-Sensor", "Samsung", "Shimmer", "StepWatch", "Xsens", "Yamax", "Others")
-result_columns <- c("Association with MS severity", "Association with other measure", "Test-retest reliability", "Group differences MS vs HC", "Group differences MS vs MS", "Group differences MS vs other diseases", "Responsiveness to change", "Responsiveness to intervention", "Subjective patient acceptability")
+result_columns <- c("Association with MS severity", "Association with other measure", "Test-retest reliability", "Group differences MS vs HC", "Group differences MS vs MS", "Group differences MS vs other diseases", "Responsiveness to change", "Responsiveness to intervention", "Subjective participant acceptability")
 if (SANITY_CHECK) stopifnot(names(table(unlist(data[, result_columns]))) %in% c("no", "yes"))
 if (SANITY_CHECK) stopifnot(names(table(unlist(data[, paste0(result_columns, " - Effect")]))) %in% c("", "significance not tested", "non-significant", "some significant", "significant"))
 
@@ -813,7 +813,7 @@ server <- function(input, output) {
       ) +
       stat_bin(binwidth = 1, geom = "text", aes(label = after_stat(count)), vjust = -1) +
       scale_x_continuous(breaks = c(1:max(plot_data$number_wearables))) +
-      ylim(0, 150)
+      ylim(0, 165)
     if (SAVE_FIGURES) ggsave("../Figures/Multimedia Appendix Number wearables per context.png", p, width = 6, height = 6)
     p
   })
