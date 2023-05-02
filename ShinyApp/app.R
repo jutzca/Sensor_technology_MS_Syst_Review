@@ -13,6 +13,8 @@ SAVE_FIGURES <- FALSE
 SANITY_CHECK <- FALSE
 
 data <- read.csv("extracted_data_new.csv", check.names = F, na.strings = c("NA", "not reported"))
+data <- data[order(data$Year, data$Authors, data$Title, data$DOI),]
+rownames(data) <- NULL
 
 if (SANITY_CHECK) stopifnot(duplicated(tolower(data$DOI)) == F)
 # data <- read.csv("23-02-23 extracted_data_new.csv", check.names = F, na.strings = c("NA", "not reported"))
@@ -438,6 +440,8 @@ ui <- dashboardPage(
         )
       ),
       tabPanel("Papers Table",
+        p("Detailed information on selected studies. Time is expressed in years. Mean (SD) or median [IQR]. MS: multiple sclerosis, HC: healthy controls, RR: relapsing-remitting, PP: primary progressive, SP: secondary progressive, PDDS: patient determined disease steps, EDSS: expanded disability status scale, ns: non-significant, s: significant, ss: some significant, nt: not tested."),
+        p(a("Open article-table with Local Citation Network and Co-Authorship Network in new tab (also includes searchable abstracts)", href="https://LocalCitationNetwork.github.io/?fromJSON=MS-Wearable-Sensors.json", target="_blank")),
         dataTableOutput("table"),
         style = "overflow-x: scroll"
       )
@@ -485,8 +489,6 @@ server <- function(input, output) {
   output$table <- renderDataTable({
     data <- filtered_data()
 
-
-
     highlight_first_row <- function(x) {
       sapply(sapply(strsplit(x, "\n\n"), function(x) sub("([^\n]*)\n", "<b>\\1</b>\n", x)), paste, collapse = "\n\n")
     }
@@ -509,7 +511,7 @@ server <- function(input, output) {
 
     cols_to_select <- c("Year", "First author and year", "Title", "MS Population", "Severity & Disease Duration", "Treatments & Comorbidities", "Comparator Population", "Wearable", "Results")
 
-    datatable(data[order(data$Year, data$Authors, data$Title, data$DOI), cols_to_select], rownames = FALSE, escape = F, filter = "top", extensions = "Buttons", selection = "none", options = list(
+    datatable(data[order(data$Year, data$Authors, data$Title, data$DOI), cols_to_select], rownames = T, escape = F, filter = "top", extensions = "Buttons", selection = "none", options = list(
       dom = "Bfrti",
       buttons = c("copy", "csv", "excel", "colvis"),
       pageLength = 1000
